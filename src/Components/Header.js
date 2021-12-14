@@ -4,31 +4,51 @@ import DesktopImage from './../img/desktop_blue.jpg'
 
 
 const ImageContainer = styled.div`
-      overflow:hidden;
-      background: url(${DesktopImage}), rgba(255, 255, 255, 0.7);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 156.25rem; /* 2500px */
       
       height:43.75rem; /* 700px */
-      img{
-            margin-top:-15.625rem;/* -250px */
-            width:100%;
-            
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      :before{
+            position:absolute;
+            content:"";
+            top: 0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            opacity:0.95;
+            background: url(${DesktopImage});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 176.25rem; /* 2820px */
+      
       }
+      
+      
+     
+      
       
 `
 const Text =styled.div`
+      display:flex;
+      flex-direction:row;
+      justify-content: center;
+      gap:5px;
       p{
-            color:#fff;
-            font-size:15rem;
+            position: relative;
+            color: #ffffff;  
+            font-size: 5rem;
+            line-height: 0.9;
+           
+            
       }
 `
 const Header = () => {
       return ( 
             <ImageContainer >
                   <Text>
-                        <p>Hello</p>
+                        <p>Hello,</p> <p>im Eduardo, </p> <p>fuck off</p>
                   </Text>
                  
             </ImageContainer>
