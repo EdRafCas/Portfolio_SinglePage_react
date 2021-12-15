@@ -4,8 +4,7 @@ import DesktopImage from './../img/desktop_blue.jpg'
 
 
 const ImageContainer = styled.div`
-      
-      height:43.75rem; /* 700px */
+      height:60rem; /* 700px */
       position:relative;
       display:flex;
       flex-direction:column;

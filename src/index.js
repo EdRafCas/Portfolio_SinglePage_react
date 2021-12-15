@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import Container from './Components/Container';
 import Header from './Components/Header';
+import LanguagesBar from './Components/LanguagesBar';
+import SocialNetworkBar from './Components/SocialNetworkBar';
 
 const Index = () => {
   return ( 
     <Container>
       <Header/>
-      <App/>
+      <LanguagesBar/>
+      <SocialNetworkBar/>
     </Container>
     
    );
