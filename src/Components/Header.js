@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import DesktopImage from './../img/desktop_blue.jpg'
 
 
+
 const ImageContainer = styled.div`
       height:60rem; /* 700px */
       position:relative;
@@ -21,8 +22,11 @@ const ImageContainer = styled.div`
             background-repeat: no-repeat;
             background-position: center;
             background-size: 176.25rem; /* 2820px */
+            
+            
       
       }
+      
       
       
      
@@ -34,14 +38,16 @@ const Text =styled.div`
       flex-direction:row;
       justify-content: center;
       gap:5px;
+      
       p{
             position: relative;
             color: #ffffff;  
             font-size: 5rem;
-            line-height: 0.9;
-           
+            line-height: 0.9; 
+            
             
       }
+      
 `
 const Header = () => {
       return ( 

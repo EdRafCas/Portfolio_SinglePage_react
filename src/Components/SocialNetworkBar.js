@@ -19,6 +19,7 @@ const SocialNetworkBar = () => {
                  <div><p>Face</p></div> 
                  <div><p>instagram</p>></div> 
                  <div><p>Github</p></div> 
+                 <div><p>Github</p></div> 
             </SocialNetworks>
        );
 }
