@@ -11,7 +11,7 @@ const Index = () => {
   return ( 
     <Container>
       <Header/>
-      <LanguagesBar/>
+
       <SocialNetworkBar/>
     </Container>
     
