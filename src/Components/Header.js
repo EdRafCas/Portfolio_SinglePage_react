@@ -9,19 +9,34 @@ import DesktopImage3 from './../img/tech.jpg'
 
 const Text =styled.div`
       display:flex;
-      flex-direction:row;
+      flex-direction:column;
       justify-content: center;
-      gap:5px;
-      :hover > div{
-            background:red; 
-      }
+      align-items:center;
+      gap:40px;
+      
+      
   
 `
-const Content =styled.div`
-            position: relative;
-            color: #ffffff;  
-            font-size: 5rem;
-            line-height: 0.9;
+const Content1 =styled.div`
+      position: relative;
+      color: #ffffff;  
+      font-size: 5rem;
+      line-height: 0.9;
+      font-weight:1000;
+
+`
+const Content2 =styled.div`
+      position: relative;
+      color: #fff;  
+      font-size: 5rem;
+      line-height: 0.9;
+      font-weight:1000;
+      transition:0.3s all ease;
+      text-transform:uppercase;
+      :hover{
+            transform:scale(1.2)
+      }
+
 `
 
 const LanguagesContainer= styled.div`
@@ -35,11 +50,11 @@ const LanguagesContainer= styled.div`
 
 const SampleLanguage1=styled.div`
       height:100%;
-      color:#000;
+      color:#fff;
       display:flex;
       flex-direction:column;
       justify-content:center;
-      background:#fff;
+      background:#000;
       transition: .5s ease all;
       :hover{
             border: none;
@@ -69,7 +84,8 @@ const SampleLanguage3=styled.div`
       display:flex;
       flex-direction:column;
       justify-content:center;
-      transition: .5s ease all;
+      align-items:center;
+      transition: .3s ease all;
       :hover{
             border: none;
             color: white;
@@ -80,20 +96,25 @@ const SampleLanguage3=styled.div`
 
 
 const Texto =styled.h1`
-            font-size:2rem;
-            text-align:center;
-            /* &:hover{
-                  font-size:3rem;   
-            } */
-            ${SampleLanguage1}:hover &{
-                  box-shadow: 5px 5px 5px 5px grey;
-                  color: green;
-                  background-color: white;
-            ${SampleLanguage2}:hover &{
-                  box-shadow: 5px 5px 5px 5px grey;
-                  color: green;
-                  background-color: white;
-      }  
+      font-size:2rem;
+      align-self:center;
+      /* &:hover{
+            font-size:3rem;   
+      } */
+      
+      ${SampleLanguage1}:hover &{
+            text-shadow: 5px 5px 5px grey;
+            font-size:3rem;
+      };
+      ${SampleLanguage2}:hover &{
+            text-shadow: 5px 5px 5px grey;
+            font-size:3rem;
+      };
+      ${SampleLanguage3}:hover &{
+            text-shadow: 5px 5px 5px grey;
+            font-size:3rem;
+      };
+      
 `
 
 
@@ -104,72 +125,72 @@ const ImageContainer = styled.div`
       flex-direction:column;
       justify-content:center;
       z-index:1;           
-      }
+      background:#000;
           
 `
 
 const FalseBackgroundDefault =styled.div`
-                  position:absolute;
-                  content:"";
-                  top: 0px;
-                  right:0px;
-                  bottom:0px;
-                  left:0px;
-                  opacity:0.9;
-                  background: url(${DesktopImageDefault});
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  background-size: 176.25rem; /* 2820px */
-                  ${Text}:hover + &{
-                        opacity:0.5;}
+            position:absolute;
+            content:"";
+            top: 0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            opacity:0.8;
+            background: url(${DesktopImageDefault});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 176.25rem; /* 2820px */
+            ${Text}:hover + &{
+                  opacity:0.5;}
 `
 
 const FalseBackground1 =styled.div`
-                  position:absolute;
-                  content:"";
-                  top: 0px;
-                  right:0px;
-                  bottom:0px;
-                  left:0px;
-                  opacity:0.90;
-                  background: url(${DesktopImage1});
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  background-size: 176.25rem; /* 2820px */
-                  ${Text}:hover + &{
-                        opacity:0.5;}
+            position:absolute;
+            content:"";
+            top: 0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            opacity:0.8;
+            background: url(${DesktopImage1});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 176.25rem; /* 2820px */
+            ${Text}:hover + &{
+                  opacity:0.5;}
 
 `
 
 const FalseBackground2 =styled.div`
-                  position:absolute;
-                  content:"";
-                  top: 0px;
-                  right:0px;
-                  bottom:0px;
-                  left:0px;
-                  opacity:0.90;
-                  background: url(${DesktopImage2});
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  background-size: 176.25rem; /* 2820px */
-                  ${Text}:hover + &{
-                        opacity:0.5;}
+            position:absolute;
+            content:"";
+            top: 0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            opacity:0.8;
+            background: url(${DesktopImage2});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 176.25rem; /* 2820px */
+            ${Text}:hover + &{
+                  opacity:0.5;}
 `
 const FalseBackground3 =styled.div`
-                  position:absolute;
-                  content:"";
-                  top: 0px;
-                  right:0px;
-                  bottom:0px;
-                  left:0px;
-                  opacity:0.90;
-                  background: url(${DesktopImage3});
-                  background-repeat: no-repeat;
-                  background-position: center;
-                  background-size: 176.25rem; /* 2820px */
-                  ${Text}:hover + &{
-                        opacity:0.5;}
+            position:absolute;
+            content:"";
+            top: 0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            opacity:0.90;
+            background: url(${DesktopImage3});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 176.25rem; /* 2820px */
+            ${Text}:hover + &{
+                  opacity:0.5;}
 `
 
 
@@ -180,6 +201,9 @@ const Header = () => {
       const [background1, changeBackground1] =useState(false)
       const [background2, changeBackground2] =useState(false)
       const [background3, changeBackground3] =useState(false)
+      const [content, changeContent] =useState(false)
+      const [content2, changeContent2] =useState(false)
+      const [content3, changeContent3] =useState(false)
 
       return ( 
             <>
@@ -194,7 +218,18 @@ const Header = () => {
                   }
                  
                   <Text>
-                        <Content >Hello,</Content><Content>im Eduardo,</Content> <Content>fuck off</Content>
+                        <Content1   onMouseEnter={()=>changeContent(true)}
+                                    onMouseLeave={()=>changeContent(false)}
+                        >{content ===true ? <Content2>Front-End</Content2>: "Hello." }
+                        </Content1>
+                        <Content1   onMouseEnter={()=>changeContent2(true)}
+                                    onMouseLeave={()=>changeContent2(false)}
+                        >{content2 ===true ? <Content2>Developer</Content2>: "Im Eduardo." }
+                        </Content1>
+                        <Content1   onMouseEnter={()=>changeContent3(true)}
+                                    onMouseLeave={()=>changeContent3(false)}
+                        >{content3 ===true ? <Content2>CONTACT</Content2>: "Welcome to my portfolio" }
+                        </Content1>
                   </Text>   
             </ImageContainer>
             
@@ -205,7 +240,7 @@ const Header = () => {
                   </SampleLanguage1>
                   <SampleLanguage2 onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
-                                    <Texto>JAVASCRITexto</Texto>
+                                    <Texto>JAVASCRIPT</Texto>
                   </SampleLanguage2>
                   <SampleLanguage3 onMouseEnter={()=>changeBackground3(true)}
                                     onMouseLeave={()=>changeBackground3(false)}>
