@@ -56,11 +56,15 @@ const SampleLanguage1=styled.div`
       justify-content:center;
       background:#000;
       transition: .5s ease all;
+     
+      
       :hover{
             border: none;
             color: white;
             background-color: black;
             transform: scale(1.3);
+            border:solid 3px red;
+            
       }
       
 `
@@ -76,6 +80,7 @@ const SampleLanguage2=styled.div`
             color: white;
             background-color: black;
             transform: scale(1.3);
+            border:solid 3px #fff;
       }
 `
 const SampleLanguage3=styled.div`
@@ -91,6 +96,7 @@ const SampleLanguage3=styled.div`
             color: white;
             background-color: black;
             transform: scale(1.3);
+            border:solid 3px blue;
       }
 `
 

@@ -7,6 +7,7 @@ const SocialNetworks=styled.div`
       display:flex;
       flex-direction:row;
       justify-content:center;
+      z-index:1;
       p{
             font-size:4rem;
             color:#000
