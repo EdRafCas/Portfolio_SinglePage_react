@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import DesktopImageDefault from './../img/desktop_blue.jpg'
-import DesktopImage1 from './../img/desktop_red.jpg'
-import DesktopImage2 from './../img/abstract.jpg'
-import DesktopImage3 from './../img/tech.jpg'
+import DesktopImageDefault from './../img/desktop_blue.jpg';
+import DesktopImage1 from './../img/desktop_red.jpg';
+import DesktopImage2 from './../img/abstract.jpg';
+import DesktopImage3 from './../img/tech.jpg';
+import ShopVideo from '../video/Try.mp4';
 
 
 
@@ -13,9 +14,6 @@ const Text =styled.div`
       justify-content: center;
       align-items:center;
       gap:40px;
-      
-      
-  
 `
 const Content1 =styled.div`
       position: relative;
@@ -23,7 +21,6 @@ const Content1 =styled.div`
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;
-
 `
 const Content2 =styled.div`
       position: relative;
@@ -36,7 +33,6 @@ const Content2 =styled.div`
       :hover{
             transform:scale(1.2)
       }
-
 `
 
 const LanguagesContainer= styled.div`
@@ -47,7 +43,6 @@ const LanguagesContainer= styled.div`
       background:#000;
       z-index:1;
 `
-
 const SampleLanguage1=styled.div`
       height:100%;
       color:#fff;
@@ -56,17 +51,13 @@ const SampleLanguage1=styled.div`
       justify-content:center;
       background:#000;
       transition: .5s ease all;
-     
-      
       :hover{
             border: none;
             color: white;
             background-color: black;
             transform: scale(1.3);
-            border:solid 3px red;
-            
+            border:solid 3px red;     
       }
-      
 `
 const SampleLanguage2=styled.div`
       height:100%;
@@ -100,7 +91,6 @@ const SampleLanguage3=styled.div`
       }
 `
 
-
 const Texto =styled.h1`
       font-size:2rem;
       align-self:center;
@@ -122,8 +112,6 @@ const Texto =styled.h1`
       };
       
 `
-
-
 const ImageContainer = styled.div`
       height:60rem; /* 700px */
       position:relative;
@@ -131,10 +119,8 @@ const ImageContainer = styled.div`
       flex-direction:column;
       justify-content:center;
       z-index:1;           
-      background:#000;
-          
+      background:#000;     
 `
-
 const FalseBackgroundDefault =styled.div`
             position:absolute;
             content:"";
@@ -150,7 +136,6 @@ const FalseBackgroundDefault =styled.div`
             ${Text}:hover + &{
                   opacity:0.5;}
 `
-
 const FalseBackground1 =styled.div`
             position:absolute;
             content:"";
@@ -158,16 +143,25 @@ const FalseBackground1 =styled.div`
             right:0px;
             bottom:0px;
             left:0px;
-            opacity:0.8;
-            background: url(${DesktopImage1});
+            opacity:0.5;
+            /* background: url(${DesktopImage1}); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: 176.25rem; /* 2820px */
             ${Text}:hover + &{
                   opacity:0.5;}
+`
+const VideoBackground=styled.video`
+      position:absolute;
+      width:100%;
+      left:50%;
+      top:50%;
+      height:100%;
+      
+      transform:translate(-50%,-50%);
+      z-index:-1;
 
 `
-
 const FalseBackground2 =styled.div`
             position:absolute;
             content:"";
@@ -199,9 +193,6 @@ const FalseBackground3 =styled.div`
                   opacity:0.5;}
 `
 
-
-
-
 const Header = () => {
 
       const [background1, changeBackground1] =useState(false)
@@ -215,7 +206,11 @@ const Header = () => {
             <>
             <ImageContainer >
                   {background1 === true ? 
-                  <FalseBackground1/>
+                  <FalseBackground1>
+                        <VideoBackground autoPlay loop muted>
+                              <source src={ShopVideo} type="video/mp4"/>
+                        </VideoBackground>
+                  </FalseBackground1>
                   : background2 === true ? 
                   <FalseBackground2/>
                   : background3 === true ? 
