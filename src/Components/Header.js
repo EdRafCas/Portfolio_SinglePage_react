@@ -149,7 +149,7 @@ const FalseBackground1 =styled.div`
             background-position: center;
             background-size: 176.25rem; /* 2820px */
             ${Text}:hover + &{
-                  opacity:0.5;}
+                  opacity:0.6;}
 `
 const VideoBackground=styled.video`
       position:absolute;
