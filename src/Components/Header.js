@@ -43,7 +43,7 @@ const LanguagesContainer= styled.div`
       background:#000;
       z-index:1;
 `
-const SampleLanguage1=styled.div`
+const Option1=styled.button`
       height:100%;
       color:#fff;
       display:flex;
@@ -51,6 +51,7 @@ const SampleLanguage1=styled.div`
       justify-content:center;
       background:#000;
       transition: .5s ease all;
+      border: none;
       :hover{
             border: none;
             color: white;
@@ -59,7 +60,7 @@ const SampleLanguage1=styled.div`
             border:solid 3px red;     
       }
 `
-const SampleLanguage2=styled.div`
+const Option2=styled.div`
       height:100%;
       color:#fff;
       display:flex;
@@ -74,7 +75,7 @@ const SampleLanguage2=styled.div`
             border:solid 3px #fff;
       }
 `
-const SampleLanguage3=styled.div`
+const Option3=styled.div`
       height:100%;
       color:#fff;
       display:flex;
@@ -98,15 +99,15 @@ const Texto =styled.h1`
             font-size:3rem;   
       } */
       
-      ${SampleLanguage1}:hover &{
+      ${Option1}:hover &{
             text-shadow: 5px 5px 5px grey;
             font-size:3rem;
       };
-      ${SampleLanguage2}:hover &{
+      ${Option2}:hover &{
             text-shadow: 5px 5px 5px grey;
             font-size:3rem;
       };
-      ${SampleLanguage3}:hover &{
+      ${Option3}:hover &{
             text-shadow: 5px 5px 5px grey;
             font-size:3rem;
       };
@@ -121,6 +122,8 @@ const ImageContainer = styled.div`
       z-index:1;           
       background:#000;     
 `
+
+
 const FalseBackgroundDefault =styled.div`
             position:absolute;
             content:"";
@@ -201,6 +204,7 @@ const Header = () => {
       const [content, changeContent] =useState(false)
       const [content2, changeContent2] =useState(false)
       const [content3, changeContent3] =useState(false)
+      
 
       return ( 
             <>
@@ -219,7 +223,7 @@ const Header = () => {
                   }
                  
                   <Text>
-                        <Content1   onMouseEnter={()=>changeContent(true)}
+                        <Content1  onMouseEnter={()=>changeContent(true)}
                                     onMouseLeave={()=>changeContent(false)}
                         >{content ===true ? <Content2>Front-End</Content2>: "Hello." }
                         </Content1>
@@ -235,18 +239,19 @@ const Header = () => {
             </ImageContainer>
             
             <LanguagesContainer>
-                  <SampleLanguage1  onMouseEnter={()=>changeBackground1(true)}
+                  <Option1
+                                    onMouseEnter={()=>changeBackground1(true)}
                                     onMouseLeave={()=>changeBackground1(false)}>
                                     <Texto>HTML/CSS</Texto>
-                  </SampleLanguage1>
-                  <SampleLanguage2 onMouseEnter={()=>changeBackground2(true)}
+                  </Option1>
+                  <Option2          onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
                                     <Texto>JAVASCRIPT</Texto>
-                  </SampleLanguage2>
-                  <SampleLanguage3 onMouseEnter={()=>changeBackground3(true)}
+                  </Option2>
+                  <Option3          onMouseEnter={()=>changeBackground3(true)}
                                     onMouseLeave={()=>changeBackground3(false)}>
                         <Texto>REACT</Texto>
-                  </SampleLanguage3>
+                  </Option3>
             </LanguagesContainer>
 
             </>
