@@ -4,7 +4,7 @@ import DesktopImageDefault from './../img/desktop_blue.jpg';
 import DesktopImage1 from './../img/desktop_red.jpg';
 import DesktopImage2 from './../img/abstract.jpg';
 import DesktopImage3 from './../img/tech.jpg';
-import ShopVideo from '../video/Try.mp4';
+
 
 
 
@@ -30,13 +30,14 @@ const Content2 =styled.div`
       font-weight:1000;
       transition:0.3s all ease;
       text-transform:uppercase;
+      width:100rem;
+      display:flex;
+      justify-content:center;
+      /* border:1px solid white; */
       :hover{
             transform:scale(1.2)
       }
 `
-
-
-
 
 const ImageContainer = styled.div`
       height:60rem; /* 700px */
@@ -47,7 +48,6 @@ const ImageContainer = styled.div`
       z-index:1;           
       background:#000;     
 `
-
 
 const FalseBackgroundDefault =styled.div`
       position:absolute;
@@ -61,8 +61,7 @@ const FalseBackgroundDefault =styled.div`
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
-      ${Text}:hover + &{
-            opacity:0.5;}
+      
 `
 const FalseBackground1 =styled.div`
       position:absolute;
@@ -72,53 +71,38 @@ const FalseBackground1 =styled.div`
       bottom:0px;
       left:0px;
       opacity:0.5;
-      /* background: url(${DesktopImage1}); */
+      background: url(${DesktopImage1});
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
-      ${Text}:hover + &{
-            opacity:0.6;}
-`
-const VideoBackground=styled.video`
-      position:absolute;
-      width:100%;
-      left:50%;
-      top:50%;
-      height:100%;
-      
-      transform:translate(-50%,-50%);
-      z-index:-1;
-
 `
 const FalseBackground2 =styled.div`
-            position:absolute;
-            content:"";
-            top: 0px;
-            right:0px;
-            bottom:0px;
-            left:0px;
-            opacity:0.8;
-            background: url(${DesktopImage2});
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 176.25rem; /* 2820px */
-            ${Text}:hover + &{
-                  opacity:0.5;}
+      position:absolute;
+      content:"";
+      top: 0px;
+      right:0px;
+      bottom:0px;
+      left:0px;
+      opacity:0.8;
+      background: url(${DesktopImage2});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 176.25rem; /* 2820px */
+            
 `
 const FalseBackground3 =styled.div`
-            position:absolute;
-            content:"";
-            top: 0px;
-            right:0px;
-            bottom:0px;
-            left:0px;
-            opacity:0.90;
-            background: url(${DesktopImage3});
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 176.25rem; /* 2820px */
-            ${Text}:hover + &{
-                  opacity:0.5;}
+      position:absolute;
+      content:"";
+      top: 0px;
+      right:0px;
+      bottom:0px;
+      left:0px;
+      opacity:0.90;
+      background: url(${DesktopImage3});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 176.25rem; /* 2820px */
+            
 `
 
 const Header = ({background1, background2, background3}) => {
@@ -132,18 +116,14 @@ const Header = ({background1, background2, background3}) => {
       return ( 
             <ImageContainer >
                   {background1 === true ? 
-                  <FalseBackground1>
-                        <VideoBackground autoPlay loop muted>
-                              <source src={ShopVideo} type="video/mp4"/>
-                        </VideoBackground>
-                  </FalseBackground1>
+                  <FalseBackground1/>
                   : background2 === true ? 
                   <FalseBackground2/>
                   : background3 === true ? 
                   <FalseBackground3/>
                   :<FalseBackgroundDefault/>
                   }
-                 
+                       
                   <TextContainer>
                         <Content1  onMouseEnter={()=>changeContent(true)}
                                     onMouseLeave={()=>changeContent(false)}
