@@ -1,6 +1,10 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import ShopVideo from '../video/Try.mp4';
+import {ReactComponent as IconJs} from './../icons/js_icon.svg'
+import {ReactComponent as IconCss} from './../icons/css3_icon.svg'
+import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
+import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 
 
 const ProjectsContainer = styled.div`
@@ -14,7 +18,6 @@ const ProjectsContainer = styled.div`
       z-index:1;           
       background:#000;
 `
-
 const Example=styled.div`
       position:relative;
       font-size:3rem;
@@ -23,7 +26,12 @@ const Example=styled.div`
       border: 3px solid #fff;
       display:flex;
       flex-direction:column;
-      width:60%;
+      width:50%;
+      
+      :hover{
+            transform:scale(1.2);
+            background:none;
+      }
 `
 const ShowProject =styled.div`
       position:absolute;
@@ -43,7 +51,6 @@ const VideoBackground=styled.video`
       left:50%;
       top:50%;
       height:100%;
-      
       transform:translate(-50%,-50%);
       z-index:-1;
 `
@@ -54,6 +61,24 @@ const Title=styled.h1`
 
 const Description=styled.p`
       font-size:1.5rem;
+`
+const IconContainer=styled.div`
+      display:flex;
+      flex-direction:row;
+      justify-content:flex-end;
+      gap:1rem;
+      height:50%;
+      padding-right:3rem;
+      
+`
+const Icons=styled.div`
+      svg{
+            height:100%;
+            width:auto;
+            
+      }
+      
+      
 `
 
 const Showcase = () => {
@@ -73,27 +98,39 @@ const Showcase = () => {
                                     onMouseLeave={()=>changeShowcase1(false)}>
                         <Title>this</Title>
                         <Description>This is a project Description</Description>
-
-
+                        <IconContainer>
+                              <Icons><IconHtml/></Icons>
+                              <Icons><IconCss/></Icons>
+                              <Icons><IconJs/></Icons>
+                              <Icons><IconReact/></Icons>
+                              
+                        </IconContainer>
                   </Example>
-                  <Example>
+                  <Example          onMouseEnter={()=>changeShowcase1(true)}
+                                    onMouseLeave={()=>changeShowcase1(false)}>
                         <Title>this</Title>
                         <Description>This is a project Description</Description>
-
-
+                        <IconContainer>
+                              <Icons><IconHtml/></Icons>
+                              <Icons><IconCss/></Icons>
+                              <Icons><IconJs/></Icons>
+                              <Icons><IconReact/></Icons>
+                              
+                        </IconContainer>
                   </Example>
-                  <Example>
+                  <Example          onMouseEnter={()=>changeShowcase1(true)}
+                                    onMouseLeave={()=>changeShowcase1(false)}>
                         <Title>this</Title>
                         <Description>This is a project Description</Description>
-
-
+                        <IconContainer>
+                              <Icons><IconHtml/></Icons>
+                              <Icons><IconCss/></Icons>
+                              <Icons><IconJs/></Icons>
+                              <Icons><IconReact/></Icons>
+                              
+                        </IconContainer>
                   </Example>
-                  <Example>
-                        <Title>this</Title>
-                        <Description>This is a project Description</Description>
-
-
-                  </Example>
+                 
                   
             </ProjectsContainer>
        );
