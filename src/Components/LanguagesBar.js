@@ -92,7 +92,7 @@ const LanguagesBar = ({changeBackground1, changeBackground2, changeBackground3})
                   <Option1 to={"/Projects"}
                                     onMouseEnter={()=>changeBackground1(true)}
                                     onMouseLeave={()=>changeBackground1(false)}>
-                                    <Texto>HTML/CSS</Texto>
+                                    <Texto>PROJECTS</Texto>
                   </Option1>
                   <Option2          onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
