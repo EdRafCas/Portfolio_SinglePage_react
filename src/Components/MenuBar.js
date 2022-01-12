@@ -86,7 +86,7 @@ const LanguagesContainer= styled.div`
 
 
 
-const LanguagesBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
+const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
       return ( 
             <LanguagesContainer>
                   <Option1 to={"/Projects"}
@@ -96,14 +96,14 @@ const LanguagesBar = ({changeBackground1, changeBackground2, changeBackground3})
                   </Option1>
                   <Option2          onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
-                                    <Texto>JAVASCRIPT</Texto>
+                                    <Texto>ABOUT ME</Texto>
                   </Option2>
                   <Option3          onMouseEnter={()=>changeBackground3(true)}
                                     onMouseLeave={()=>changeBackground3(false)}>
-                        <Texto>REACT</Texto>
+                        <Texto>CONTACT</Texto>
                   </Option3>
             </LanguagesContainer>
        );
 }
  
-export  default LanguagesBar;
+export  default MenuBar;

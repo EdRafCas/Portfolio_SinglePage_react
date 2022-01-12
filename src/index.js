@@ -5,7 +5,7 @@ import WebFont from 'webfontloader';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Container from './Components/Container';
 import Header from './Components/Header';
-import LanguagesBar from './Components/LanguagesBar';
+import MenuBar from './Components/MenuBar';
 import Showcase from './Components/Showcase';
 import SocialNetworkBar from './Components/SocialNetworkBar';
 
@@ -27,7 +27,7 @@ const Index = () => {
           <Route path="/" exact={true}  element={<Header background1={background1} background2={background2} background3={background3} />}/>   
           <Route path="/Projects" exact={true}  element={<Showcase />}/>   
         </Routes>
-        <LanguagesBar changeBackground1={changeBackground1} changeBackground2={changeBackground2} changeBackground3={changeBackground3}/>
+        <MenuBar changeBackground1={changeBackground1} changeBackground2={changeBackground2} changeBackground3={changeBackground3}/>
       </BrowserRouter>
       <SocialNetworkBar/>
     </Container>

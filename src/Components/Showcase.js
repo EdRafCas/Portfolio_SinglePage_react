@@ -9,41 +9,54 @@ import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconArrow} from './../icons/arrow_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 
-const Projects = [
+const ProjectsPortolio = [
       {
             id:1,
             name:"Spend manager",
             description:"App for easy management of expenses on a daily basis, with account creation, and classification by type and date and of each expense, hosted in firebase ",
-            direction:"https://react-app-lista-gastos-31e5d.web.app/",
-            HTML:true,
-            CSS:false,
-            JS:true,
-            React:false, 
-            firebase:false
-      },
-      {
-            id:2,
-            name:"Coffe Shop",
-            description:"Landing page for a coffe shop-like business",
-            direction:"https://react-app-lista-gastos-31e5d.web.app/",
-            HTML:true,
-            CSS:false,
-            JS:true,
-            React:false, 
-            firebase:true
-
-      },
-      {
-            id:3,
-            name:"Rock paper scissors",
-            description:"game simulator for rock-paper-scissors",
-            direction:"https://react-app-lista-gastos-31e5d.web.app/",
+            src:"https://react-app-lista-gastos-31e5d.web.app/",
             HTML:true,
             CSS:false,
             JS:true,
             React:true, 
-            firebase:true
+            Firebase:true
+      },
+      {
+            id:2,
+            name:"Shopping cart",
+            description:"Digital store for a clothing store, with shopping cart and search functionalities",
+            src:"https://cartshop-react.web.app/",
+            HTML:true,
+            CSS:true,
+            JS:true,
+            React:true, 
+            Firebase:true
+
+      },
+      {
+            id:3,
+            name:"Coffe Shop",
+            description:"Simplre landing page for a coffe shop-like business",
+            src:"https://coffee-shop-react.web.app/",
+            HTML:true,
+            CSS:true,
+            JS:true,
+            React:true, 
+            Firebase:true
+
+      },
+      {
+            id:4,
+            name:"Rock paper scissors",
+            description:"Dinamic simulator for rock-paper-scissors game vs CPU, with point counter",
+            src:"https://rock-paper-scissors-5a2c8.web.app/",
+            HTML:true,
+            CSS:true,
+            JS:true,
+            React:true, 
+            Firebase:true
       }
+      
 ]
 
 const ReturnButtom=styled(Link)`
@@ -83,7 +96,7 @@ const Example=styled.a`
       position:relative;
       font-size:3rem;
       color:#fff;
-      height:10rem;
+      min-width:22rem;
       border: 3px solid #fff;
       display:flex;
       flex-direction:column;
@@ -163,47 +176,33 @@ const Showcase = () => {
                         </VideoBackground>
                   </ShowProject>
                   :""}
-                  
+                  {ProjectsPortolio.map((Projects, index)=>{
+                        return(
+                              <Example    key={index}        
+                                          onMouseEnter={()=>changeShowcase1(true)}
+                                          onMouseLeave={()=>changeShowcase1(false)}
+                                          href={Projects.src}
+                                          target="__blank">
+                                    <Title>{Projects.name}</Title>
+                                    <Description>{Projects.description}</Description>
+                                    <IconContainer>
+                                          
+                                          <Icons><IconHtml/></Icons>
+                                          <Icons><IconCss/></Icons>
+                                          <Icons><IconJs/></Icons>
+                                          {Projects.React ?
+                                          <Icons><IconReact/></Icons>
+                                          :""}
+                                          {Projects.Firebase ?
+                                          <Icons><IconFirebase/></Icons>
+                                          :""}
+                                    </IconContainer>
+                              </Example>     
+                        )
+                  })}
                         
                  
-                  <Example          onMouseEnter={()=>changeShowcase1(true)}
-                                    onMouseLeave={()=>changeShowcase1(false)}
-                                    href={"https://react-app-lista-gastos-31e5d.web.app/"}>
-                        <Title>this</Title>
-                        <Description>This is a project Description</Description>
-                        <IconContainer>
-                              <Icons><IconHtml/></Icons>
-                              <Icons><IconCss/></Icons>
-                              <Icons><IconJs/></Icons>
-                              <Icons><IconReact/></Icons>
-                              <Icons><IconFirebase/></Icons>
-                              
-                        </IconContainer>
-                  </Example>
-                  <Example          onMouseEnter={()=>changeShowcase1(true)}
-                                    onMouseLeave={()=>changeShowcase1(false)}>
-                        <Title>this</Title>
-                        <Description>This is a project Description</Description>
-                        <IconContainer>
-                              <Icons><IconHtml/></Icons>
-                              <Icons><IconCss/></Icons>
-                              <Icons><IconJs/></Icons>
-                              <Icons><IconReact/></Icons>
-                              
-                        </IconContainer>
-                  </Example>
-                  <Example          onMouseEnter={()=>changeShowcase1(true)}
-                                    onMouseLeave={()=>changeShowcase1(false)}>
-                        <Title>this</Title>
-                        <Description>This is a project Description</Description>
-                        <IconContainer>
-                              <Icons><IconHtml/></Icons>
-                              <Icons><IconCss/></Icons>
-                              <Icons><IconJs/></Icons>
-                              <Icons><IconReact/></Icons>
-                              
-                        </IconContainer>
-                  </Example>
+                  
                   <ArrowContainer>
                         <ReturnButtom to="/">      
                               <IconArrow/>  
