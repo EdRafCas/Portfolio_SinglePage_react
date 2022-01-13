@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import styled from 'styled-components';
 import ShopVideo from '../video/Try.mp4';
 import { Link } from 'react-router-dom';
+import BackgroundVideo from '../Elements/BackgroundVideo';
 import {ReactComponent as IconJs} from './../icons/js_icon.svg'
 import {ReactComponent as IconCss} from './../icons/css3_icon.svg'
 import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
@@ -12,14 +13,15 @@ import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 const ProjectsPortolio = [
       {
             id:1,
-            name:"Spend manager",
+            name:"Spend manager App",
             description:"App for easy management of expenses on a daily basis, with account creation, and classification by type and date and of each expense, hosted in firebase ",
             src:"https://react-app-lista-gastos-31e5d.web.app/",
             HTML:true,
             CSS:false,
             JS:true,
             React:true, 
-            Firebase:true
+            Firebase:true,
+            background:"changeShowcase1(true)"
       },
       {
             id:2,
@@ -36,7 +38,7 @@ const ProjectsPortolio = [
       {
             id:3,
             name:"Coffe Shop",
-            description:"Simplre landing page for a coffe shop-like business",
+            description:"Landing page for a coffe shop-like business",
             src:"https://coffee-shop-react.web.app/",
             HTML:true,
             CSS:true,
@@ -48,7 +50,7 @@ const ProjectsPortolio = [
       {
             id:4,
             name:"Rock paper scissors",
-            description:"Dinamic simulator for rock-paper-scissors game vs CPU, with point counter",
+            description:"Dynamic simulator for rock-paper-scissors game vs CPU",
             src:"https://rock-paper-scissors-5a2c8.web.app/",
             HTML:true,
             CSS:true,
@@ -103,33 +105,14 @@ const Example=styled.a`
       justify-content:space-between;
       width:50%;
       text-decoration:none;
+      padding-left:0.5rem;
       
       :hover{
             transform:scale(1.2);
             background:none;
       }
 `
-const ShowProject =styled.div`
-      position:absolute;
-      content:"";
-      top: 0px;
-      right:0px;
-      bottom:0px;
-      left:0px;
-      opacity:0.5;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 176.25rem; /* 2820px */
-`
-const VideoBackground=styled.video`
-      position:absolute;
-      width:100%;
-      left:50%;
-      top:50%;
-      height:100%;
-      transform:translate(-50%,-50%);
-      z-index:-1;
-`
+
 
 const Title=styled.h1`
       font-size:2rem;
@@ -145,11 +128,11 @@ const IconContainer=styled.div`
       gap:0.2em;
       height:100%
       padding-right:1rem;
-      border:1px solid white;
+     /*  border:1px solid white; */
       
 `
 const Icons=styled.div`
-      border:1px solid white;
+      /* border:1px solid white; */
       svg{
             height:100%;
             max-height:4rem;
@@ -166,20 +149,20 @@ const Icons=styled.div`
 const Showcase = () => {
       const [showcase1, changeShowcase1] =useState(false)
 
+      const BackgrounChanger =()=>{
+            changeShowcase1(true)
+      }      
+
       return (
             
             <ProjectsContainer>
                   {showcase1 === true ? 
-                  <ShowProject>
-                        <VideoBackground autoPlay loop muted>
-                              <source src={ShopVideo} type="video/mp4"/>
-                        </VideoBackground>
-                  </ShowProject>
+                  <BackgroundVideo ShopVideo={ShopVideo}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
                               <Example    key={index}        
-                                          onMouseEnter={()=>changeShowcase1(true)}
+                                          onMouseEnter={BackgrounChanger}
                                           onMouseLeave={()=>changeShowcase1(false)}
                                           href={Projects.src}
                                           target="__blank">

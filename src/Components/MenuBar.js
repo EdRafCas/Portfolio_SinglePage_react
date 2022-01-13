@@ -20,13 +20,14 @@ const Option1=styled(Link)`
             border:solid 3px red;     
       }
 `
-const Option2=styled.div`
+const Option2=styled(Link)`
       height:100%;
       color:#fff;
       display:flex;
       flex-direction:column;
       justify-content:center;
       transition: .5s ease all;
+      text-decoration:none;
       :hover{
             border: none;
             color: white;
@@ -93,8 +94,9 @@ const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
                                     onMouseEnter={()=>changeBackground1(true)}
                                     onMouseLeave={()=>changeBackground1(false)}>
                                     <Texto>PROJECTS</Texto>
-                  </Option1>
-                  <Option2          onMouseEnter={()=>changeBackground2(true)}
+                  </Option1 >
+                  <Option2  to={"/Projects"}        
+                                    onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
                                     <Texto>ABOUT ME</Texto>
                   </Option2>
