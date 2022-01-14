@@ -14,6 +14,7 @@ const ProjectsPortolio = [
       {
             id:1,
             name:"Spend manager App",
+            tag:"manager-app",
             description:"App for easy management of expenses on a daily basis, with account creation, and classification by type and date and of each expense, hosted in firebase ",
             src:"https://react-app-lista-gastos-31e5d.web.app/",
             HTML:true,
@@ -26,6 +27,7 @@ const ProjectsPortolio = [
       {
             id:2,
             name:"Shopping cart",
+            tag:"shopping-app",
             description:"Digital store for a clothing store, with shopping cart and search functionalities",
             src:"https://cartshop-react.web.app/",
             HTML:true,
@@ -38,6 +40,7 @@ const ProjectsPortolio = [
       {
             id:3,
             name:"Coffe Shop",
+            tag:"coffe-shop",
             description:"Landing page for a coffe shop-like business",
             src:"https://coffee-shop-react.web.app/",
             HTML:true,
@@ -50,6 +53,7 @@ const ProjectsPortolio = [
       {
             id:4,
             name:"Rock paper scissors",
+            tag:"rock-paper-scissors",
             description:"Dynamic simulator for rock-paper-scissors game vs CPU",
             src:"https://rock-paper-scissors-5a2c8.web.app/",
             HTML:true,
@@ -148,24 +152,55 @@ const Icons=styled.div`
 
 const Showcase = () => {
       const [showcase1, changeShowcase1] =useState(false)
+      const [showcase2, changeShowcase2] =useState(false)
+      const [showcase3, changeShowcase3] =useState(false)
+      const [showcase4, changeShowcase4] =useState(false)
 
-      const BackgrounChanger =()=>{
-            changeShowcase1(true)
-      }      
+      const BackgrounChanger=(tagname)=>{
+
+            if(tagname ==="manager-app"){
+                  changeShowcase1(true)
+            }if(tagname ==="shopping-app"){
+                  changeShowcase2(true)
+            }if(tagname==="coffe-shop"){
+                  changeShowcase3(true)
+            }if(tagname==="rock-paper-scissors"){
+                  changeShowcase4(true)
+            }
+      }
+      const BackgrounReverser=(tagname)=>{
+
+            if(tagname ==="manager-app"){
+                  changeShowcase1(false)
+            }if(tagname ==="shopping-app"){
+                  changeShowcase2(false)
+            }if(tagname==="coffe-shop"){
+                  changeShowcase3(false)
+            }if(tagname==="rock-paper-scissors"){
+                  changeShowcase4(false)
+            }
+      }            
 
       return (
             
             <ProjectsContainer>
                   {showcase1 === true ? 
                   <BackgroundVideo ShopVideo={ShopVideo}/>
+                  :showcase2 === true ? 
+                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  :showcase3 === true ? 
+                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  :showcase4 === true ? 
+                  <BackgroundVideo ShopVideo={ShopVideo}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
                               <Example    key={index}        
-                                          onMouseEnter={BackgrounChanger}
-                                          onMouseLeave={()=>changeShowcase1(false)}
+                                          onMouseEnter={()=>BackgrounChanger(Projects.tag)}
+                                          onMouseLeave={()=>BackgrounReverser(Projects.tag)}
                                           href={Projects.src}
-                                          target="__blank">
+                                          target="__blank"
+                                          >
                                     <Title>{Projects.name}</Title>
                                     <Description>{Projects.description}</Description>
                                     <IconContainer>

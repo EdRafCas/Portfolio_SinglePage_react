@@ -7,15 +7,19 @@
 }
 
 body {
-  background: #F9F9F9;
+  background:grey;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  overflow-x: hidden;
+  
 }
 
 :root {
   font-size: 16px;
+  
 }
 
 #root {

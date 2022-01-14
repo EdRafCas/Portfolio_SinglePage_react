@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background: #fff;
+    background: #000;
     width: 100%;
+    max-width:200rem;
     min-width:71.25rem; /* 1140px */
     /* max-width: 71.25rem; /* 1140px */ */
     height: 100%;
@@ -15,6 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+    
     z-index: 100;
 
     @media(max-width: 71.25rem){ 

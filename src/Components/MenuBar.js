@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Option1=styled(Link)`
       height:100%;
+      width:100%;
       color:#fff;
       display:flex;
       flex-direction:column;
       justify-content:center;
-      background:#000;
+      margin:auto;
       transition: .5s ease all;
-      border: none;
       text-decoration:none;
       :hover{
             border: none;
@@ -22,10 +22,12 @@ const Option1=styled(Link)`
 `
 const Option2=styled(Link)`
       height:100%;
+      width:100%;
       color:#fff;
       display:flex;
       flex-direction:column;
       justify-content:center;
+      margin:auto;
       transition: .5s ease all;
       text-decoration:none;
       :hover{
@@ -36,14 +38,16 @@ const Option2=styled(Link)`
             border:solid 3px #fff;
       }
 `
-const Option3=styled.div`
+const Option3=styled(Link)`
       height:100%;
+      width:100%;
       color:#fff;
       display:flex;
       flex-direction:column;
       justify-content:center;
-      align-items:center;
-      transition: .3s ease all;
+      margin:auto;
+      transition: .5s ease all;
+      text-decoration:none;
       :hover{
             border: none;
             color: white;
@@ -74,12 +78,17 @@ const Texto =styled.h1`
       };
       
 `
-const LanguagesContainer= styled.div`
+const OptionsContainer= styled.div`
       width:100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr 1fr 1fr);
       height:15rem;
       background:#000;
+      overflow: hidden
+      position:relative;
+      overflow:block;
+      
+      
       z-index:1;
 `
 
@@ -89,7 +98,7 @@ const LanguagesContainer= styled.div`
 
 const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
       return ( 
-            <LanguagesContainer>
+            <OptionsContainer>
                   <Option1 to={"/Projects"}
                                     onMouseEnter={()=>changeBackground1(true)}
                                     onMouseLeave={()=>changeBackground1(false)}>
@@ -100,11 +109,12 @@ const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
                                     onMouseLeave={()=>changeBackground2(false)}>
                                     <Texto>ABOUT ME</Texto>
                   </Option2>
-                  <Option3          onMouseEnter={()=>changeBackground3(true)}
+                  <Option3  to={"/Projects"}         
+                                    onMouseEnter={()=>changeBackground3(true)}
                                     onMouseLeave={()=>changeBackground3(false)}>
                         <Texto>CONTACT</Texto>
                   </Option3>
-            </LanguagesContainer>
+            </OptionsContainer>
        );
 }
  

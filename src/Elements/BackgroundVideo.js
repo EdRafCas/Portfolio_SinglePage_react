@@ -9,7 +9,7 @@ const ShowProject =styled.div`
       right:0px;
       bottom:0px;
       left:0px;
-      opacity:0.5;
+      opacity:1.0;
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
