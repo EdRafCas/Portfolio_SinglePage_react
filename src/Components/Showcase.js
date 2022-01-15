@@ -1,6 +1,9 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import ShopVideo from '../video/Try.mp4';
+import ShoppingCart from '../video/shopping_cart_video.mp4';
+import CoffeShop from '../video/coffee_shop_video.mp4';
+import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
 import { Link } from 'react-router-dom';
 import BackgroundVideo from '../Elements/BackgroundVideo';
 import {ReactComponent as IconJs} from './../icons/js_icon.svg'
@@ -143,9 +146,7 @@ const Icons=styled.div`
             width:auto;
             min-width:0.5em;
             fill:white;
-            
       }
-      
 `
 
 
@@ -187,11 +188,11 @@ const Showcase = () => {
                   {showcase1 === true ? 
                   <BackgroundVideo ShopVideo={ShopVideo}/>
                   :showcase2 === true ? 
-                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  <BackgroundVideo ShopVideo={ShoppingCart}/>
                   :showcase3 === true ? 
-                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  <BackgroundVideo ShopVideo={CoffeShop}/>
                   :showcase4 === true ? 
-                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  <BackgroundVideo ShopVideo={RockPaperScissors}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
