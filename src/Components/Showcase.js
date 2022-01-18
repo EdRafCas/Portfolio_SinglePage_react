@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import ShopVideo from '../video/Try.mp4';
+import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
 import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
@@ -102,6 +103,7 @@ const ProjectsContainer = styled.div`
       background:#000;
 `
 const Example=styled.a`
+      padding:1rem;
       position:relative;
       font-size:3rem;
       color:#fff;
@@ -110,6 +112,7 @@ const Example=styled.a`
       display:flex;
       flex-direction:column;
       justify-content:space-between;
+     /*  width:50%; */
       width:50%;
       text-decoration:none;
       padding-left:0.5rem;
@@ -123,18 +126,23 @@ const Example=styled.a`
 
 const Title=styled.h1`
       font-size:2rem;
+      padding-bottom:1rem;
+      padding-left:2rem;
 `
 
 const Description=styled.p`
-      font-size:1.5rem;
+      font-size:1.2rem;
+      padding-left:2rem;
+      padding-bottom:1rem;
 `
 const IconContainer=styled.div`
       display:flex;
       flex-direction:row;
       justify-content:flex-end;
-      gap:0.2em;
-      height:100%
-      padding-right:1rem;
+      gap:0.5em;
+
+      height:3rem;
+      padding-right:3rem;
      /*  border:1px solid white; */
       
 `
@@ -186,7 +194,7 @@ const Showcase = () => {
             
             <ProjectsContainer>
                   {showcase1 === true ? 
-                  <BackgroundVideo ShopVideo={ShopVideo}/>
+                  <BackgroundVideo ShopVideo={SpendManager}/>
                   :showcase2 === true ? 
                   <BackgroundVideo ShopVideo={ShoppingCart}/>
                   :showcase3 === true ? 

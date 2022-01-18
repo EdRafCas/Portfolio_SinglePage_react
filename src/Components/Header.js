@@ -115,14 +115,15 @@ const Header = ({background1, background2, background3}) => {
 
       return ( 
             <ImageContainer >
-                  {background1 === true ? 
+                  {/* {background1 === true ? 
                   <FalseBackground1/>
                   : background2 === true ? 
                   <FalseBackground2/>
                   : background3 === true ? 
                   <FalseBackground3/>
                   :<FalseBackgroundDefault/>
-                  }
+                  } */}
+                  <FalseBackgroundDefault/>
                        
                   <TextContainer>
                         <Content1  onMouseEnter={()=>changeContent(true)}
