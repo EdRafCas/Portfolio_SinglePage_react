@@ -7,6 +7,7 @@ import Container from './Components/Container';
 import Header from './Components/Header';
 import MenuBar from './Components/MenuBar';
 import Showcase from './Components/Showcase';
+import AboutMe from './Components/AboutMe';
 
 
 WebFont.load({
@@ -25,7 +26,8 @@ const Index = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact={true}  element={<Header background1={background1} background2={background2} background3={background3} />}/>   
-          <Route path="/Projects" exact={true}  element={<Showcase />}/>   
+          <Route path="/Projects" exact={true}  element={<Showcase />}/>  
+          <Route path="/AboutMe" exact={true} element ={<AboutMe />}/> 
         </Routes>
         <MenuBar changeBackground1={changeBackground1} changeBackground2={changeBackground2} changeBackground3={changeBackground3}/>
       </BrowserRouter>

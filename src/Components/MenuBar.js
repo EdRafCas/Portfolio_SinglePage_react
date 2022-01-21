@@ -104,7 +104,7 @@ const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
                                     onMouseLeave={()=>changeBackground1(false)}>
                                     <Texto>PROJECTS</Texto>
                   </Option1 >
-                  <Option2  to={"/Projects"}        
+                  <Option2  to={"/AboutMe"}        
                                     onMouseEnter={()=>changeBackground2(true)}
                                     onMouseLeave={()=>changeBackground2(false)}>
                                     <Texto>ABOUT ME</Texto>

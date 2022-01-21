@@ -70,25 +70,26 @@ const ProjectsPortolio = [
 ]
 
 const ReturnButtom=styled(Link)`
-      border:1px solid white;
-      background:#fff;
-      height: auto; 
+      display:blocK;
+      height:5rem;
+      width:auto;
+      
+      
       svg{
             height:100%;
             width:auto;
+            fill:#fff;
             
       }
       
 `
 const ArrowContainer=styled.div`
       position:absolute;
-      width:8em;
-      height:5em;
-      top:5em;
-      right:5em;
-      padding:1em;
+      top:5rem;
+      right:17rem;
+      padding:1rem;
       border-radius: 0.625rem;
-      background:white;    
+      background:#950101;
 `
 
 const ProjectsContainer = styled.div`
@@ -108,7 +109,8 @@ const Example=styled.a`
       font-size:3rem;
       color:#fff;
       min-width:22rem;
-      border: 3px solid #fff;
+      border: 5px solid #3D0000;
+      border-radius:1rem;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
@@ -153,7 +155,7 @@ const Icons=styled.div`
             max-height:4rem;
             width:auto;
             min-width:0.5em;
-            fill:white;
+            fill:#fff;
       }
 `
 
