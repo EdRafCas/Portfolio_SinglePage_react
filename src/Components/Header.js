@@ -17,14 +17,14 @@ const TextContainer =styled.div`
 `
 const Content1 =styled.div`
       position: relative;
-      color: #ffffff;  
+      color:#ccd6f6;  
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;
 `
 const Content2 =styled.div`
       position: relative;
-      color: #fff;  
+      color:#ccd6f6; 
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;

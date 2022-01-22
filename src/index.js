@@ -8,6 +8,7 @@ import Header from './Components/Header';
 import MenuBar from './Components/MenuBar';
 import Showcase from './Components/Showcase';
 import AboutMe from './Components/AboutMe';
+import SocialNetworkBar from './Components/SocialNetworkBar';
 
 
 WebFont.load({
@@ -31,7 +32,7 @@ const Index = () => {
         </Routes>
         <MenuBar changeBackground1={changeBackground1} changeBackground2={changeBackground2} changeBackground3={changeBackground3}/>
       </BrowserRouter>
-      
+      <SocialNetworkBar/>
     </Container>
     
    );

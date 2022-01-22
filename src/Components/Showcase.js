@@ -72,25 +72,23 @@ const ProjectsPortolio = [
 const ReturnButtom=styled(Link)`
       display:blocK;
       height:5rem;
-      width:auto;
-      
-      
+      width:auto;      
       svg{
             height:100%;
             width:auto;
-            fill:#fff;
+            fill:#ccd6f6;;
             
       }
       
 `
-const ArrowContainer=styled.div`
+/* const ArrowContainer=styled.div`
       position:absolute;
       top:5rem;
-      right:17rem;
+      right:19rem;
       padding:1rem;
       border-radius: 0.625rem;
       background:#950101;
-`
+` */
 
 const ProjectsContainer = styled.div`
       position:relative;      
@@ -99,7 +97,7 @@ const ProjectsContainer = styled.div`
       flex-direction:column;
       justify-content:space-evenly;
       align-items:flex-start;
-      padding-left:12rem;
+      padding-left:20rem;
       z-index:1;           
       background:#000;
 `
@@ -107,9 +105,9 @@ const Example=styled.a`
       padding:1rem;
       position:relative;
       font-size:3rem;
-      color:#fff;
+      color:#ccd6f6;
       min-width:22rem;
-      border: 5px solid #3D0000;
+      border: 5px solid #950101;
       border-radius:1rem;
       display:flex;
       flex-direction:column;
@@ -155,10 +153,45 @@ const Icons=styled.div`
             max-height:4rem;
             width:auto;
             min-width:0.5em;
-            fill:#fff;
+            fill:#ccd6f6;
       }
 `
+const ButtonModel=styled(Link)`
+      display: flex;
+      position:absolute;
+      top:5rem;
+      right:19rem;
+      height: 5rem;
+      width: 8rem;
+      align-items: center;
+      justify-content: center;
+      background-color: #eeeeee4b;
+      border-radius: 3px;
+      letter-spacing: 1px;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      border: none;
+      background: #fff;
+      text-decoration:none;
+      font-size: 1.5rem;
+      font-weight:800;
+      color:#000;
+      svg{
+            margin-right: 5px;
+            margin-left: 5px;
+            font-size: 1.5rem;
+            transition: all 0.4s ease-in;
+      }
+      :hover{
+            box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+            transform: translateY(-2px);
+            svg{
+                  font-size: 1.3rem;
+                  transform: translateX(-10px);
+            }
+      }
 
+`
 
 
 const Showcase = () => {
@@ -231,12 +264,17 @@ const Showcase = () => {
                   })}
                         
                  
-                  
-                  <ArrowContainer>
+                  <ButtonModel to="/">
+                        <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+                              <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+                        </svg>
+                        <span>Back</span>
+                  </ButtonModel>
+                  {/* <ArrowContainer>
                         <ReturnButtom to="/">      
                               <IconArrow/>  
                         </ReturnButtom>                 
-                  </ArrowContainer>
+                  </ArrowContainer> */}
                   
             </ProjectsContainer>
                   

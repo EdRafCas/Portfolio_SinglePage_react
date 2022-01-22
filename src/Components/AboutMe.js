@@ -31,7 +31,7 @@ const Title=styled.h1`
 
 const Description=styled.p`
       max-width:100rem;
-      font-size:1.2rem;
+      font-size:1.5rem;
       padding:2rem;
      
 `
@@ -40,11 +40,20 @@ const AboutMe = () => {
       return ( 
             <DescriptionContainer>
                   <Card>
-                        <Title>Eduardo Castillo</Title>
+                        <Title>About Me</Title>
                         <Description>
-                              29 years old civil engineer, self taught front end developer (in development), aiming to learn and create, to build and improve.
-                              
+                              Hello! My name is Eduardo and im a long time enthusiast of learning new things, i went to college and graduated from Civil engineering, with time and effort i search for a new challenge, a new career and a new passion.                               
+                              <br/>
+                              <br/>
+                              Turns out, that career was web development.                   
+                              <br/>
+                              <br/>
+                              I began to learn by my own means at the start of 2021, HTML/CSS/JS were the beginning of the journey, React/JS(ES6)/Firebase soon followed.               
+                              <br/>
+                              <br/>
+                              Im a self taught front end developer (in development), aiming to learn and create, to build and improve.
                         </Description>
+
 
 
                   </Card>

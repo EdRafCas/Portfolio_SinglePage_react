@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SocialNetworks=styled.div`
-      width:100%;
+      position:absolute;
+      top:15rem;
+      left:0rem;
+      width:10rem;
       background:#fff;
       display:flex;
-      flex-direction:row;
+      flex-direction:column;
       justify-content:center;
       z-index:1;
       p{

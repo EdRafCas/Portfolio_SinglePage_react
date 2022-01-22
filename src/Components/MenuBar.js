@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Option1=styled(Link)`
-      height:100%;
-      width:100%;
-      color:#fff;
+      height:50%;
+      width:50%;
+      color:#ccd6f6;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -13,17 +13,16 @@ const Option1=styled(Link)`
       transition: .5s ease all;
       text-decoration:none;
       :hover{
-            border: none;
-            color: white;
+            
             background-color: black;
             transform: scale(1.3);
             border:solid 3px red;     
       }
 `
 const Option2=styled(Link)`
-      height:100%;
-      width:100%;
-      color:#fff;
+      height:50%;
+      width:50%;
+      color:#ccd6f6;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -31,17 +30,16 @@ const Option2=styled(Link)`
       transition: .5s ease all;
       text-decoration:none;
       :hover{
-            border: none;
-            color: white;
+            
             background-color: black;
             transform: scale(1.3);
             border:solid 3px #fff;
       }
 `
 const Option3=styled(Link)`
-      height:100%;
-      width:100%;
-      color:#fff;
+      height:50%;
+      width:50%;
+      color:#ccd6f6;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -49,8 +47,7 @@ const Option3=styled(Link)`
       transition: .5s ease all;
       text-decoration:none;
       :hover{
-            border: none;
-            color: white;
+            
             background-color: black;
             transform: scale(1.3);
             border:solid 3px blue;
@@ -87,8 +84,6 @@ const OptionsContainer= styled.div`
       overflow: hidden
       position:relative;
       overflow:block;
-      
-      
       z-index:1;
 `
 
