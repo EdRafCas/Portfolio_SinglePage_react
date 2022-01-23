@@ -11,7 +11,6 @@ import {ReactComponent as IconJs} from './../icons/js_icon.svg'
 import {ReactComponent as IconCss} from './../icons/css3_icon.svg'
 import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
 import {ReactComponent as IconReact} from './../icons/react_icon.svg'
-import {ReactComponent as IconArrow} from './../icons/arrow_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 
 const ProjectsPortolio = [
@@ -69,27 +68,6 @@ const ProjectsPortolio = [
       
 ]
 
-const ReturnButtom=styled(Link)`
-      display:blocK;
-      height:5rem;
-      width:auto;      
-      svg{
-            height:100%;
-            width:auto;
-            fill:#ccd6f6;;
-            
-      }
-      
-`
-/* const ArrowContainer=styled.div`
-      position:absolute;
-      top:5rem;
-      right:19rem;
-      padding:1rem;
-      border-radius: 0.625rem;
-      background:#950101;
-` */
-
 const ProjectsContainer = styled.div`
       position:relative;      
       height:60rem; /* 700px */
@@ -106,7 +84,7 @@ const Example=styled.a`
       position:relative;
       font-size:3rem;
       color:#ccd6f6;
-      min-width:22rem;
+      min-width:27rem;
       border: 5px solid #950101;
       border-radius:1rem;
       display:flex;
@@ -160,18 +138,17 @@ const ButtonModel=styled(Link)`
       display: flex;
       position:absolute;
       top:5rem;
-      right:19rem;
+      right:5%;
       height: 5rem;
       width: 8rem;
       align-items: center;
       justify-content: center;
-      background-color: #eeeeee4b;
       border-radius: 3px;
       letter-spacing: 1px;
       transition: all 0.2s linear;
       cursor: pointer;
       border: none;
-      background: #fff;
+      background: #ccd6f6;
       text-decoration:none;
       font-size: 1.5rem;
       font-weight:800;
@@ -183,7 +160,7 @@ const ButtonModel=styled(Link)`
             transition: all 0.4s ease-in;
       }
       :hover{
-            box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+            box-shadow: 9px 9px 33px #ccd6f6, -9px -9px 33px #ccd6f6;
             transform: translateY(-2px);
             svg{
                   font-size: 1.3rem;

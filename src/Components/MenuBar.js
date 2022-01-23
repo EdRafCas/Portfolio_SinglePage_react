@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Option1=styled(Link)`
-      height:50%;
-      width:50%;
-      color:#ccd6f6;
       display:flex;
+      height:50%;
+      width:auto;
+      padding:0.5rem;
+      color:#ccd6f6;
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -20,10 +21,11 @@ const Option1=styled(Link)`
       }
 `
 const Option2=styled(Link)`
-      height:50%;
-      width:50%;
-      color:#ccd6f6;
       display:flex;
+      height:50%;
+      width:auto;
+      padding:0.5rem;
+      color:#ccd6f6;
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -37,10 +39,11 @@ const Option2=styled(Link)`
       }
 `
 const Option3=styled(Link)`
-      height:50%;
-      width:50%;
-      color:#ccd6f6;
       display:flex;
+      height:50%;
+      width:auto;
+      padding:0.5rem;
+      color:#ccd6f6;
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -57,6 +60,7 @@ const Option3=styled(Link)`
 const Texto =styled.h1`
       font-size:2rem;
       align-self:center;
+      width:auto;
       /* &:hover{
             font-size:3rem;   
       } */
@@ -79,7 +83,7 @@ const OptionsContainer= styled.div`
       width:100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr 1fr 1fr);
-      height:15rem;
+      height:10rem;
       background:#000;
       overflow: hidden
       position:relative;

@@ -7,7 +7,7 @@ const Container = styled.div`
     min-width:71.25rem; /* 1140px */
     /* max-width: 71.25rem; /* 1140px */ */
     height: 100%;
-    min-height:80rem; /* 1280px */
+    min-height:70rem; /* 1280px */
     overflow-y: auto;
     /* box-shadow: 0px 1.25rem 2.5rem rgba(0,0,0,.05); */
     border-radius: 0; 
