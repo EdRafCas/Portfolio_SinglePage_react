@@ -8,35 +8,37 @@ const SocialNetworks=styled.div`
       position:absolute;
       top:40%;
       left:0rem;
-      max-width:4rem;
-      width:4rem;
+      max-width:3rem;
+      min-width:3rem;
+      gap:5px;
       display:flex;
       flex-direction:column;
       justify-content:center;
       z-index:1;
-      color:#ccd6f6;
+      cursor:pointer;
+      text-decoration:none;
       p{
             font-size:4rem;
-            color:#000
       }
 `
-const Icons=styled.div`
+const Icons=styled.a`
       /* border:1px solid white; */
       svg{
             height:100%;
             max-height:5rem;
             width:auto;
             min-width:0.5em;
-            fill:#ccd6f6;
+            color:#ccd6f6;
+            
       }
 `
 
 const SocialNetworkBar = () => {
       return ( 
             <SocialNetworks>
-                 <Icons><IconGithub/></Icons>
-                 <Icons><IconTwitter/></Icons>
-                 <Icons><IconInstagram/></Icons>
+                 <Icons href={"https://github.com/EdRafCas"} target="__blank"><IconGithub/></Icons>
+                 <Icons href={"https://twitter.com/Eduardrcc"} target="__blank"><IconTwitter/></Icons>
+                 <Icons href={"https://www.instagram.com/eduardooraf/"} target="__blank"><IconInstagram/></Icons>
                  
             </SocialNetworks>
        );

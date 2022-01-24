@@ -21,6 +21,7 @@ const Content1 =styled.div`
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;
+      cursor:pointer;
 `
 const Content2 =styled.div`
       position: relative;
@@ -33,6 +34,7 @@ const Content2 =styled.div`
       width:100rem;
       display:flex;
       justify-content:center;
+      cursor:pointer;
       /* border:1px solid white; */
       :hover{
             transform:scale(1.2)

@@ -9,6 +9,7 @@ const DescriptionContainer = styled.div`
       z-index:1;           
       /* border:solid #fff 3px; */
       width:100%;
+      
 
 `
 
@@ -20,6 +21,8 @@ const Card =styled.div`
       color:#fff;
       border-radius:1.5rem;
       max-width:60%;
+      cursor:auto;
+      color:#ccd6f6;
 
 `
 const Title=styled.h1`

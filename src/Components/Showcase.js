@@ -118,11 +118,9 @@ const IconContainer=styled.div`
       flex-direction:row;
       justify-content:flex-end;
       gap:0.5em;
-
       height:3rem;
       padding-right:3rem;
      /*  border:1px solid white; */
-      
 `
 const Icons=styled.div`
       /* border:1px solid white; */
@@ -143,11 +141,11 @@ const ButtonModel=styled(Link)`
       width: 8rem;
       align-items: center;
       justify-content: center;
-      border-radius: 3px;
+      border-radius: 10px;
+      border: none;
       letter-spacing: 1px;
       transition: all 0.2s linear;
       cursor: pointer;
-      border: none;
       background: #ccd6f6;
       text-decoration:none;
       font-size: 1.5rem;
@@ -167,7 +165,6 @@ const ButtonModel=styled(Link)`
                   transform: translateX(-10px);
             }
       }
-
 `
 
 
