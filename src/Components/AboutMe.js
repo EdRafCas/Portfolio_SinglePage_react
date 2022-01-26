@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../Theme';
 
 const DescriptionContainer = styled.div`
       position:relative;      
@@ -14,7 +15,7 @@ const DescriptionContainer = styled.div`
 `
 
 const Card =styled.div`
-      border:solid #3D0000 10px;
+      border:solid ${theme.mainBorder} 10px;
       margin:auto;
       height:auto;
       width:auto;

@@ -4,7 +4,7 @@ import DesktopImageDefault from './../img/desktop_blue.jpg';
 import DesktopImage1 from './../img/desktop_red.jpg';
 import DesktopImage2 from './../img/abstract.jpg';
 import DesktopImage3 from './../img/tech.jpg';
-
+import theme from '../Theme';
 
 
 
@@ -17,7 +17,7 @@ const TextContainer =styled.div`
 `
 const Content1 =styled.div`
       position: relative;
-      color:#ccd6f6;  
+      color:${theme.mainText};  
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;
@@ -25,7 +25,7 @@ const Content1 =styled.div`
 `
 const Content2 =styled.div`
       position: relative;
-      color:#ccd6f6; 
+      color:${theme.mainText}; 
       font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;

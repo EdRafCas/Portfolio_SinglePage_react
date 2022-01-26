@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
+import theme from '../Theme';
 
 const ContactContainer = styled.div`
       position:relative;      
@@ -9,7 +10,7 @@ const ContactContainer = styled.div`
       z-index:1;           
       /* border:solid #fff 3px; */
       width:100%;
-      background:white;
+      background:#000;
       justify-content:center;
       margin:auto;
       padding:10rem 10rem;
@@ -41,7 +42,7 @@ const Formulary = styled.form`
 `
 
 const Card =styled.div`
-      border:solid #3D0000 10px;
+      border:solid ${theme.mainBorder} 10px;
       margin:auto;
       height:auto;
       width:auto;
@@ -49,7 +50,7 @@ const Card =styled.div`
       border-radius:1.5rem;
       max-width:60%;
       cursor:auto;
-      color:#ccd6f6;
+      color:${theme.mainText};
 `
 const Title=styled.h1`
       font-size:2rem;
@@ -102,7 +103,7 @@ const ContactButton=styled.button`
 const Input = styled.input`
     font-size: 12px;
     text-transform: uppercase;
-    border: 3px solid #000;
+    border: 3px solid ${theme.mainBorder};
     outline: none;
     height: ${(props) => props.name==="message" ? "150px"
                         : props.name==="email" ? "50px"    
@@ -116,7 +117,7 @@ const TextArea =styled.textarea`
       font-size: 12px;
       text-transform: uppercase;
       border: none;
-      border: 3px solid #000;
+      border: 3px solid ${theme.mainBorder};
       outline: none;
       height: ${(props) => props.name==="email" ? "50px"    
                         : props.name==="name" ? "50px"    

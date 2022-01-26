@@ -12,6 +12,7 @@ import {ReactComponent as IconCss} from './../icons/css3_icon.svg'
 import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
 import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
+import theme from '../Theme';
 
 const ProjectsPortolio = [
       {
@@ -83,9 +84,9 @@ const Example=styled.a`
       padding:1rem;
       position:relative;
       font-size:3rem;
-      color:#ccd6f6;
+      color:${theme.mainText};
       min-width:27rem;
-      border: 5px solid #950101;
+      border: 5px solid ${theme.mainBorder};
       border-radius:1rem;
       display:flex;
       flex-direction:column;
@@ -129,7 +130,7 @@ const Icons=styled.div`
             max-height:4rem;
             width:auto;
             min-width:0.5em;
-            fill:#ccd6f6;
+            fill:${theme.mainText};
       }
 `
 const ButtonModel=styled(Link)`
@@ -146,7 +147,7 @@ const ButtonModel=styled(Link)`
       letter-spacing: 1px;
       transition: all 0.2s linear;
       cursor: pointer;
-      background: #ccd6f6;
+      background: ${theme.mainText};
       text-decoration:none;
       font-size: 1.5rem;
       font-weight:800;
@@ -158,7 +159,7 @@ const ButtonModel=styled(Link)`
             transition: all 0.4s ease-in;
       }
       :hover{
-            box-shadow: 9px 9px 33px #ccd6f6, -9px -9px 33px #ccd6f6;
+            box-shadow: 9px 9px 33px ${theme.mainText}, -9px -9px 33px ${theme.mainText};
             transform: translateY(-2px);
             svg{
                   font-size: 1.3rem;

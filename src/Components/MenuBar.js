@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import theme from '../Theme';
 
 const Option1=styled(Link)`
       display:flex;
       height:50%;
       width:auto;
       padding:0.5rem;
-      color:#ccd6f6;
+      color:${theme.mainText};
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -16,8 +17,8 @@ const Option1=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.3);
-            border:solid 3px red;     
+            transform: scale(2);
+            border:solid 3px ${theme.mainRed};     
       }
 `
 const Option2=styled(Link)`
@@ -25,7 +26,7 @@ const Option2=styled(Link)`
       height:50%;
       width:auto;
       padding:0.5rem;
-      color:#ccd6f6;
+      color:${theme.mainText};
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -34,7 +35,7 @@ const Option2=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.3);
+            transform: scale(2);
             border:solid 3px #fff;
       }
 `
@@ -43,7 +44,7 @@ const Option3=styled(Link)`
       height:50%;
       width:auto;
       padding:0.5rem;
-      color:#ccd6f6;
+      color:${theme.mainText};
       flex-direction:column;
       justify-content:center;
       margin:auto;
@@ -52,7 +53,7 @@ const Option3=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.3);
+            transform: scale(2);
             border:solid 3px blue;
       }
 `
