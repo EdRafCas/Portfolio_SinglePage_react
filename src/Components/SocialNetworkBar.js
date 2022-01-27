@@ -5,6 +5,7 @@ import {ReactComponent as IconTwitter} from './../icons/twitter_icon.svg'
 import {ReactComponent as IconInstagram} from './../icons/instagram_icon.svg'
 import {ReactComponent as IconLinkedin} from './../icons/linkdin_icon.svg'
 
+
 const SocialNetworks=styled.div`
       position:absolute;
       top:40%;

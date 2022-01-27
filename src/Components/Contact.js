@@ -31,6 +31,7 @@ const Formulary = styled.form`
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      color:${theme.mainText};
       gap:1rem;
       input {
             width: 100%;
@@ -47,7 +48,7 @@ const Card =styled.div`
       height:auto;
       width:auto;
       color:#fff;
-      border-radius:1.5rem;
+      border-radius:15px;
       max-width:60%;
       cursor:auto;
       color:${theme.mainText};
@@ -68,7 +69,7 @@ const Description=styled.p`
 const Label=styled.label`
       text-transform:uppercase;
       font-weight:800;
-      font-size:16px;
+      font-size:1.5rem;
       @media(max-width: 720px){
             text-align:center;
         
@@ -76,51 +77,57 @@ const Label=styled.label`
 `
 const ContactButton=styled.button`
       box-sizing: border-box;
-      padding: 8px 12px;
+      padding: 1rem 1rem;
       background-color: transparent;
-      color: #000000;
-      fill: #000000;
-      border: 3px solid #000000;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.42857143;
+      color: ${theme.mainText};
+      fill: white;
+      border: 3px solid ${theme.mainBorder};
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.42rem;
       text-align: center;
       white-space: nowrap;
       vertical-align: middle;
       cursor: pointer;
       transition: all 0.4s ease;
+      height:5rem;
       :hover{
-            color:#fff;
-            background:#000000;
+            color:${theme.mainBorder};
+            background:${theme.mainText};
+            border: none;
             
             :active{
-                  border: 3px double #fff;
-                  font-size: 16px;
+                  border: 3px solid ${theme.mainBorder};
+                  color:${theme.background};
+                  font-size: 2.5rem;
+                  padding: 0.5rem 0.5rem;
                   font-weight: 800;
             }   
       }
 `
 const Input = styled.input`
-    font-size: 12px;
-    text-transform: uppercase;
-    border: 3px solid ${theme.mainBorder};
-    outline: none;
-    height: ${(props) => props.name==="message" ? "150px"
-                        : props.name==="email" ? "50px"    
-                        : props.name==="name" ? "50px"    
-                        :"auto"};
+      padding-left:1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border: 5px solid ${theme.mainBorder};
+      outline: none;
+      height: ${(props) => props.name==="message" ? "9rem"
+                              : props.name==="email" ? "3rem"    
+                              : props.name==="name" ? "3rem"    
+                              :"auto"};
       text-align:left;
       white-space:nowrap;
       overflow:scroll;
 `;
 const TextArea =styled.textarea`
-      font-size: 12px;
+      padding:1rem;
+      font-size: 1rem;
       text-transform: uppercase;
       border: none;
-      border: 3px solid ${theme.mainBorder};
+      border: 5px solid ${theme.mainBorder};
       outline: none;
-      height: ${(props) => props.name==="email" ? "50px"    
-                        : props.name==="name" ? "50px"    
+      height: ${(props) => props.name==="email" ? "3rem"    
+                        : props.name==="name" ? "3rem"    
                         :"auto"};
       text-align: justify;
       white-space:normal;
@@ -157,7 +164,7 @@ const Contact = () => {
                                     
                               </Description>
                         </Card>
-                        <Formulary>
+                        <Formulary action="mailto:eduardoo.rafael@gmail.com" method="post" encType='text/plain'>
                                     <Label>Name</Label>
                                     <Input
                                           type="text"
@@ -172,7 +179,7 @@ const Contact = () => {
                                           type="email"
                                           name="email"
                                           id="email"
-                                          placeholder=""
+                                          placeholder="mail@mail.com"
                                           value={inputEmail}
                                           onChange={handleChange}
                                     />
@@ -187,7 +194,7 @@ const Contact = () => {
                                           value={textMessage}
                                           onChange={handleChange}
                                     />
-                                    <ContactButton type="submit" onClick={showValue}>SEND</ContactButton>
+                                    <ContactButton type="submit" onClick={showValue}> SEND</ContactButton>
                         </Formulary>
                   </ContainerColumns>
                   

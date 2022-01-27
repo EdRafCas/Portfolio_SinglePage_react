@@ -12,12 +12,12 @@ const Option1=styled(Link)`
       flex-direction:column;
       justify-content:center;
       margin:auto;
-      transition: .5s ease all;
+      transition: 0.5s ease all;
       text-decoration:none;
       :hover{
             
             background-color: black;
-            transform: scale(2);
+            transform: scale(1.8);
             border:solid 3px ${theme.mainRed};     
       }
 `
