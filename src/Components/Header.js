@@ -65,7 +65,7 @@ const FalseBackgroundDefault =styled.div`
       background-size: 176.25rem; /* 2820px */
       
 `
-const FalseBackground1 =styled.div`
+/* const FalseBackground1 =styled.div`
       position:absolute;
       content:"";
       top: 0px;
@@ -76,7 +76,7 @@ const FalseBackground1 =styled.div`
       background: url(${DesktopImage1});
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 176.25rem; /* 2820px */
+      background-size: 176.25rem; 
 `
 const FalseBackground2 =styled.div`
       position:absolute;
@@ -89,8 +89,7 @@ const FalseBackground2 =styled.div`
       background: url(${DesktopImage2});
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 176.25rem; /* 2820px */
-            
+      background-size: 176.25rem;      
 `
 const FalseBackground3 =styled.div`
       position:absolute;
@@ -103,9 +102,8 @@ const FalseBackground3 =styled.div`
       background: url(${DesktopImage3});
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 176.25rem; /* 2820px */
-            
-`
+      background-size: 176.25rem;           
+` */
 
 const Header = ({background1, background2, background3}) => {
 
