@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import ShopVideo from '../video/Try.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';

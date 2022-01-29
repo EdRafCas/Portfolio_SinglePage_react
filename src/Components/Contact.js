@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import { Formik } from 'formik';
 import theme from '../Theme';
 
 const ContactContainer = styled.div`
@@ -137,24 +138,7 @@ const TextArea =styled.textarea`
 
 
 const Contact = () => {
-      const [inputName, changeInputName] = useState("");
-      const [inputEmail, changeInputEmail] = useState("");
-      const [textMessage, changeTextMessage] = useState("");
-
-      const handleChange = (e) =>{
-            if(e.target.name ==="name"){
-                  changeInputName(e.target.value)
-            }if(e.target.name ==="email"){
-                  changeInputEmail(e.target.value)
-            }if (e.target.name ==="message"){
-                  changeTextMessage(e.target.value)
-            }
-      }
-      const showValue = (e) => {
-            /* e.preventDefault(); */
-            console.log(inputName,inputEmail, textMessage)
-      }
-
+      
       return ( 
             <ContactContainer>
                   <ContainerColumns>
@@ -164,38 +148,69 @@ const Contact = () => {
                                     
                               </Description>
                         </Card>
-                        <Formulary action="mailto:eduardoo.rafael@gmail.com" method="post" encType='text/plain'>
-                                    <Label>Name</Label>
-                                    <Input
-                                          type="text"
-                                          name="name"
-                                          id="name"
-                                          placeholder="Name"
-                                          value={inputName}
-                                          onChange={handleChange}
-                                    />
-                                    <Label>Email</Label>
-                                    <Input
-                                          type="email"
-                                          name="email"
-                                          id="email"
-                                          placeholder="mail@mail.com"
-                                          value={inputEmail}
-                                          onChange={handleChange}
-                                    />
-                                    <Label>Message</Label>
-                                    <TextArea message
-                                          cols="30"
-                                          rows="20"
-                                          type="text"
-                                          name="message"
-                                          id="message"
-                                          placeholder="Leave us your message here"
-                                          value={textMessage}
-                                          onChange={handleChange}
-                                    />
-                                    <ContactButton type="submit" onClick={showValue}> SEND</ContactButton>
-                        </Formulary>
+                        <Formik 
+                              initialValues={{
+                                    name:"",
+                                    email:"",
+                                    message:""
+                              }}
+                              validate={(values) =>{
+                                    let errorMessage = {};
+
+                                    if(!values.name){
+                                          errorMessage.name ="Please insert your name"
+                                    } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.name)){
+                                          errorMessage.name ="Name can only contain letters and spaces"
+                                    }
+                                    return errorMessage;
+                              }}
+                              onSubmit={()=>{
+                                    console.log("Form Enviado")
+                              }}
+                        >
+                              {( {values, errors, handleSubmit, handleChange, handleBlur} ) =>(
+                                    <Formulary 
+                                          action="" 
+                                          method="" 
+                                          onSubmit={handleSubmit}>
+                                          {console.log(errors)}
+                                          <Label htmlFor='name'>Name</Label>
+                                          <Input
+                                                type="text"
+                                                name="name"
+                                                id="name"
+                                                placeholder="Name"
+                                                value={values.name}
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                          />
+                                          {errors.name && <p>{errors.name}</p>}
+                                          <Label htmlFor="email">Email</Label>
+                                          <Input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="mail@mail.com"
+                                                value={values.email}
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                          />
+                                          <Label htmlFor="message">Message</Label>
+                                          <TextArea
+                                                name="message"
+                                                id="message"
+                                                cols="30"
+                                                rows="20"
+                                                type="text"
+                                                placeholder="Leave us your message here"
+                                                value={values.message}
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                          />
+                                          <ContactButton type="submit"> SEND</ContactButton>
+                                    </Formulary>
+                              )}        
+                        </Formik>
                   </ContainerColumns>
                   
             </ContactContainer>

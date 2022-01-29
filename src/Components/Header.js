@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import DesktopImageDefault from './../img/desktop_blue.jpg';
+/* 
 import DesktopImage1 from './../img/desktop_red.jpg';
 import DesktopImage2 from './../img/abstract.jpg';
-import DesktopImage3 from './../img/tech.jpg';
+import DesktopImage3 from './../img/tech.jpg'; 
+*/
 import theme from '../Theme';
 
 
