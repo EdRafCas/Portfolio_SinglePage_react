@@ -156,11 +156,18 @@ const Contact = () => {
                               }}
                               validate={(values) =>{
                                     let errorMessage = {};
-
+                                    
+                                    //validation name
                                     if(!values.name){
                                           errorMessage.name ="Please insert your name"
                                     } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.name)){
-                                          errorMessage.name ="Name can only contain letters and spaces"
+                                          errorMessage.name ="Your name can only contain letters and spaces"
+                                    }
+                                    //validation name
+                                    if(!values.email){
+                                          errorMessage.email ="Please insert your email"
+                                    } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(values.email)){
+                                          errorMessage.email ="Insert a valid email address"
                                     }
                                     return errorMessage;
                               }}
@@ -168,7 +175,7 @@ const Contact = () => {
                                     console.log("Form Enviado")
                               }}
                         >
-                              {( {values, errors, handleSubmit, handleChange, handleBlur} ) =>(
+                              {( {values, errors, touched, handleSubmit, handleChange, handleBlur} ) =>(
                                     <Formulary 
                                           action="" 
                                           method="" 
@@ -184,7 +191,7 @@ const Contact = () => {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                           />
-                                          {errors.name && <p>{errors.name}</p>}
+                                          {touched.name && errors.name && <p>{errors.name}</p>}
                                           <Label htmlFor="email">Email</Label>
                                           <Input
                                                 type="email"
@@ -196,6 +203,7 @@ const Contact = () => {
                                                 onBlur={handleBlur}
                                           />
                                           <Label htmlFor="message">Message</Label>
+                                          {touched.email && errors.email &&  <p>{errors.email}</p>}
                                           <TextArea
                                                 name="message"
                                                 id="message"
