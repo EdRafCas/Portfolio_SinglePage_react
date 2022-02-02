@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import { Formik } from 'formik';
+import { Formik} from 'formik';
 import theme from '../Theme';
 
 const ContactContainer = styled.div`
@@ -138,7 +138,8 @@ const TextArea =styled.textarea`
 
 
 const Contact = () => {
-      
+      const [formSent, changeFormSent] = useState(false);
+
       return ( 
             <ContactContainer>
                   <ContainerColumns>
@@ -171,8 +172,11 @@ const Contact = () => {
                                     }
                                     return errorMessage;
                               }}
-                              onSubmit={()=>{
+                              onSubmit={(values, {resetForm})=>{
+                                    resetForm();
+                                    changeFormSent(true);
                                     console.log("Form Enviado")
+                                    setTimeout(()=>changeFormSent(false), 5000)
                               }}
                         >
                               {( {values, errors, touched, handleSubmit, handleChange, handleBlur} ) =>(
@@ -180,7 +184,6 @@ const Contact = () => {
                                           action="" 
                                           method="" 
                                           onSubmit={handleSubmit}>
-                                          {console.log(errors)}
                                           <Label htmlFor='name'>Name</Label>
                                           <Input
                                                 type="text"
@@ -216,6 +219,7 @@ const Contact = () => {
                                                 onBlur={handleBlur}
                                           />
                                           <ContactButton type="submit"> SEND</ContactButton>
+                                          {formSent &&<p>Your message has been sent</p>}
                                     </Formulary>
                               )}        
                         </Formik>
