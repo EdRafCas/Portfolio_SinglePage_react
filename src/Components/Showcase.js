@@ -11,6 +11,7 @@ import {ReactComponent as IconCss} from './../icons/css3_icon.svg'
 import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
 import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
+import {ReactComponent as IconGitAlt} from './../icons/git_alt_icon.svg'
 import theme from '../Theme';
 
 const ProjectsPortolio = [
@@ -25,7 +26,8 @@ const ProjectsPortolio = [
             JS:true,
             React:true, 
             Firebase:true,
-            background:"changeShowcase1(true)"
+            background:"changeShowcase1(true)",
+            repository:"https://github.com/EdRafCas/payment_tracking_app_react"
       },
       {
             id:2,
@@ -37,7 +39,8 @@ const ProjectsPortolio = [
             CSS:true,
             JS:true,
             React:true, 
-            Firebase:true
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/Store_cart_react"
 
       },
       {
@@ -50,7 +53,8 @@ const ProjectsPortolio = [
             CSS:true,
             JS:true,
             React:true, 
-            Firebase:true
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/coffee_shop_react"
 
       },
       {
@@ -63,7 +67,8 @@ const ProjectsPortolio = [
             CSS:true,
             JS:true,
             React:true, 
-            Firebase:true
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
       }
       
 ]
@@ -84,7 +89,7 @@ const Example=styled.a`
       position:relative;
       font-size:3rem;
       color:${theme.mainText};
-      min-width:27rem;
+      min-width:31rem;
       border: 5px solid ${theme.mainBorder};
       border-radius:1rem;
       display:flex;
@@ -120,17 +125,41 @@ const IconContainer=styled.div`
       gap:0.5em;
       height:3rem;
       padding-right:3rem;
+      padding-left:2rem;
      /*  border:1px solid white; */
 `
+
+
 const Icons=styled.div`
       /* border:1px solid white; */
       svg{
             height:100%;
-            max-height:4rem;
+            max-height:3rem;
             width:auto;
             min-width:0.5em;
             fill:${theme.mainText};
       }
+`
+const IconsGit=styled.a`
+      position:absolute;
+      left:3rem;
+      height:100%;
+      max-height:3rem;
+      color:${theme.mainBorder};
+      transition: 0.3s ease all;
+      :hover{
+            
+            transform:scale(1.5)
+      }
+
+      svg{
+                  height:100%;
+                  max-height:3rem;
+                  width:auto;
+                  min-width:0.5em;
+                  fill:${theme.mainBorder};
+            }
+
 `
 const ButtonModel=styled(Link)`
       display: flex;
@@ -221,8 +250,9 @@ const Showcase = () => {
                                           >
                                     <Title>{Projects.name}</Title>
                                     <Description>{Projects.description}</Description>
+                                    
                                     <IconContainer>
-                                          
+                                          <IconsGit href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>
                                           <Icons><IconHtml/></Icons>
                                           <Icons><IconCss/></Icons>
                                           <Icons><IconJs/></Icons>
