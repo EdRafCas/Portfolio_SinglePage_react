@@ -50,7 +50,16 @@ const ImageContainer = styled.div`
       flex-direction:column;
       justify-content:center;
       z-index:1;           
-      background:#000;     
+      background:#000;
+      @media(max-width: 71.25rem){ 
+        width: 100%;
+        min-width:45rem;    
+       }
+      @media(max-width: 45rem){ 
+        width: 100%;
+        min-width:37.5rem;
+           
+    } 
 `
 
 const FalseBackgroundDefault =styled.div`

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Formik} from 'formik';
 import theme from '../Theme';
+import emailjs from '@emailjs/browser';
 
 const ContactContainer = styled.div`
       position:relative;      
@@ -140,6 +141,16 @@ const TextArea =styled.textarea`
 const Contact = () => {
       const [formSent, changeFormSent] = useState(false);
 
+      function sendEmail(object){
+        
+            emailjs.send('portfolio', 'template_portfolio', object, 'user_pG8RcVfWdfbpwU4z7yptt')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+      }
+
       return ( 
             <ContactContainer>
                   <ContainerColumns>
@@ -173,10 +184,12 @@ const Contact = () => {
                                     return errorMessage;
                               }}
                               onSubmit={(values, {resetForm})=>{
-                                    resetForm();
-                                    changeFormSent(true);
-                                    console.log("Form Enviado")
-                                    setTimeout(()=>changeFormSent(false), 5000)
+                                          resetForm();
+                                          changeFormSent(true);
+                                          console.log("Form Enviado")
+                                          setTimeout(()=>changeFormSent(false), 5000)
+                                          sendEmail(values)
+                                          
                               }}
                         >
                               {( {values, errors, touched, handleSubmit, handleChange, handleBlur} ) =>(

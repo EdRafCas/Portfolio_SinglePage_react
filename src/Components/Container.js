@@ -18,16 +18,7 @@ const Container = styled.div`
     position: relative;
     z-index: 100;
 
-    @media(max-width: 71.25rem){ 
-        width: 95%;
-        min-width:45rem;
-           
-    }
-    @media(max-width: 45rem){ 
-        width: 100%;
-        min-width:37.5rem;
-           
-    }
+    
  
 `;
 
