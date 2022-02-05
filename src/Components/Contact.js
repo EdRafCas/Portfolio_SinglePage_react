@@ -23,10 +23,10 @@ const ContainerColumns =styled.div`
       grid-template-columns: repeat(1, 1fr 1fr);
       justify-items:center;
       margin:auto;
-      @media(max-width: 720px){
+      @media(max-width: 760px){
             grid-template-columns: repeat(1,1fr);
         
-    }
+      }
 `
 const Formulary = styled.form` 
       width:100%;
@@ -54,6 +54,10 @@ const Card =styled.div`
       max-width:60%;
       cursor:auto;
       color:${theme.mainText};
+      @media(max-width: 760px){
+            display:none;
+        
+      }
 `
 const Title=styled.h1`
       font-size:2rem;
@@ -72,7 +76,7 @@ const Label=styled.label`
       text-transform:uppercase;
       font-weight:800;
       font-size:1.5rem;
-      @media(max-width: 720px){
+      @media(max-width: 760px){
             text-align:center;
         
     }

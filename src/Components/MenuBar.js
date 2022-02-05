@@ -17,7 +17,7 @@ const Option1=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.8);
+            transform: scale(1.3);
             border:solid 3px ${theme.mainRed};     
       }
 `
@@ -35,7 +35,7 @@ const Option2=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(2);
+            transform: scale(1.3);
             border:solid 3px #fff;
       }
 `
@@ -53,7 +53,7 @@ const Option3=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(2);
+            transform: scale(1.3);
             border:solid 3px blue;
       }
 `

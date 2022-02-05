@@ -4,7 +4,7 @@ const Container = styled.div`
     background: #000;
     width: 100%;
     max-width:200rem;
-    min-width:71.25rem; /* 1140px */
+    /* min-width:71.25rem; */ 
     /* max-width: 71.25rem; /* 1140px */ */
     height: 100%;
     min-height:70rem; /* 1280px */
@@ -17,7 +17,7 @@ const Container = styled.div`
     justify-content: flex-start;
     position: relative;
     z-index: 100;
-
+    min-width: 760px;;
     
  
 `;

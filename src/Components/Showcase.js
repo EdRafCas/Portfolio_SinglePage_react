@@ -83,6 +83,7 @@ const ProjectsContainer = styled.div`
       padding-left:20rem;
       z-index:1;           
       background:#000;
+      
 `
 const Example=styled.a`
       padding:1rem;
