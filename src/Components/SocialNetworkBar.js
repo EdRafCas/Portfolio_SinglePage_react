@@ -8,7 +8,7 @@ import {ReactComponent as IconLinkedin} from './../icons/linkdin_icon.svg'
 
 const SocialNetworks=styled.div`
       position:absolute;
-      top:40%;
+      top:0%;
       left:0rem;
       max-width:10rem;
       min-width:3rem;

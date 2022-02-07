@@ -80,7 +80,8 @@ const ProjectsContainer = styled.div`
       flex-direction:column;
       justify-content:space-evenly;
       align-items:flex-start;
-      padding-left:20rem;
+      width:80%;
+      padding-left:5rem;
       z-index:1;           
       background:#000;
       
@@ -195,6 +196,10 @@ const ButtonModel=styled(Link)`
                   transform: translateX(-10px);
             }
       }
+      @media(max-width: 930px){ 
+            top:30%;
+            left:-10%;
+    }
 `
 
 

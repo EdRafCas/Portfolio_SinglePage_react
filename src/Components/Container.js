@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const Container = styled.div`
     background: #000;
     width: 100%;
-    max-width:200rem;
+    max-width:176.25rem;
     /* min-width:71.25rem; */ 
-    /* max-width: 71.25rem; /* 1140px */ */
+    /* max-width: 71.25rem; /* 1140px */
     height: 100%;
-    min-height:70rem; /* 1280px */
+    min-height:70rem;
     overflow-y: auto;
     /* box-shadow: 0px 1.25rem 2.5rem rgba(0,0,0,.05); */
     border-radius: 0; 
@@ -15,9 +15,11 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items:center;
     position: relative;
     z-index: 100;
-    min-width: 760px;;
+    min-width: 360px;
+    
     
  
 `;

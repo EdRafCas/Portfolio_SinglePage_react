@@ -10,6 +10,7 @@ body {
   background:#000;
   min-height: 100vh;
   display: flex;
+  margin:auto;
   align-items: center;
   justify-content: center;
   z-index: 10;
@@ -23,16 +24,16 @@ body {
   
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   :root{
     font-size:16px;
   }
 }
 
-@media screen and (max-width: 1123px) {
-  :root{
+@media screen and (max-width: 1139px) {
+  /* :root{
     font-size:12px;
-  }
+  } */
 }
 
 #root {

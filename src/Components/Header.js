@@ -20,10 +20,15 @@ const TextContainer =styled.div`
 const Content1 =styled.div`
       position: relative;
       color:${theme.mainText};  
-      font-size: 5rem;
+      font-size: 4rem;
       line-height: 0.9;
       font-weight:1000;
+      text-align:center;
       cursor:pointer;
+      
+      @media(max-width: 760px){ 
+            font-size: 3rem;
+    }
 `
 const Content2 =styled.div`
       position: relative;
@@ -33,31 +38,41 @@ const Content2 =styled.div`
       font-weight:1000;
       transition:0.3s all ease;
       text-transform:uppercase;
-      width:100rem;
+      
       display:flex;
       justify-content:center;
       cursor:pointer;
       /* border:1px solid white; */
-      :hover{
-            transform:scale(1.2)
+      
+      @media(min-width: 761px){ 
+            :hover{
+                  transform:scale(1.2)
+            }
       }
+      @media(max-width: 760px){ 
+            font-size: 3rem;}
 `
 
 const ImageContainer = styled.div`
-      height:60rem; /* 700px */
+      height:70rem; /* 700px */
       position:relative;
       display:flex;
       flex-direction:column;
       justify-content:center;
       z-index:1;           
       background:#000;
-      @media(max-width: 71.25rem){ 
-        width: 100%;
-        min-width:45rem;    
+      width:100%;
+      @media(max-width: 1140px){ 
+            width: 100%;
+            height:60rem   
        }
-      @media(max-width: 45rem){ 
-        width: 100%;
-        min-width:37.5rem;
+      @media(max-width: 760px){ 
+            height:60rem  
+           
+      } 
+    @media(max-width: 360px){ 
+            height:80rem  
+        
            
     } 
 `

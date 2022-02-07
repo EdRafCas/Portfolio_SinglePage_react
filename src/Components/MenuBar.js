@@ -17,9 +17,13 @@ const Option1=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.3);
             border:solid 3px ${theme.mainRed};     
       }
+      @media(min-width: 761px){
+            transform: scale(1.3);
+      }
+      
+
 `
 const Option2=styled(Link)`
       display:flex;
@@ -35,13 +39,16 @@ const Option2=styled(Link)`
       :hover{
             
             background-color: black;
-            transform: scale(1.3);
+            
             border:solid 3px #fff;
+      }
+      @media(min-width: 761px){
+            transform: scale(1.3);
       }
 `
 const Option3=styled(Link)`
       display:flex;
-      height:50%;
+      height:60%;
       width:auto;
       padding:0.5rem;
       color:${theme.mainText};
@@ -51,33 +58,39 @@ const Option3=styled(Link)`
       transition: .5s ease all;
       text-decoration:none;
       :hover{
-            
             background-color: black;
-            transform: scale(1.3);
             border:solid 3px blue;
       }
+      @media(min-width: 761px){
+            transform: scale(1.3);
+      }
+
 `
 
 const Texto =styled.h1`
-      font-size:2rem;
+      font-size:1.5rem;
       align-self:center;
       width:auto;
+      text-align:center;
+      transition: .5s ease all;
       /* &:hover{
             font-size:3rem;   
       } */
-      
+      @media(min-width: 761px){
       ${Option1}:hover &{
             text-shadow: 5px 5px 5px grey;
-            font-size:3rem;
+            font-size:2rem;
       };
       ${Option2}:hover &{
             text-shadow: 5px 5px 5px grey;
-            font-size:3rem;
+            font-size:2rem;
       };
       ${Option3}:hover &{
             text-shadow: 5px 5px 5px grey;
-            font-size:3rem;
+            font-size:2rem;
       };
+      }
+
       
 `
 const OptionsContainer= styled.div`
