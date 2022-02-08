@@ -77,19 +77,23 @@ const Texto =styled.h1`
             font-size:3rem;   
       } */
       @media(min-width: 761px){
-      ${Option1}:hover &{
-            text-shadow: 5px 5px 5px grey;
-            font-size:2rem;
-      };
-      ${Option2}:hover &{
-            text-shadow: 5px 5px 5px grey;
-            font-size:2rem;
-      };
-      ${Option3}:hover &{
-            text-shadow: 5px 5px 5px grey;
-            font-size:2rem;
-      };
+            ${Option1}:hover &{
+                  text-shadow: 5px 5px 5px grey;
+                  font-size:2rem;
+            };
+            ${Option2}:hover &{
+                  text-shadow: 5px 5px 5px grey;
+                  font-size:2rem;
+            };
+            ${Option3}:hover &{
+                  text-shadow: 5px 5px 5px grey;
+                  font-size:2rem;
+            };
       }
+      @media(max-width: 760px){ 
+            font-size:1rem; 
+           
+      } 
 
       
 `
@@ -97,12 +101,17 @@ const OptionsContainer= styled.div`
       width:100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr 1fr 1fr);
-      height:10rem;
+      height:8rem;
+      max-height:20%;
       background:#000;
       overflow: hidden
       position:relative;
       overflow:block;
       z-index:1;
+      @media(max-width: 760px){ 
+            height:5rem; 
+           
+      } 
 `
 
 

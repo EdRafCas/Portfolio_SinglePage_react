@@ -8,7 +8,7 @@ import {ReactComponent as IconLinkedin} from './../icons/linkdin_icon.svg'
 
 const SocialNetworks=styled.div`
       position:absolute;
-      top:0%;
+      top:2rem;
       left:0rem;
       max-width:10rem;
       min-width:3rem;
@@ -23,6 +23,16 @@ const SocialNetworks=styled.div`
       p{
             font-size:4rem;
       }
+      @media(max-width: 760px){ 
+            padding-left:0rem;
+            min-width:2rem;
+            
+           
+      } 
+      @media(max-width: 375px){ 
+            
+      
+      } 
 `
 const Icons=styled.a`
       /* border:1px solid white; */
@@ -42,6 +52,23 @@ const Icons=styled.a`
             }
             
       }
+      @media(max-width: 760px){ 
+            svg{
+                  height:100%;
+                  max-height:4rem;
+            }
+            
+           
+      } 
+      @media(max-width: 375px){ 
+            svg{
+                  height:100%;
+                  max-height:3rem;
+            }
+              
+      
+      } 
+      
 
 `
 

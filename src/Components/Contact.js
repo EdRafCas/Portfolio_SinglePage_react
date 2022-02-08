@@ -16,6 +16,21 @@ const ContactContainer = styled.div`
       justify-content:center;
       margin:auto;
       padding:10rem 10rem;
+      min-width:375px;
+      @media(max-width: 1140px){ 
+           
+            height:60rem   
+       }
+      @media(max-width: 760px){ 
+            height:40rem;  
+            padding:2.5rem 2.5rem;
+           
+      } 
+      @media(max-width: 375px){ 
+            height:30rem;
+            overflow:scroll;
+      
+      } 
 `
 const ContainerColumns =styled.div`
       width:100%;
@@ -42,6 +57,11 @@ const Formulary = styled.form`
                   color: rgba(0,0,0,.2);
             }
       }
+      @media(max-width: 760px){ 
+            gap:0.5rem;
+            
+           
+      } 
 `
 
 const Card =styled.div`
@@ -62,7 +82,16 @@ const Card =styled.div`
 const Title=styled.h1`
       font-size:2rem;
       padding:2rem;
-      padding-bottom:1rem;  
+      padding-bottom:1rem; 
+      @media(max-width: 760px){ 
+            font-size:1rem;
+            padding:1rem;
+            padding-bottom:0.5rem; 
+           
+      } 
+      @media(max-width: 375px){ 
+           
+      } 
 `
 
 const Description=styled.p`
@@ -78,16 +107,16 @@ const Label=styled.label`
       font-size:1.5rem;
       @media(max-width: 760px){
             text-align:center;
-        
-    }
+            font-size:1rem;   
+      }
 `
 const ContactButton=styled.button`
       box-sizing: border-box;
-      padding: 1rem 1rem;
+     
       background-color: transparent;
       color: ${theme.mainText};
       fill: white;
-      border: 3px solid ${theme.mainBorder};
+      border: 5px solid ${theme.mainBorder};
       font-size: 2rem;
       font-weight: 800;
       line-height: 1.42rem;
@@ -110,6 +139,24 @@ const ContactButton=styled.button`
                   font-weight: 800;
             }   
       }
+      @media(max-width: 760px){ 
+            font-size: 1rem;
+            height:2rem;
+            border: 3px solid ${theme.mainBorder}; 
+            :hover{
+                             
+                  :active{
+                        
+                        font-size: 2rem;
+                        
+                  }   
+            }
+           
+      } 
+      @media(max-width: 375px){ 
+            
+      
+      } 
 `
 const Input = styled.input`
       padding-left:1rem;
@@ -117,13 +164,19 @@ const Input = styled.input`
       text-transform: uppercase;
       border: 5px solid ${theme.mainBorder};
       outline: none;
-      height: ${(props) => props.name==="message" ? "9rem"
+      height: ${(props) =>    props.name==="messag" ? "9rem"
                               : props.name==="email" ? "3rem"    
                               : props.name==="name" ? "3rem"    
                               :"auto"};
       text-align:left;
       white-space:nowrap;
       overflow:scroll;
+      @media(max-width: 760px){
+            padding-left:0.5rem;
+            font-size: 1rem;
+            height:2rem;
+            border: 3px solid ${theme.mainBorder};
+      }
 `;
 const TextArea =styled.textarea`
       padding:1rem;
@@ -132,13 +185,18 @@ const TextArea =styled.textarea`
       border: none;
       border: 5px solid ${theme.mainBorder};
       outline: none;
+      
       height: ${(props) => props.name==="email" ? "3rem"    
                         : props.name==="name" ? "3rem"    
                         :"auto"};
       text-align: justify;
       white-space:normal;
       overflow:scroll;
-
+      @media(max-width: 760px){
+            text-align:center;
+            font-size:1rem;
+            border: 3px solid ${theme.mainBorder};   
+      }
 `
 
 
@@ -227,8 +285,8 @@ const Contact = () => {
                                           <TextArea
                                                 name="message"
                                                 id="message"
-                                                cols="30"
-                                                rows="20"
+                                                cols="25"
+                                                rows="10"
                                                 type="text"
                                                 placeholder="Leave us your message here"
                                                 value={values.message}

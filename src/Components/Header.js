@@ -20,15 +20,20 @@ const TextContainer =styled.div`
 const Content1 =styled.div`
       position: relative;
       color:${theme.mainText};  
-      font-size: 4rem;
+      font-size: 5rem;
       line-height: 0.9;
       font-weight:1000;
       text-align:center;
       cursor:pointer;
-      
+      @media(max-width: 1140px){ 
+            font-size: 4rem;
+      }
       @media(max-width: 760px){ 
-            font-size: 3rem;
-    }
+            font-size: 2rem;
+      }
+      @media(max-width: 375px){ 
+            font-size: 1.5rem;
+      }
 `
 const Content2 =styled.div`
       position: relative;
@@ -49,11 +54,19 @@ const Content2 =styled.div`
                   transform:scale(1.2)
             }
       }
+      @media(max-width: 1140px){ 
+            font-size: 4rem;
+      }
       @media(max-width: 760px){ 
-            font-size: 3rem;}
+            font-size: 3rem;
+      }
+      @media(max-width: 375px){ 
+            font-size: 1.5rem;
+      }
 `
 
 const ImageContainer = styled.div`
+      max-height:80%;
       height:70rem; /* 700px */
       position:relative;
       display:flex;
@@ -67,14 +80,13 @@ const ImageContainer = styled.div`
             height:60rem   
        }
       @media(max-width: 760px){ 
-            height:60rem  
+            height:40rem  
            
       } 
-    @media(max-width: 360px){ 
-            height:80rem  
-        
-           
-    } 
+      @media(max-width: 375px){ 
+            height:30rem  
+      
+      } 
 `
 
 const FalseBackgroundDefault =styled.div`
@@ -89,6 +101,19 @@ const FalseBackgroundDefault =styled.div`
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
+      @media(min-width: 1141px){ 
+            background-size: 176.25rem; 
+           
+      } 
+      @media(max-width: 1140px){ 
+            background-size: 1140px; 
+           
+      } 
+      @media(max-width: 760px){ 
+            background-size: 760px; 
+           
+      } 
+      
       
 `
 /* const FalseBackground1 =styled.div`

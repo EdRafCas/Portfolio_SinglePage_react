@@ -3,33 +3,72 @@ import styled from 'styled-components';
 import theme from '../Theme';
 
 const DescriptionContainer = styled.div`
-      position:relative;      
+           
       height:60rem; /* 700px */
       display:flex;
       flex-direction:column;
       z-index:1;           
       /* border:solid #fff 3px; */
       width:100%;
+      justify-content:center;
+      align-items:center;
+      min-width:375px;
+      @media(max-width: 1140px){ 
+            width: 100%;
+            height:60rem   
+       }
+      @media(max-width: 760px){ 
+            height:40rem  
+           
+      } 
+      @media(max-width: 375px){ 
+            height:30rem  
+            
+      } 
       
 
 `
 
 const Card =styled.div`
       border:solid ${theme.mainBorder} 10px;
-      margin:auto;
+      margin:0rem;
       height:auto;
       width:auto;
       color:#fff;
       border-radius:1.5rem;
-      max-width:60%;
+      max-width:80%;
       cursor:auto;
       color:#ccd6f6;
+      @media(max-width: 1140px){ 
+
+       }
+      @media(max-width: 760px){ 
+            border:solid ${theme.mainBorder} 5px;
+           
+      } 
+      @media(max-width: 375px){ 
+            
+      
+      } 
 
 `
 const Title=styled.h1`
       font-size:2rem;
       padding:2rem;
       padding-bottom:1rem;
+      @media(max-width: 1140px){ 
+            
+      }
+      @media(max-width: 760px){ 
+            font-size:1rem;
+            padding:1rem;
+            
+      } 
+      @media(max-width: 375px){ 
+            padding:0.5rem;
+            
+            
+      } 
       
 `
 
@@ -37,7 +76,19 @@ const Description=styled.p`
       max-width:100rem;
       font-size:1.5rem;
       padding:2rem;
-     
+      @media(max-width: 1140px){ 
+            
+      }
+      @media(max-width: 760px){ 
+            font-size:1rem;
+            padding:1rem;
+               
+      } 
+      @media(max-width: 375px){ 
+            font-size:1rem;
+            padding:0.5rem;
+            
+      } 
 `
 
 const AboutMe = () => {

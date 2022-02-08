@@ -84,6 +84,20 @@ const ProjectsContainer = styled.div`
       padding-left:5rem;
       z-index:1;           
       background:#000;
+      @media(max-width: 930px){
+            padding-left:2rem;
+            
+       }
+      @media(max-width: 760px){ 
+            padding-left:0rem;
+            height:40rem
+      }
+      @media(max-width: 375px){ 
+            height:30rem  
+            overflow:scroll;
+      
+      } 
+      
       
 `
 const Example=styled.a`
@@ -106,6 +120,22 @@ const Example=styled.a`
             transform:scale(1.2);
             background:none;
       }
+      @media(max-width: 930px){
+            font-size:2rem;
+      }
+      @media(max-width: 760px){ 
+            min-width:20rem;
+            font-size:1rem;
+
+      }
+      @media(max-width: 490px){ 
+            min-width:15rem;
+            
+      }
+      @media(max-width: 375px){ 
+            padding:0.5rem;
+            
+      }
 `
 
 
@@ -113,12 +143,35 @@ const Title=styled.h1`
       font-size:2rem;
       padding-bottom:1rem;
       padding-left:2rem;
+      @media(max-width: 930px){ 
+            font-size:1.5rem;
+            padding-bottom:0.5rem;
+            padding-left:1rem;
+      }
+      @media(max-width: 760px){ 
+            font-size:1rem;
+            padding-bottom:0.5rem;
+            padding-left:0.5rem;
+
+      }
+      
 `
 
 const Description=styled.p`
       font-size:1.2rem;
       padding-left:2rem;
       padding-bottom:1rem;
+      @media(max-width: 930px){ 
+            font-size:1rem;
+            padding-left:1rem;
+            padding-bottom:1rem;
+      }
+      @media(max-width: 760px){
+            font-size:0.8rem;
+            padding-left:0.5rem;
+            padding-bottom:0.5rem; 
+
+      }
 `
 const IconContainer=styled.div`
       display:flex;
@@ -129,6 +182,15 @@ const IconContainer=styled.div`
       padding-right:3rem;
       padding-left:2rem;
      /*  border:1px solid white; */
+      @media(max-width: 930px){ 
+            gap:0.5em;
+            height:2rem;
+      }
+      @media(max-width: 760px){ 
+            gap:0.5em;
+            height:1rem;
+
+      }
 `
 
 
@@ -150,10 +212,8 @@ const IconsGit=styled.a`
       color:${theme.mainBorder};
       transition: 0.3s ease all;
       :hover{
-            
-            transform:scale(1.5)
+            transform:scale(1.5);
       }
-
       svg{
                   height:100%;
                   max-height:3rem;
@@ -161,6 +221,14 @@ const IconsGit=styled.a`
                   min-width:0.5em;
                   fill:${theme.mainBorder};
             }
+      @media(max-width: 930px){ 
+            left:2rem;
+            max-height:2rem;
+      }
+      @media(max-width: 760px){ 
+            left:1rem;
+            max-height:1rem;
+      }
 
 `
 const ButtonModel=styled(Link)`
@@ -197,9 +265,40 @@ const ButtonModel=styled(Link)`
             }
       }
       @media(max-width: 930px){ 
-            top:30%;
-            left:-10%;
-    }
+            height: 4rem;
+            width: 5rem;
+            right:-10%;
+            font-size: 1rem;
+            svg{
+                  margin-right: 0px;
+                  margin-left: 0px;
+                  font-size: 1rem;
+
+            }
+            :hover{
+                  box-shadow: 6px 6px 22px ${theme.mainText}, -6px -6px 22px ${theme.mainText};
+                  transform: translateY(-1px);
+                  svg{
+                        font-size: 1rem;
+                        transform: translateX(-5px);
+                  }
+            }
+      }
+      @media(max-width: 490px){ 
+            
+            height:3rem;
+            width: 4rem;
+            right:-10%;
+            font-size: 1rem;
+            svg{
+                  margin-right: 0px;
+                  margin-left: 0px;
+                  font-size: 0.5rem;
+
+            }
+            
+            
+      }
 `
 
 
