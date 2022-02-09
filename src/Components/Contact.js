@@ -202,10 +202,10 @@ const TextArea =styled.textarea`
 
 const Contact = () => {
       const [formSent, changeFormSent] = useState(false);
-
+      console.log(process.env);
       function sendEmail(object){
         
-            emailjs.send('portfolio', 'template_portfolio', object, 'user_pG8RcVfWdfbpwU4z7yptt')
+            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, object, process.env.REACT_APP_EMAILJS_ID)
               .then((result) => {
                   console.log(result.text);
               }, (error) => {

@@ -67,7 +67,7 @@ const Content2 =styled.div`
 
 const ImageContainer = styled.div`
       max-height:80%;
-      height:70rem; /* 700px */
+      height:60rem; /* 700px */
       position:relative;
       display:flex;
       flex-direction:column;

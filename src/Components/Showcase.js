@@ -87,14 +87,17 @@ const ProjectsContainer = styled.div`
       @media(max-width: 930px){
             padding-left:2rem;
             
+            
+            
        }
       @media(max-width: 760px){ 
             padding-left:0rem;
             height:40rem
+            
       }
       @media(max-width: 375px){ 
-            height:30rem  
-            overflow:scroll;
+            height:35rem;
+            
       
       } 
       
