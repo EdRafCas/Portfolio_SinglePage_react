@@ -101,15 +101,17 @@ const OptionsContainer= styled.div`
       width:100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr 1fr 1fr);
-      height:8rem;
-      max-height:20%;
+      height:15vh;
+      max-height:10rem;
       background:#000;
       overflow: hidden
       position:relative;
       overflow:block;
       z-index:1;
+      max-height:15rem;
       @media(max-width: 760px){ 
-            height:5rem; 
+            height:10vh;
+            min-height:3rem; 
            
       } 
 `

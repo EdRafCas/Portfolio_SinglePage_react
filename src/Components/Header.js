@@ -66,8 +66,8 @@ const Content2 =styled.div`
 `
 
 const ImageContainer = styled.div`
-      max-height:80%;
-      height:60rem; /* 700px */
+      
+      height:85vh; /* 700px */
       position:relative;
       display:flex;
       flex-direction:column;
@@ -75,16 +75,18 @@ const ImageContainer = styled.div`
       z-index:1;           
       background:#000;
       width:100%;
+      max-height:85rem;
       @media(max-width: 1140px){ 
             width: 100%;
-            height:60rem   
+              
        }
       @media(max-width: 760px){ 
-            height:40rem  
+            height:90vh;
+            max-height:40rem  
            
       } 
       @media(max-width: 375px){ 
-            height:30rem  
+            height:90vh;  
       
       } 
 `

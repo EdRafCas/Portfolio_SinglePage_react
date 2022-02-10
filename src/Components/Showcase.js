@@ -75,7 +75,7 @@ const ProjectsPortolio = [
 
 const ProjectsContainer = styled.div`
       position:relative;      
-      height:60rem; /* 700px */
+      height:85vh; /* 700px */
       display:flex;
       flex-direction:column;
       justify-content:space-evenly;
@@ -84,19 +84,21 @@ const ProjectsContainer = styled.div`
       padding-left:5rem;
       z-index:1;           
       background:#000;
+      max-height:85rem;
+      
       @media(max-width: 930px){
             padding-left:2rem;
-            
-            
             
        }
       @media(max-width: 760px){ 
             padding-left:0rem;
-            height:40rem
+            max-height:40rem
             
       }
       @media(max-width: 375px){ 
-            height:35rem;
+            height:90vh;
+            min-height:35rem;
+           
             
       
       } 

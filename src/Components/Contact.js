@@ -6,7 +6,8 @@ import emailjs from '@emailjs/browser';
 
 const ContactContainer = styled.div`
       position:relative;      
-      height:60rem; /* 700px */
+      height:85vh; /* 700px */
+      max-height:85rem;
       display:flex;
       flex-direction:column;
       z-index:1;           
@@ -14,20 +15,20 @@ const ContactContainer = styled.div`
       width:100%;
       background:#000;
       justify-content:center;
-      margin:auto;
-      padding:10rem 10rem;
+      padding:5rem 5rem;
       min-width:375px;
       @media(max-width: 1140px){ 
-           
-            height:60rem   
+            
        }
       @media(max-width: 760px){ 
             height:40rem;  
-            padding:2.5rem 2.5rem;
+            padding:0rem 2.5rem;
            
       } 
       @media(max-width: 375px){ 
-            height:30rem;
+            /* height:35rem; */
+            height:90vh
+            padding:0rem 2.5rem;
             overflow:scroll;
       
       } 
@@ -38,7 +39,7 @@ const ContainerColumns =styled.div`
       grid-template-columns: repeat(1, 1fr 1fr);
       justify-items:center;
       margin:auto;
-      @media(max-width: 760px){
+      @media(max-width: 1000px){
             grid-template-columns: repeat(1,1fr);
         
       }
@@ -65,7 +66,7 @@ const Formulary = styled.form`
 `
 
 const Card =styled.div`
-      border:solid ${theme.mainBorder} 10px;
+      border:/* solid ${theme.mainBorder} 5px; */ none;
       margin:auto;
       height:auto;
       width:auto;
@@ -74,30 +75,30 @@ const Card =styled.div`
       max-width:60%;
       cursor:auto;
       color:${theme.mainText};
+      text-align:center;
+      
       @media(max-width: 760px){
-            display:none;
+            max-width:100%;
+        
+      }
+      @media(max-width: 375px){
+            
         
       }
 `
-const Title=styled.h1`
-      font-size:2rem;
-      padding:2rem;
-      padding-bottom:1rem; 
-      @media(max-width: 760px){ 
-            font-size:1rem;
-            padding:1rem;
-            padding-bottom:0.5rem; 
-           
-      } 
-      @media(max-width: 375px){ 
-           
-      } 
-`
 
 const Description=styled.p`
-      max-width:100rem;
+      
       font-size:1.5rem;
       padding:2rem;
+      @media(max-width: 1000px){ 
+            font-size:1rem;
+            padding:0.5rem;
+      }
+      @media(max-width: 375px){ 
+            font-size:0.8rem;
+            padding-bottom:0.5rem;
+      }
 `
 
 
@@ -105,8 +106,10 @@ const Label=styled.label`
       text-transform:uppercase;
       font-weight:800;
       font-size:1.5rem;
+      @media(max-width: 1000px){
+            text-align:center; 
+      }
       @media(max-width: 760px){
-            text-align:center;
             font-size:1rem;   
       }
 `
@@ -217,9 +220,8 @@ const Contact = () => {
             <ContactContainer>
                   <ContainerColumns>
                         <Card>
-                              <Title>About Me</Title>
                               <Description>
-                                    
+                                    Leave me your message/feedback and we'll stay in touch!
                               </Description>
                         </Card>
                         <Formik 

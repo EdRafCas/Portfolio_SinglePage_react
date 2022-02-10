@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import theme from '../Theme';
 
 const DescriptionContainer = styled.div`
-           
-      height:60rem; /* 700px */
+      max-height:85rem;
+      height:85vh; /* 700px */
       display:flex;
       flex-direction:column;
       z-index:1;           
@@ -15,14 +15,15 @@ const DescriptionContainer = styled.div`
       min-width:375px;
       @media(max-width: 1140px){ 
             width: 100%;
-            height:60rem   
+           
        }
       @media(max-width: 760px){ 
-            height:40rem  
+            max-height:40rem  
            
       } 
       @media(max-width: 375px){ 
-            height:30rem  
+            height:90vh;
+            min-height:35rem; 
             
       } 
       
