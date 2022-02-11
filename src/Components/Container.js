@@ -18,11 +18,8 @@ const Container = styled.div`
     align-items:center;
     position: relative;
     z-index: 100;
-    min-width: 360px;
+    min-width: 375px;
     
-    
-    
- 
 `;
 
 export default Container;

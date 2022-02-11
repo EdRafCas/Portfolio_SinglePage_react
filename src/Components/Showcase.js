@@ -80,22 +80,33 @@ const ProjectsContainer = styled.div`
       flex-direction:column;
       justify-content:space-evenly;
       align-items:flex-start;
-      width:80%;
-      padding-left:5rem;
+      width:100%;
+      padding-left:8rem;
       z-index:1;           
       background:#000;
-      max-height:85rem;
-      
+      max-height:85rem;´
+      @media(max-width:1024px){
+            @media(max-height:600px){
+                  padding-left:1rem;
+            }
+      }
       @media(max-width: 930px){
-            padding-left:2rem;
+            padding-left:6rem;
             
        }
       @media(max-width: 760px){ 
-            padding-left:0rem;
-            max-height:40rem
+            padding-left:5rem;
+            
+            
+      }
+      @media(max-width:600px){ 
+            padding-left:4rem;
+            
+            
             
       }
       @media(max-width: 375px){ 
+            padding-left:2rem;
             height:90vh;
             min-height:35rem;
            
@@ -106,7 +117,7 @@ const ProjectsContainer = styled.div`
       
 `
 const Example=styled.a`
-      padding:1rem;
+      padding:0.5rem;
       position:relative;
       font-size:3rem;
       color:${theme.mainText};
@@ -117,16 +128,21 @@ const Example=styled.a`
       flex-direction:column;
       justify-content:space-between;
      /*  width:50%; */
-      width:50%;
+      width:40%;
       text-decoration:none;
       padding-left:0.5rem;
+     
       
-      :hover{
-            transform:scale(1.2);
-            background:none;
+      @media(min-width: 501px){
+            :hover{
+                  transform:scale(1.2);
+                  background:none;
+            }
       }
+      
       @media(max-width: 930px){
             font-size:2rem;
+           
       }
       @media(max-width: 760px){ 
             min-width:20rem;
@@ -134,6 +150,7 @@ const Example=styled.a`
 
       }
       @media(max-width: 490px){ 
+
             min-width:15rem;
             
       }
@@ -145,17 +162,14 @@ const Example=styled.a`
 
 
 const Title=styled.h1`
-      font-size:2rem;
-      padding-bottom:1rem;
+      font-size:1.5rem;
+      padding-bottom:0.5rem;
       padding-left:2rem;
       @media(max-width: 930px){ 
-            font-size:1.5rem;
-            padding-bottom:0.5rem;
             padding-left:1rem;
       }
       @media(max-width: 760px){ 
             font-size:1rem;
-            padding-bottom:0.5rem;
             padding-left:0.5rem;
 
       }
@@ -163,7 +177,7 @@ const Title=styled.h1`
 `
 
 const Description=styled.p`
-      font-size:1.2rem;
+      font-size:1rem;
       padding-left:2rem;
       padding-bottom:1rem;
       @media(max-width: 930px){ 
@@ -239,7 +253,7 @@ const IconsGit=styled.a`
 const ButtonModel=styled(Link)`
       display: flex;
       position:absolute;
-      top:5rem;
+      top:5%;
       right:5%;
       height: 5rem;
       width: 8rem;
@@ -272,7 +286,6 @@ const ButtonModel=styled(Link)`
       @media(max-width: 930px){ 
             height: 4rem;
             width: 5rem;
-            right:-10%;
             font-size: 1rem;
             svg{
                   margin-right: 0px;
@@ -293,7 +306,6 @@ const ButtonModel=styled(Link)`
             
             height:3rem;
             width: 4rem;
-            right:-10%;
             font-size: 1rem;
             svg{
                   margin-right: 0px;

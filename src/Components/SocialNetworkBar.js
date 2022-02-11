@@ -11,7 +11,6 @@ const SocialNetworks=styled.div`
       top:20vh;
       left:0rem;
       max-width:10rem;
-      min-width:3rem;
       gap:5px;
       padding-left:1rem;
       display:flex;
@@ -20,13 +19,8 @@ const SocialNetworks=styled.div`
       z-index:1;
       cursor:pointer;
       text-decoration:none;
-      p{
-            font-size:4rem;
-      }
       @media(max-width: 760px){ 
             padding-left:0rem;
-            min-width:2rem;
-            
            
       } 
       @media(max-width: 375px){ 
@@ -37,10 +31,9 @@ const SocialNetworks=styled.div`
 const Icons=styled.a`
       /* border:1px solid white; */
       svg{
-            height:100%;
-            max-height:5rem;
+            max-width:5rem;
             width:50%;
-            min-width:0.5em;
+            min-width:1rem;
             color:#ccd6f6;
             transition: 0.3s ease all;
             :hover{
@@ -55,7 +48,7 @@ const Icons=styled.a`
       @media(max-width: 760px){ 
             svg{
                   height:100%;
-                  max-height:4rem;
+                  max-height:3rem;
             }
             
            
@@ -63,7 +56,7 @@ const Icons=styled.a`
       @media(max-width: 375px){ 
             svg{
                   height:100%;
-                  max-height:3rem;
+                  
             }
               
       

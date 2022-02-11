@@ -81,8 +81,7 @@ const ImageContainer = styled.div`
               
        }
       @media(max-width: 760px){ 
-            height:90vh;
-            max-height:40rem  
+            
            
       } 
       @media(max-width: 375px){ 
