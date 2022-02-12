@@ -8,7 +8,6 @@ import emailjs from '@emailjs/browser';
 const ContactContainer = styled.div`
       position:relative;      
       height:85vh; /* 700px */
-      
       display:flex;
       flex-direction:column;
       z-index:1;           
@@ -98,6 +97,8 @@ const Description=styled.p`
       @media(max-width: 375px){ 
             font-size:0.8rem;
             padding-bottom:0.5rem;
+            text-align:left;
+            width:80%
       }
 `
 
@@ -115,7 +116,6 @@ const Label=styled.label`
 `
 const ContactButton=styled.button`
       box-sizing: border-box;
-     
       background-color: transparent;
       color: ${theme.mainText};
       fill: white;
@@ -150,7 +150,7 @@ const ContactButton=styled.button`
                              
                   :active{
                         
-                        font-size: 2rem;
+                        font-size: 1.1rem;
                         
                   }   
             }

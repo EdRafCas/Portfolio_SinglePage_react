@@ -106,7 +106,7 @@ const ProjectsContainer = styled.div`
             
       }
       @media(max-width: 375px){ 
-            padding-left:2rem;
+            padding-left:2.5rem;
             height:90vh;
             min-height:35rem;
            
@@ -219,8 +219,10 @@ const Icons=styled.div`
             height:100%;
             max-height:3rem;
             width:auto;
-            min-width:0.5em;
+            min-width:1rem;
             fill:${theme.mainText};
+            @media(max-width: 375px){ 
+                  max-height:1rem;}
       }
 `
 const IconsGit=styled.a`
@@ -303,7 +305,7 @@ const ButtonModel=styled(Link)`
             }
       }
       @media(max-width: 490px){ 
-            
+            top:2%;
             height:3rem;
             width: 4rem;
             font-size: 1rem;

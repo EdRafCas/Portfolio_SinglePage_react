@@ -10,21 +10,22 @@ const DescriptionContainer = styled.div`
       flex-direction:column;
       z-index:1;           
       /* border:solid #fff 3px; */
-      width:100%;
+      width:60%;
+      
       justify-content:center;
       align-items:center;
       min-width:375px;
       @media(max-width: 1140px){ 
-            width: 100%;
+            
            
        }
       @media(max-width: 760px){ 
-            
-           
+            padding:0 2.5rem;
       } 
       @media(max-width: 375px){ 
             height:90vh;
             min-height:35rem; 
+            
             
       } 
       
@@ -38,7 +39,7 @@ const Card =styled.div`
       width:auto;
       color:#fff;
       border-radius:1.5rem;
-      max-width:60%;
+      
       cursor:auto;
       color:#ccd6f6;
       @media(max-width: 1140px){ 
@@ -46,10 +47,11 @@ const Card =styled.div`
        }
       @media(max-width: 760px){ 
             border:solid ${theme.mainBorder} 5px;
-            max-width:80%;
+            
            
       } 
       @media(max-width: 375px){ 
+            border:solid ${theme.mainBorder} 3px;
             
       
       } 

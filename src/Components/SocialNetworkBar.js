@@ -33,7 +33,7 @@ const Icons=styled.a`
       svg{
             max-width:5rem;
             width:50%;
-            min-width:1rem;
+            min-width:0.5rem;
             color:#ccd6f6;
             transition: 0.3s ease all;
             :hover{

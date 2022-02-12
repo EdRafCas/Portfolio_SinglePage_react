@@ -19,7 +19,6 @@ const Container = styled.div`
     position: relative;
     z-index: 100;
     min-width: 375px;
-    
 `;
 
 export default Container;
