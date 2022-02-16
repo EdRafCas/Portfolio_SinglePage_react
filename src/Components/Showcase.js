@@ -327,7 +327,7 @@ const Showcase = () => {
       const [showcase3, changeShowcase3] =useState(false)
       const [showcase4, changeShowcase4] =useState(false)
 
-      const BackgrounChanger=(tagname)=>{
+       const BackgrounChanger=(tagname)=>{
 
             if(tagname ==="manager-app"){
                   changeShowcase1(true)

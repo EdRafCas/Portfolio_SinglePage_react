@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../Theme';
+import BackgroundVideo from '../Elements/BackgroundVideo';
+import SpendManager from '../video/spend_manager_video.mp4';
 
 
 const ContactContainer = styled.div`
-      position:relative;      
+           
       height:85vh; /* 700px */
       display:flex;
       flex-direction:column;
@@ -14,7 +16,7 @@ const ContactContainer = styled.div`
       width:100%;
       background:#000;
       justify-content:center;
-      padding:5rem 5rem;
+      padding:3rem 3rem;
       min-width:375px;
       @media(max-width: 1140px){ 
             
@@ -32,6 +34,9 @@ const ContactContainer = styled.div`
       } 
 `
 const ContainerColumns =styled.div`
+      position:relative; 
+      height:85vh;
+      border:solid ${theme.mainBorder} 5px; 
       width:100%;
       display:grid;
       grid-template-columns: repeat(1, 1fr 1fr);
@@ -44,19 +49,56 @@ const ContainerColumns =styled.div`
 `
 
 const Card =styled.div`
-      border:/* solid ${theme.mainBorder} 5px; */ none;
+      position:absolute;
+      left:0px;
+      top:0px;
+      height:60vh;
+      border:solid ${theme.mainBorder} 5px; 
       margin:auto;
-      height:auto;
-      width:auto;
+      width:50%;
+      min width:50%;
+      max-width:100%;
       color:#fff;
       border-radius:15px;
-      max-width:60%;
       cursor:auto;
       color:${theme.mainText};
       text-align:center;
       
-      @media(max-width: 760px){
-            max-width:100%;
+      z-index:100;
+      @media(max-width: 1500px){
+            top:0px;
+            left:auto;
+            right:auto;
+            
+        
+      }
+      @media(max-width: 375px){
+            
+        
+      }
+`
+const Card2 =styled.div`
+      position:absolute;
+      top:0px;
+      right:0px;
+      height:60vh;
+      border:solid ${theme.mainBorder} 5px; 
+      margin:auto;
+      width:50%;
+      min width:50%;
+      max-width:100%;
+      color:#fff;
+      border-radius:15px;
+     
+      cursor:auto;
+      color:${theme.mainText};
+      text-align:center;
+      
+      @media(max-width: 1500px){
+            top:0px;
+            left:auto;
+            right:auto; 
+            
         
       }
       @media(max-width: 375px){
@@ -67,14 +109,15 @@ const Card =styled.div`
 
 const Description=styled.p`
       
-      font-size:1.5rem;
+      font-size:1rem;
       padding:2rem;
+      
       @media(max-width: 1000px){ 
-            font-size:1rem;
+            font-size:0.8rem;
             padding:0.5rem;
       }
       @media(max-width: 375px){ 
-            font-size:0.8rem;
+            font-size:0.5rem;
             padding-bottom:0.5rem;
             text-align:left;
             width:80%
@@ -163,9 +206,14 @@ const ProjectDescription = () => {
                   <ContainerColumns>
                         <Card>
                               <Description>
-                                    Leave me your message/feedback and we'll stay in touch!
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                              
                               </Description>
                         </Card>
+                        <Card2>
+                              <BackgroundVideo ShopVideo={SpendManager}/>
+                        </Card2>
                         
                   </ContainerColumns>
                   
