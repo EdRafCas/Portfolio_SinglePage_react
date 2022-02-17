@@ -356,13 +356,13 @@ const Showcase = () => {
             
             <ProjectsContainer>
                   {showcase1 === true ? 
-                  <BackgroundVideo ShopVideo={SpendManager}/>
+                  <BackgroundVideo ShowVideo={SpendManager}/>
                   :showcase2 === true ? 
-                  <BackgroundVideo ShopVideo={ShoppingCart}/>
+                  <BackgroundVideo ShowVideo={ShoppingCart}/>
                   :showcase3 === true ? 
-                  <BackgroundVideo ShopVideo={CoffeShop}/>
+                  <BackgroundVideo ShowVideo={CoffeShop}/>
                   :showcase4 === true ? 
-                  <BackgroundVideo ShopVideo={RockPaperScissors}/>
+                  <BackgroundVideo ShowVideo={RockPaperScissors}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(

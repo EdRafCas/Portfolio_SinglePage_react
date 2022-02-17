@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../Theme';
@@ -16,7 +16,7 @@ const ContactContainer = styled.div`
       width:100%;
       background:#000;
       justify-content:center;
-      padding:3rem 3rem;
+      padding:4rem 4rem;
       min-width:375px;
       @media(max-width: 1140px){ 
             
@@ -39,7 +39,7 @@ const ContainerColumns =styled.div`
       border:solid ${theme.mainBorder} 5px; 
       width:100%;
       display:grid;
-      grid-template-columns: repeat(1, 1fr 1fr);
+      grid-template-columns: repeat(1, 3fr 2fr);
       justify-items:center;
       margin:auto;
       @media(max-width: 1000px){
@@ -50,31 +50,48 @@ const ContainerColumns =styled.div`
 
 const Card =styled.div`
       position:absolute;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:1rem 1rem 1rem;
       left:0px;
       top:0px;
       height:60vh;
       border:solid ${theme.mainBorder} 5px; 
       margin:auto;
       width:50%;
-      min width:50%;
       max-width:100%;
       color:#fff;
       border-radius:15px;
       cursor:auto;
       color:${theme.mainText};
       text-align:center;
-      
+      min-width:300px;
       z-index:100;
       @media(max-width: 1500px){
             top:0px;
             left:auto;
             right:auto;
-            
-        
+            width:60%;
       }
-      @media(max-width: 375px){
+      @media(max-width: 760px){ 
+            padding:0rem;
+            justify-content:center;               
+      }
+`
+const DecriptionText=styled.p`
+      margin:0;
+      font-size:1rem;
+      padding-bottom:1rem;
+      text-align:justify;
+      @media(max-width: 1000px){ 
+            font-size:0.8rem;
             
-        
+      }
+
+      @media(max-width: 760px){ 
+            font-size:0.6rem;
+            padding-bottom:0.5rem;
       }
 `
 const Card2 =styled.div`
@@ -84,45 +101,32 @@ const Card2 =styled.div`
       height:60vh;
       border:solid ${theme.mainBorder} 5px; 
       margin:auto;
-      width:50%;
-      min width:50%;
+      width:40%;
+      min width:40%;
       max-width:100%;
       color:#fff;
       border-radius:15px;
-     
       cursor:auto;
       color:${theme.mainText};
       text-align:center;
+      min-width:300px;
       
       @media(max-width: 1500px){
             top:0px;
             left:auto;
-            right:auto; 
+            right:auto;
+            width:60%; 
             
         
       }
+      
       @media(max-width: 375px){
             
         
       }
 `
 
-const Description=styled.p`
-      
-      font-size:1rem;
-      padding:2rem;
-      
-      @media(max-width: 1000px){ 
-            font-size:0.8rem;
-            padding:0.5rem;
-      }
-      @media(max-width: 375px){ 
-            font-size:0.5rem;
-            padding-bottom:0.5rem;
-            text-align:left;
-            width:80%
-      }
-`
+
 
 const ButtonBack=styled(Link)`
       display: flex;
@@ -205,14 +209,30 @@ const ProjectDescription = () => {
                   </ButtonBack>
                   <ContainerColumns>
                         <Card>
-                              <Description>
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                              
-                              </Description>
+                              <DecriptionText>
+                              This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
+                              </DecriptionText>
+                              <DecriptionText>
+                               The purpose is to serve as "tracking" app, by first requiring the creation of an account (email and password are required) and login into the app it allows the record, and categorization of "expenses", to set a date, a concept, and an amount to each one of the entries, it mantains a permanent track of expenses during the current month and offers the possibily to edit/erase all values of all entries recorded.    
+                               <br/>                    
+                               <br/>                    
+                               Some of the libraries i've implemented during this project were:
+                               <br/>
+                               ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
+                               <br/>
+                               ♥ Webfont                    
+                               <br/>
+                               ♥ Styled-components                    
+                               <br/>
+                               ♥ React-Helmet                   
+                               <br/>
+                               ♥ Date-fns                   
+                               <br/>
+                               ♥ React-day-picker                   
+                              </DecriptionText>
                         </Card>
                         <Card2>
-                              <BackgroundVideo ShopVideo={SpendManager}/>
+                              <BackgroundVideo  Description ShowVideo={SpendManager}/>
                         </Card2>
                         
                   </ContainerColumns>

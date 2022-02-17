@@ -9,10 +9,16 @@ const ShowProject =styled.div`
       right:0px;
       bottom:0px;
       left:0px;
-      opacity:0.5;
+      opacity:${(props) => props.Description ? "1.0" : "0.5"};
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
+      @media(max-width: 1500px){
+            opacity:0.5;
+            
+        
+      }
+
 `
 const VideoBackground=styled.video`
       position:absolute;
@@ -24,11 +30,11 @@ const VideoBackground=styled.video`
       z-index:-1;
 `
 
-const BackgroundVideo = ({ShopVideo}) => {
+const BackgroundVideo = ({ShowVideo, Description}) => {
       return ( 
-            <ShowProject>
+            <ShowProject Description={Description} >
                   <VideoBackground autoPlay loop muted>
-                        <source src={ShopVideo} type="video/mp4"/>
+                        <source src={ShowVideo} type="video/mp4"/>
                   </VideoBackground>
             </ShowProject>
        );
