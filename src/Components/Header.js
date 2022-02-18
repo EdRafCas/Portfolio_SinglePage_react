@@ -68,6 +68,7 @@ const Content2 =styled.div`
 const ImageContainer = styled.div`
       
       height:85vh; /* 700px */
+      max-height:85rem;
       position:relative;
       display:flex;
       flex-direction:column;
@@ -75,7 +76,8 @@ const ImageContainer = styled.div`
       z-index:1;           
       background:#000;
       width:100%;
-      max-height:85rem;
+      min-height:600px;
+      
       @media(max-width: 1140px){ 
             width: 100%;
               
@@ -102,6 +104,7 @@ const FalseBackgroundDefault =styled.div`
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
+      
       @media(min-width: 1141px){ 
             background-size: 176.25rem; 
            

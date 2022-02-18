@@ -13,7 +13,7 @@ const ShowProject =styled.div`
       background-repeat: no-repeat;
       background-position: center;
       background-size: 176.25rem; /* 2820px */
-      @media(max-width: 1500px){
+      @media(max-width: 1200px){
             opacity:0.5;
             
         

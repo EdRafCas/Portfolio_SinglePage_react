@@ -8,17 +8,18 @@
 
 body {
   background:#000;
-  min-height: 600px;
+  
   display: flex;
   margin:auto;
   align-items: center;
   justify-content: center;
   z-index: 10;
+  
 }
 
 :root {
   font-size: 16px;
-  
+  min-height: 750px;
   
   
 }
