@@ -18,6 +18,7 @@ const ProjectsPortolio = [
       {
             id:1,
             name:"Spend manager App",
+            route:"Spend-manager-app",
             tag:"manager-app",
             description:"App for easy management of expenses on a daily basis, with account creation, and classification by type and date and of each expense, hosted in firebase ",
             src:"https://react-app-lista-gastos-31e5d.web.app/",
@@ -32,6 +33,7 @@ const ProjectsPortolio = [
       {
             id:2,
             name:"Shopping cart",
+            route:"Shopping-cart-app",
             tag:"shopping-app",
             description:"Digital store for a clothing store, with shopping cart and search functionalities",
             src:"https://cartshop-react.web.app/",
@@ -47,6 +49,7 @@ const ProjectsPortolio = [
             id:3,
             name:"Coffe Shop",
             tag:"coffe-shop",
+            route:"Coffe-shop-landing-page",
             description:"Landing page for a coffe shop-like business",
             src:"https://coffee-shop-react.web.app/",
             HTML:true,
@@ -61,6 +64,7 @@ const ProjectsPortolio = [
             id:4,
             name:"Rock paper scissors",
             tag:"rock-paper-scissors",
+            route:"Rock-paper-scissors-app",
             description:"Dynamic simulator for rock-paper-scissors game vs CPU",
             src:"https://rock-paper-scissors-5a2c8.web.app/",
             HTML:true,
@@ -163,10 +167,16 @@ const Example=styled.a`
 `
 
 
-const Title=styled.h1`
+const Title=styled(Link)`
+      width:auto;
+      text-decoration: none;
+      color:${theme.mainText};
       font-size:1.5rem;
       padding-bottom:0.5rem;
       padding-left:2rem;
+      :hover{
+            text-decoration:underline;
+      }
       @media(max-width: 930px){ 
             padding-left:1rem;
       }
@@ -372,7 +382,7 @@ const Showcase = () => {
                                           href={Projects.src}
                                           target="__blank"
                                           >
-                                    <Title>{Projects.name}</Title>
+                                    <Title to={`/Projects/${Projects.route}`} >{Projects.name}</Title>
                                     <Description>{Projects.description}</Description>
                                     
                                     <IconContainer>

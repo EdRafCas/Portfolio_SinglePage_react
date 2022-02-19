@@ -3,6 +3,24 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import theme from '../Theme';
 
+const OptionsContainer= styled.div`
+      width:100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr 1fr 1fr);
+      height:15vh;
+      max-height:10rem;
+      background:#000;
+      overflow: hidden
+      overflow:block;
+      z-index:1;
+      max-height:15rem;
+      @media(max-width: 760px){ 
+            height:10vh;
+            min-height:3rem; 
+           
+      } 
+`
+
 const Option1=styled(Link)`
       display:flex;
       height:50%;
@@ -20,6 +38,9 @@ const Option1=styled(Link)`
             border:solid 3px ${theme.mainRed};     
       }
       @media(min-width: 761px){
+            transform: scale(1.3);
+      }
+      @media(min-height: 761px){
             transform: scale(1.3);
       }
       
@@ -97,24 +118,7 @@ const Texto =styled.h1`
 
       
 `
-const OptionsContainer= styled.div`
-      width:100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr 1fr 1fr);
-      height:15vh;
-      max-height:10rem;
-      background:#000;
-      overflow: hidden
-      position:relative;
-      overflow:block;
-      z-index:1;
-      max-height:15rem;
-      @media(max-width: 760px){ 
-            height:10vh;
-            min-height:3rem; 
-           
-      } 
-`
+
 
 
 

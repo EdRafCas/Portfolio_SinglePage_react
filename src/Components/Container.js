@@ -21,7 +21,7 @@ const Container = styled.div`
     align-items:center;
     position: relative;
     z-index: 100;
-    overflow:scroll;
+    
     
 `;
 

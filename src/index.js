@@ -30,7 +30,7 @@ const Index = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact={true}  element={<Header background1={background1} background2={background2} background3={background3} />}/>
-          <Route path="/ProjectDescription" exact={true} element ={<ProjectDescription />}/> 
+          <Route path="/Projects/:route" exact={true} element ={<ProjectDescription />}/> 
           <Route path="/Projects" exact={true}  element={<Showcase />}/>  
           <Route path="/AboutMe" exact={true} element ={<AboutMe />}/> 
           <Route path="/Contact" exact={true} element ={<Contact />}/> 

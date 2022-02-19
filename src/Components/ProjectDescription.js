@@ -87,6 +87,25 @@ const Card =styled.div`
                         
       }
 `
+const Title=styled.h1`
+      font-size:1.5rem;
+      padding:0.5rem;
+      padding-bottom:1rem;
+      @media(max-width: 1140px){ 
+            
+      }
+      @media(max-width: 760px){ 
+            font-size:1rem;
+           
+            
+      } 
+      @media(max-width: 375px){ 
+            padding:0.5rem;
+            
+            
+      } 
+      
+`
 const DecriptionText=styled.p`
       margin:0;
       font-size:1rem;
@@ -122,13 +141,14 @@ const Card2 =styled.div`
       color:${theme.mainText};
       text-align:center;
       min-width:300px;
+      z-index:98;
       
       @media(max-width: 1200px){
             height:100%;
             top:0px;
             left:auto;
             right:auto;
-            width:90%; 
+            width:88%; 
             
         
       }
@@ -142,6 +162,7 @@ const Card2 =styled.div`
 
 
 const ButtonBack=styled(Link)`
+      z-index:99;
       display: flex;
       position:absolute;
       top:5%;
@@ -212,7 +233,7 @@ const ProjectDescription = () => {
 
       return ( 
             <ProjectsContainer>
-                  <ButtonBack to="/">
+                  <ButtonBack to="/Projects/">
                         <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
                               <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
                         </svg>
@@ -220,6 +241,7 @@ const ProjectDescription = () => {
                   </ButtonBack>
                   <ContainerColumns>
                         <Card>
+                              <Title>Finance tracking</Title>
                               <DecriptionText>
                               This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
                               </DecriptionText>
