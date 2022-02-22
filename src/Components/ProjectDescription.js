@@ -58,7 +58,7 @@ const Card =styled.div`
       width:60%;
       max-width:100%;
       min-width:300px;
-      overflow:scroll;
+      overflow:hidden;
       flex-direction:column;
       align-items:center;
       padding:2rem 2rem 1rem;
