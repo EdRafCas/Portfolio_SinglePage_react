@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../Theme';
-import BackgroundVideo from '../Elements/BackgroundVideo';
-import SpendManager from '../video/spend_manager_video.mp4';
+import {ExpenseApp, ShopApp} from '../Elements/PortfolioApp';
 
 
 const ProjectsContainer = styled.div`
@@ -50,117 +49,6 @@ const ContainerColumns =styled.div`
         
       }
 `
-
-const Card =styled.div`
-      position:absolute;
-      display:flex;
-      height:60vh;
-      width:60%;
-      max-width:100%;
-      min-width:300px;
-      overflow:hidden;
-      flex-direction:column;
-      align-items:center;
-      padding:2rem 2rem 1rem;
-      left:0px;
-      top:0px;
-      border:solid ${theme.mainBorder} 5px; 
-      margin:auto;
-      color:#fff;
-      border-radius:15px;
-      cursor:auto;
-      color:${theme.mainText};
-      text-align:center;
-      
-      z-index:100;
-      @media(max-width: 1200px){
-            height:100%;
-            padding:0rem;
-            top:0px;
-            left:auto;
-            right:auto;
-            width:90%;
-            justify-content:center;   
-      }
-      @media(max-width: 760px){ 
-            padding:0rem;
-                        
-      }
-`
-const Title=styled.h1`
-      font-size:1.5rem;
-      padding:0.5rem;
-      padding-bottom:1rem;
-      @media(max-width: 1140px){ 
-            
-      }
-      @media(max-width: 760px){ 
-            font-size:1rem;
-           
-            
-      } 
-      @media(max-width: 375px){ 
-            padding:0.5rem;
-            
-            
-      } 
-      
-`
-const DecriptionText=styled.p`
-      margin:0;
-      font-size:1rem;
-      padding-bottom:1rem;
-      text-align:justify;
-      @media(max-width: 1000px){ 
-            font-size:1rem;
-            
-      }
-
-      @media(max-width: 760px){ 
-            font-size:0.8rem;
-            padding-bottom:0.5rem;
-      }
-      @media(max-width: 550px){ 
-            font-size:0.5rem;
-            padding-bottom:0.5rem;
-      }
-`
-const Card2 =styled.div`
-      position:absolute;
-      top:0px;
-      right:0px;
-      height:60vh;
-      /* border:solid ${theme.mainBorder} 5px; */ 
-      margin:auto;
-      width:40%;
-      min width:40%;
-      max-width:100%;
-      color:#fff;
-      border-radius:15px;
-      cursor:auto;
-      color:${theme.mainText};
-      text-align:center;
-      min-width:300px;
-      z-index:98;
-      
-      @media(max-width: 1200px){
-            height:100%;
-            top:0px;
-            left:auto;
-            right:auto;
-            width:88%; 
-            
-        
-      }
-      
-      @media(max-width: 375px){
-            
-        
-      }
-`
-
-
-
 const ButtonBack=styled(Link)`
       z-index:99;
       display: flex;
@@ -227,10 +115,9 @@ const ButtonBack=styled(Link)`
             
       }
 `
-
 const ProjectDescription = () => {
-      
-
+      const {route} =useParams();
+      console.log(route);
       return ( 
             <ProjectsContainer>
                   <ButtonBack to="/Projects/">
@@ -240,33 +127,11 @@ const ProjectDescription = () => {
                         
                   </ButtonBack>
                   <ContainerColumns>
-                        <Card>
-                              <Title>Finance tracking</Title>
-                              <DecriptionText>
-                              This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
-                              </DecriptionText>
-                              <DecriptionText>
-                               The purpose is to serve as "tracking" app, by first requiring the creation of an account (email and password are required) and login into the app it allows the record, and categorization of "expenses", to set a date, a concept, and an amount to each one of the entries, it mantains a permanent track of expenses during the current month and offers the possibily to edit/erase all values of all entries recorded.    
-                               <br/>                    
-                               <br/>                    
-                               Some of the libraries i've implemented during this project were:
-                               <br/>
-                               ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
-                               <br/>
-                               ♥ Webfont                    
-                               <br/>
-                               ♥ Styled-components                    
-                               <br/>
-                               ♥ React-Helmet                   
-                               <br/>
-                               ♥ Date-fns                   
-                               <br/>
-                               ♥ React-day-picker                   
-                              </DecriptionText>
-                        </Card>
-                        <Card2>
-                              <BackgroundVideo  Description ShowVideo={SpendManager}/>
-                        </Card2>
+                  {route==="Spend-manager-app"?
+                  <ExpenseApp/>:
+                  <ShopApp/>
+                  }
+                  
                         
                   </ContainerColumns>
                   

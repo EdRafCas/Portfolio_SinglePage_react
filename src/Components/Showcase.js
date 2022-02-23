@@ -122,21 +122,20 @@ const ProjectsContainer = styled.div`
       
       
 `
-const Example=styled.a`
+const Example=styled.div`
       padding:0.5rem;
       position:relative;
-      font-size:3rem;
-      color:${theme.mainText};
       min-width:31rem;
       border: 5px solid ${theme.mainBorder};
       border-radius:1rem;
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
+      
      /*  width:50%; */
       width:40%;
-      text-decoration:none;
+      
       padding-left:0.5rem;
+      
      
       
       @media(min-width: 501px){
@@ -165,15 +164,45 @@ const Example=styled.a`
             
       }
 `
+const LinkContainer =styled(Link)`
+      display:flex;
+      flex-direction:column;
+      width:100%;
+      height:100%;
+      text-decoration:none;
+      font-size:3rem;
+      color:${theme.mainText};
+      padding:0;
+      margin:0;
+      justify-content:space-between;
+      @media(max-width: 930px){
+            font-size:2rem;
+           
+      }
+      @media(max-width: 760px){ 
+            
+            font-size:1rem;
 
+      }
+      @media(max-width: 490px){ 
 
-const Title=styled(Link)`
+            
+            
+      }
+      @media(max-width: 375px){ 
+            padding:0.5rem;
+            
+      }
+`
+
+const Title=styled.a`
       width:auto;
       text-decoration: none;
       color:${theme.mainText};
       font-size:1.5rem;
       padding-bottom:0.5rem;
       padding-left:2rem;
+      z-index:100;
       :hover{
             text-decoration:underline;
       }
@@ -379,24 +408,28 @@ const Showcase = () => {
                               <Example    key={index}        
                                           onMouseEnter={()=>BackgrounChanger(Projects.tag)}
                                           onMouseLeave={()=>BackgrounReverser(Projects.tag)}
+                              >
+                                    <Title 
                                           href={Projects.src}
-                                          target="__blank"
-                                          >
-                                    <Title to={`/Projects/${Projects.route}`} >{Projects.name}</Title>
-                                    <Description>{Projects.description}</Description>
+                                          target="__blank">{Projects.name}
+                                    </Title>
+                                    <LinkContainer to={`/Projects/${Projects.route}`}>
+                                          
+                                          <Description>{Projects.description}</Description>
+                                          <IconContainer>
+                                                <IconsGit href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>
+                                                <Icons><IconHtml/></Icons>
+                                                <Icons><IconCss/></Icons>
+                                                <Icons><IconJs/></Icons>
+                                                {Projects.React ?
+                                                <Icons><IconReact/></Icons>
+                                                :""}
+                                                {Projects.Firebase ?
+                                                <Icons><IconFirebase/></Icons>
+                                                :""}
+                                          </IconContainer>
+                                    </LinkContainer>                                 
                                     
-                                    <IconContainer>
-                                          <IconsGit href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>
-                                          <Icons><IconHtml/></Icons>
-                                          <Icons><IconCss/></Icons>
-                                          <Icons><IconJs/></Icons>
-                                          {Projects.React ?
-                                          <Icons><IconReact/></Icons>
-                                          :""}
-                                          {Projects.Firebase ?
-                                          <Icons><IconFirebase/></Icons>
-                                          :""}
-                                    </IconContainer>
                               </Example>     
                         )
                   })}
