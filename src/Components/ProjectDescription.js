@@ -2,7 +2,10 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../Theme';
-import {ExpenseApp, ShopApp} from '../Elements/PortfolioApp';
+import {ExpenseApp, 
+      ShoppingCartApp, 
+      CoffeShopApp, 
+      RockPaperScissorsApp} from '../Elements/PortfolioApp';
 
 
 const ProjectsContainer = styled.div`
@@ -127,9 +130,15 @@ const ProjectDescription = () => {
                         
                   </ButtonBack>
                   <ContainerColumns>
-                  {route==="Spend-manager-app"?
-                  <ExpenseApp/>:
-                  <ShopApp/>
+                  {route==="Spend-manager-app" ?
+                  <ExpenseApp/>
+                  :route==="Shopping-cart-app" ?
+                  <ShoppingCartApp/>
+                  :route==="Coffe-shop-landing-page" ?
+                  <CoffeShopApp/>
+                  :route==="Rock-paper-scissors-app" ?
+                  <RockPaperScissorsApp/>
+                  :""
                   }
                   
                         
