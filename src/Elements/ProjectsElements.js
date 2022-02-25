@@ -24,16 +24,19 @@ const Card =styled.div`
       
       z-index:100;
       @media(max-width: 1200px){
-            height:100%;
+            border:solid ${theme.mainBorder} 3px; 
+            height:60vh;
             padding:0rem;
-            top:0px;
+            top:auto;
             left:auto;
             right:auto;
             width:90%;
-            justify-content:center;   
+            justify-content:center;
+            align-self:center;   
       }
       @media(max-width: 760px){ 
             padding:0rem;
+            height:60vh
                         
       }
 `

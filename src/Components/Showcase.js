@@ -123,20 +123,15 @@ const ProjectsContainer = styled.div`
       
 `
 const Example=styled.div`
-      padding:0.5rem;
+      padding:1rem;
       position:relative;
       min-width:31rem;
-      border: 5px solid ${theme.mainBorder};
+      border:solid ${theme.mainBorder} 5px;
       border-radius:1rem;
       display:flex;
       flex-direction:column;
-      
      /*  width:50%; */
-      width:40%;
-      
-      padding-left:0.5rem;
-      
-     
+      width:50%;
       
       @media(min-width: 501px){
             :hover{
@@ -144,24 +139,22 @@ const Example=styled.div`
                   background:none;
             }
       }
-      
       @media(max-width: 930px){
-            font-size:2rem;
-           
+            
+            font-size:2rem;    
       }
       @media(max-width: 760px){ 
             min-width:20rem;
             font-size:1rem;
-
+            border:solid ${theme.mainBorder} 3px;
+            padding:0.5rem;
+            width:70%;
       }
       @media(max-width: 490px){ 
-
-            min-width:15rem;
-            
+            min-width:15rem;   
       }
       @media(max-width: 375px){ 
-            padding:0.5rem;
-            
+            padding:0.rem;    
       }
 `
 const LinkContainer =styled(Link)`
@@ -174,14 +167,16 @@ const LinkContainer =styled(Link)`
       color:${theme.mainText};
       padding:0;
       margin:0;
+      
       justify-content:space-between;
+      
       @media(max-width: 930px){
             font-size:2rem;
            
       }
       @media(max-width: 760px){ 
-            
             font-size:1rem;
+            padding-left:0.5rem;
 
       }
       @media(max-width: 490px){ 
@@ -190,7 +185,7 @@ const LinkContainer =styled(Link)`
             
       }
       @media(max-width: 375px){ 
-            padding:0.5rem;
+            
             
       }
 `
@@ -203,6 +198,8 @@ const Title=styled.a`
       padding-bottom:0.5rem;
       padding-left:2rem;
       z-index:100;
+      font-weight:600;
+     
       :hover{
             text-decoration:underline;
       }
@@ -228,7 +225,7 @@ const Description=styled.p`
       }
       @media(max-width: 760px){
             font-size:0.8rem;
-            padding-left:0.5rem;
+            padding-left:0rem;
             padding-bottom:0.5rem; 
 
       }

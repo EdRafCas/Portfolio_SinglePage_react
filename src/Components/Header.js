@@ -165,7 +165,7 @@ const Header = ({background1, background2, background3}) => {
       
       const [content, changeContent] =useState(false)
       const [content2, changeContent2] =useState(false)
-      const [content3, changeContent3] =useState(false)
+      /* const [content3, changeContent3] =useState(false) */
       
 
       return ( 
@@ -189,10 +189,7 @@ const Header = ({background1, background2, background3}) => {
                                     onMouseLeave={()=>changeContent2(false)}
                         >{content2 ===true ? <Content2>Developer</Content2>: "Im Eduardo." }
                         </Content1>
-                        <Content1   onMouseEnter={()=>changeContent3(true)}
-                                    onMouseLeave={()=>changeContent3(false)}
-                        >{content3 ===true ? <Content2>CONTACT</Content2>: "Welcome to my portfolio" }
-                        </Content1>
+                        <Content1>Welcome to my portfolio</Content1>
                   </TextContainer>   
             </ImageContainer>
        );

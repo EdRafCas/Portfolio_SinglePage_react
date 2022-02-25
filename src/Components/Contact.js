@@ -91,7 +91,6 @@ const Card =styled.div`
 `
 
 const Description=styled.p`
-      
       font-size:1.5rem;
       padding:2rem;
       @media(max-width: 1000px){ 
@@ -102,11 +101,10 @@ const Description=styled.p`
             font-size:0.8rem;
             padding-bottom:0.5rem;
             text-align:left;
+            padding-left:0;
             width:80%
       }
 `
-
-
 const Label=styled.label`
       text-transform:uppercase;
       font-weight:800;
@@ -182,7 +180,7 @@ const Input = styled.input`
             padding-left:0.5rem;
             font-size: 1rem;
             height:2rem;
-            border: 3px solid ${theme.mainBorder};
+            border: 2px solid ${theme.mainBorder};
       }
 `;
 const TextArea =styled.textarea`
@@ -202,7 +200,7 @@ const TextArea =styled.textarea`
       @media(max-width: 760px){
             text-align:center;
             font-size:1rem;
-            border: 3px solid ${theme.mainBorder};   
+            border: 2px solid ${theme.mainBorder};   
       }
 `
 const ButtonBack=styled(Link)`

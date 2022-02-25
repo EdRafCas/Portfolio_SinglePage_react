@@ -20,7 +20,8 @@ const ProjectsContainer = styled.div`
       width:100%;
       min-width:375px;
       background:#000;
-      justify-content:center;
+      align-items:center;
+      
       padding:4rem 4rem;
       @media(max-width: 1140px){ 
             
