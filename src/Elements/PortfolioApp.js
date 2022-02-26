@@ -10,27 +10,29 @@ const ExpenseApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Finance tracking</Title>
+                        <Title>Spent-tracking</Title>
                         <DescriptionText>
                               This project is the most challenging one i've done so far: a functional, Firebase-hosted application.                             
                               <br/>
                               <br/>
-                              The purpose is to serve as "tracking" app, to be used it requires the user to create an account (email and password are required) and login, once authenticated(firebase authentication) it records and categorises "expenses", it allows to set a date, a concept, and an amount to each one of the data entries, it mantains a permanently visible score of the expenses whose dates are containing during the ongoing month and offers the possibily to edit/erase all values of all entries.
-                              <br/>                    
+                              The goal and purpose is to serve as "tracking" app, to access it requires the user to create an account (email and password are required) and login, once authenticated (firebase authentication) it receives "expenses", it allows to set a date, a category, and an amount to each one of the data entries, mantains a permanently visible acumulated of all the expenses whose dates are contained during the ongoing month and offers the possibility to edit/erase all values of all entries, at any time.
+                              <br/>
+                              Firebase-hosting all database                    
                               <br/>                    
                               Some of the libraries i've implemented during this project were:
                               <br/>
-                              ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
                               <br/>
-                              ♥ Webfont                    
+                              - React-Router(BrowserRouter, Route, Switch, Link)                    
                               <br/>
-                              ♥ Styled-components                    
+                              - Webfont                    
                               <br/>
-                              ♥ React-Helmet                   
+                              - Styled-components                    
                               <br/>
-                              ♥ Date-fns                   
+                              - React-Helmet                   
                               <br/>
-                              ♥ React-day-picker                   
+                              - Date-fns                   
+                              <br/>
+                              - React-day-picker                   
                         </DescriptionText>
                   </Card>
                   <Card2>
@@ -46,25 +48,21 @@ const ShoppingCartApp = () => {
                   <Card>
                         <Title>E-Store Shopping Cart</Title>
                         <DescriptionText>
-                        This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
+                        In this project my aim was to create a blueprint for a generic online clothing shop, the purpose was to emulate both the design and accesibility functions provided by the most frequeantly available online stores, that being: the ability to search trough a catalogue of items, filter them trough their caracteristics and keep the selections in dynamic shopping cart.                
                         <br/>
                         <br/>
-                        The purpose is to serve as "tracking" app, by first requiring the creation of an account (email and password are required) and login into the app it allows the record, and categorization of "expenses", to set a date, a concept, and an amount to each one of the entries, it mantains a permanent track of expenses during the current month and offers the possibily to edit/erase all values of all entries recorded.    
+                        The page design (color palette and elements placement) are taken from several existing sites (no need to reinvent the wheel), search engine and cart adding-editing functionalities were all created from scratch.
                         <br/>                    
                         <br/>                    
                         Some of the libraries i've implemented during this project were:
                         <br/>
-                        ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
+                        - React-Router(BrowserRouter, Route, Switch, Link)                    
                         <br/>
-                        ♥ Webfont                    
+                        - Webfont                    
                         <br/>
-                        ♥ Styled-components                    
+                        - Styled-components                    
                         <br/>
-                        ♥ React-Helmet                   
-                        <br/>
-                        ♥ Date-fns                   
-                        <br/>
-                        ♥ React-day-picker                   
+                        - React-Helmet                   
                         </DescriptionText>
                   </Card>
                   <Card2>
@@ -78,27 +76,22 @@ const CoffeShopApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Coffe</Title>
+                        <Title>Coffe shop landing page</Title>
                         <DescriptionText>
-                        This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
+                        One of the first sites i made, this project was originally made in plain  HTML, CSS, SASS, and Js, then, as practice i decided to turn it into a React app as a way to explore compatibilities and advantages.                      
                         </DescriptionText>
                         <DescriptionText>
-                              The purpose is to serve as "tracking" app, by first requiring the creation of an account (email and password are required) and login into the app it allows the record, and categorization of "expenses", to set a date, a concept, and an amount to each one of the entries, it mantains a permanent track of expenses during the current month and offers the possibily to edit/erase all values of all entries recorded.    
-                              <br/>                    
-                              <br/>                    
-                              Some of the libraries i've implemented during this project were:
-                              <br/>
-                              ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
-                              <br/>
-                              ♥ Webfont                    
-                              <br/>
-                              ♥ Styled-components                    
-                              <br/>
-                              ♥ React-Helmet                   
-                              <br/>
-                              ♥ Date-fns                   
-                              <br/>
-                              ♥ React-day-picker                   
+                        The main highlight would be the accesible single-page design and a dynamic menu(this is mean to be a coffe-shop after all), hosted as a database in firebase allowing the page to be updated easily without redeploying the already hosted page.   
+                        <br/>                    
+                        <br/>                    
+                        Some of the libraries i've implemented during this project were:
+                        <br/>
+                        - React-Router(BrowserRouter, Route, Switch, Link)                    
+                        <br/>
+                        - Webfont                    
+                        <br/>
+                        - Styled-components                    
+                                 
                         </DescriptionText>
                   </Card>
                   <Card2>
@@ -112,27 +105,25 @@ const RockPaperScissorsApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Rock-Paper-Scissors Game</Title>
+                        <Title>Rock-Paper-Scissors </Title>
                         <DescriptionText>
-                        This is a project where i used several libraries simultaneously to achieve what is by far the most complex product i've achieved so far: a functional, Firebase-hosted application.                             
-                        </DescriptionText>
-                        <DescriptionText>
-                              The purpose is to serve as "tracking" app, by first requiring the creation of an account (email and password are required) and login into the app it allows the record, and categorization of "expenses", to set a date, a concept, and an amount to each one of the entries, it mantains a permanent track of expenses during the current month and offers the possibily to edit/erase all values of all entries recorded.    
+                              This Projects was made as a challenge as provided in <a 
+                              href={"https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH"}
+                              target="__blank">frontendmentor </a>                        
+                              <br/>                    
+                              <br/>  
+                             Starting from a basic folder with resources(svgs, icons, color palette) but no guidelines in the "how" the goal was to create an interactive game that allowed the win-lose-tie interaction we all know from rock-paper-scissors, it simulates a seemingly random value upon choosing an option and keeps a record(locally stored) of results.
                               <br/>                    
                               <br/>                    
                               Some of the libraries i've implemented during this project were:
                               <br/>
-                              ♥ React-Router(BrowserRouter, Route, Switch, Link)                    
+                              - React-Router(BrowserRouter, Route, Switch, Link)                    
                               <br/>
-                              ♥ Webfont                    
+                              - Webfont                    
                               <br/>
-                              ♥ Styled-components                    
+                              - Styled-components                    
                               <br/>
-                              ♥ React-Helmet                   
-                              <br/>
-                              ♥ Date-fns                   
-                              <br/>
-                              ♥ React-day-picker                   
+                              - React-Helmet                                    
                         </DescriptionText>
                   </Card>
                   <Card2>

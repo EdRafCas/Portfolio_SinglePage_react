@@ -64,6 +64,13 @@ const DescriptionText=styled.p`
       font-size:1rem;
       padding-bottom:1rem;
       text-align:justify;
+      a{
+            text-decoration:none;
+            color:${theme.mainText};
+            :hover{
+                  text-decoration:underline;
+            }
+      }
       @media(max-width: 1000px){ 
             font-size:1rem;
             
