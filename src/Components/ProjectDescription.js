@@ -17,39 +17,40 @@ const ProjectsContainer = styled.div`
       flex-direction:column;
       z-index:1;           
       /* border:solid #fff 3px; */
-      width:100%;
       min-width:375px;
       background:#000;
       align-items:center;
-      
-      padding:4rem 4rem;
       @media(max-width: 1140px){ 
             
        }
       @media(max-width: 760px){ 
              
-            padding:0rem 2.5rem;
+            padding:2rem 2.5rem;
            
       } 
       @media(max-width: 375px){ 
             /* height:35rem; */
             height:90vh;
-            padding:0rem 2.5rem;
+            padding:2rem 2.5rem;
 
       } 
 `
 const ContainerColumns =styled.div`
-      position:relative; 
-      height:85vh;
+      
+      height:100%;
       /* border:solid ${theme.mainBorder} 5px;  */
       width:100%;
       display:grid;
-      grid-template-columns: repeat(1, 3fr 2fr);
+      grid-template-columns: repeat(1, 6fr 4fr);
       justify-items:center;
+      padding-right:1rem;
       margin:auto;
-      @media(max-width: 1000px){
-            
-            grid-template-columns: repeat(1,1fr);
+      align-items:center;
+      @media(max-width: 1200px){
+            padding-right:0rem;
+            display:flex;
+            flex-direction:column;
+
         
       }
 `
