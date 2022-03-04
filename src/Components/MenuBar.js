@@ -20,7 +20,6 @@ const OptionsContainer= styled.div`
            
       } 
 `
-
 const Option1=styled(Link)`
       display:flex;
       height:50%;
@@ -87,7 +86,6 @@ const Option3=styled(Link)`
       }
 
 `
-
 const Texto =styled.h1`
       font-size:1.5rem;
       align-self:center;
@@ -118,11 +116,6 @@ const Texto =styled.h1`
 
       
 `
-
-
-
-
-
 
 const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
       return ( 

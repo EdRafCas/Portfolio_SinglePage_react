@@ -13,6 +13,7 @@ import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 import {ReactComponent as IconGitAlt} from './../icons/git_alt_icon.svg'
 import theme from '../Theme';
+import {Helmet} from "react-helmet";
 
 const ProjectsPortolio = [
       {
@@ -189,7 +190,6 @@ const LinkContainer =styled(Link)`
             
       }
 `
-
 const Title=styled.a`
       width:auto;
       text-decoration: none;
@@ -213,7 +213,6 @@ const Title=styled.a`
       }
       
 `
-
 const Description=styled.p`
       font-size:1rem;
       padding-left:2rem;
@@ -249,8 +248,6 @@ const IconContainer=styled.div`
 
       }
 `
-
-
 const Icons=styled.div`
       /* border:1px solid white; */
       svg{
@@ -355,15 +352,13 @@ const ButtonBack=styled(Link)`
             
       }
 `
-
-
 const Showcase = () => {
       const [showcase1, changeShowcase1] =useState(false)
       const [showcase2, changeShowcase2] =useState(false)
       const [showcase3, changeShowcase3] =useState(false)
       const [showcase4, changeShowcase4] =useState(false)
 
-       const BackgrounChanger=(tagname)=>{
+      const BackgrounChanger=(tagname)=>{
 
             if(tagname ==="manager-app"){
                   changeShowcase1(true)
@@ -389,7 +384,12 @@ const Showcase = () => {
       }            
 
       return (
+      <>      
+            <Helmet >
             
+            <title>Projects</title>
+     
+            </Helmet>
             <ProjectsContainer>
                   {showcase1 === true ? 
                   <BackgroundVideo ShowVideo={SpendManager}/>
@@ -446,8 +446,8 @@ const Showcase = () => {
                   
             </ProjectsContainer>
                   
-            
-       );
+      </> 
+      );
 }
  
 export default Showcase;

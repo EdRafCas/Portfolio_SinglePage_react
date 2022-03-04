@@ -6,6 +6,7 @@ import {ExpenseApp,
       ShoppingCartApp, 
       CoffeShopApp, 
       RockPaperScissorsApp} from '../Elements/PortfolioApp';
+import {Helmet} from "react-helmet";
 
 
 const ProjectsContainer = styled.div`
@@ -55,7 +56,7 @@ const ContainerColumns =styled.div`
       }
 `
 const ButtonBack=styled(Link)`
-      z-index:99;
+      z-index:100;
       display: flex;
       position:absolute;
       top:5%;
@@ -123,7 +124,12 @@ const ButtonBack=styled(Link)`
 const ProjectDescription = () => {
       const {route} =useParams();
       console.log(route);
-      return ( 
+      return (
+      <>
+            <Helmet >
+                  <title>{route}</title>
+            </Helmet>
+      
             <ProjectsContainer>
                   <ButtonBack to="/Projects/">
                         <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
@@ -147,6 +153,7 @@ const ProjectDescription = () => {
                   </ContainerColumns>
                   
             </ProjectsContainer>
+      </> 
        );
 }
  

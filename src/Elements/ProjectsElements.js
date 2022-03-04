@@ -89,7 +89,7 @@ const Card =styled.div`
       cursor:auto;
       color:${theme.mainText};
       text-align:center;
-      z-index:100;
+      z-index:99;
       @media(max-width: 1200px){
             height:50%;
             
@@ -130,10 +130,15 @@ const Card2 =styled.div`
       
 `
 
-const Title=styled.h1`
+const Title=styled.a`
+      text-decoration: none;
+      color:${theme.mainText};
       font-size:1.5rem;
       padding:0.5rem;
       padding-bottom:1rem;
+      :hover{
+            text-decoration:underline;
+      }
       @media(max-width: 1140px){ 
       }
       @media(max-width: 760px){ 

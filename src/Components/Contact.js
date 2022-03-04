@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Formik} from 'formik';
 import theme from '../Theme';
 import emailjs from '@emailjs/browser';
+import {Helmet} from "react-helmet";
 
 const ContactContainer = styled.div`
       position:relative;      
@@ -16,24 +17,20 @@ const ContactContainer = styled.div`
       flex-direction:column;
       z-index:1;           
       /* border:solid #fff 3px; */
-      
       background:#000;
       justify-content:center;
       padding:5rem 5rem;
       
-      @media(max-width: 1140px){ 
-            
-       }
+      @media(max-width: 1140px){     
+      }
       @media(max-width: 760px){ 
              
-            padding:0rem 2.5rem;
-           
+            padding:0rem 2.5rem;     
       } 
       @media(max-width: 375px){ 
             /* height:35rem; */
             height:90vh;
             padding:0rem 2.5rem;
-
       } 
 `
 const ContainerColumns =styled.div`
@@ -43,8 +40,7 @@ const ContainerColumns =styled.div`
       justify-items:center;
       margin:auto;
       @media(max-width: 1000px){
-            grid-template-columns: repeat(1,1fr);
-        
+            grid-template-columns: repeat(1,1fr);  
       }
 `
 const Formulary = styled.form` 
@@ -62,9 +58,7 @@ const Formulary = styled.form`
             }
       }
       @media(max-width: 760px){ 
-            gap:0.5rem;
-            
-           
+            gap:0.5rem;          
       } 
 `
 
@@ -82,14 +76,10 @@ const Card =styled.div`
       
       @media(max-width: 760px){
             max-width:100%;
-        
       }
-      @media(max-width: 375px){
-            
-        
+      @media(max-width: 375px){  
       }
 `
-
 const Description=styled.p`
       font-size:1.5rem;
       padding:2rem;
@@ -152,15 +142,11 @@ const ContactButton=styled.button`
                              
                   :active{
                         
-                        font-size: 1.1rem;
-                        
+                        font-size: 1.1rem;   
                   }   
             }
-           
       } 
       @media(max-width: 375px){ 
-            
-      
       } 
 `
 const Input = styled.input`
@@ -190,7 +176,6 @@ const TextArea =styled.textarea`
       border: none;
       border: 5px solid ${theme.mainBorder};
       outline: none;
-      
       height: ${(props) => props.name==="email" ? "3rem"    
                         : props.name==="name" ? "3rem"    
                         :"auto"};
@@ -244,7 +229,6 @@ const ButtonBack=styled(Link)`
                   margin-right: 0px;
                   margin-left: 0px;
                   font-size: 1rem;
-
             }
             :hover{
                   box-shadow: 6px 6px 22px ${theme.mainText}, -6px -6px 22px ${theme.mainText};
@@ -283,6 +267,10 @@ const Contact = () => {
       }
 
       return ( 
+      <>
+            <Helmet >
+                  <title>Contact</title>
+            </Helmet>
             <ContactContainer>
                   <ButtonBack to="/">
                         <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
@@ -374,7 +362,8 @@ const Contact = () => {
                   </ContainerColumns>
                   
             </ContactContainer>
-       );
+      </> 
+      );
 }
  
 export default Contact;

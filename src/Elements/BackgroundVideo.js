@@ -14,11 +14,8 @@ const ShowProject =styled.div`
       background-position: center;
       background-size: 176.25rem; /* 2820px */
       @media(max-width: 1200px){
-            opacity:0.5;
-            
-        
+            /* opacity:0.5 */;
       }
-
 `
 const VideoBackground=styled.video`
       position:absolute;

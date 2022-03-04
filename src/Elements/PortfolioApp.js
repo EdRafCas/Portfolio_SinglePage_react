@@ -10,7 +10,8 @@ const ExpenseApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Spent-tracking</Title>
+                        <Title href={"https://react-app-lista-gastos-31e5d.web.app/"}
+                               target="__blank">Spent-tracking</Title>
                         <DescriptionText>
                               This project is the most challenging one i've done so far: a functional, Firebase-hosted application.                             
                               <br/>
@@ -46,7 +47,8 @@ const ShoppingCartApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>E-Store Shopping Cart</Title>
+                        <Title href={"https://cartshop-react.web.app/"}
+                               target="__blank">E-Store Shopping Cart</Title>
                         <DescriptionText>
                         In this project my aim was to create a blueprint for a generic online clothing shop, the purpose was to emulate both the design and accesibility functions provided by the most frequeantly available online stores, that being: the ability to search trough a catalogue of items, filter them trough their caracteristics and keep the selections in dynamic shopping cart.                
                         <br/>
@@ -76,7 +78,8 @@ const CoffeShopApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Coffe shop landing page</Title>
+                        <Title href={"https://coffee-shop-react.web.app/"}
+                               target="__blank">Coffe shop landing page</Title>
                         <DescriptionText>
                         One of the first sites i made, this project was originally made in plain  HTML, CSS, SASS, and Js, then, as practice i decided to turn it into a React app as a way to explore compatibilities and advantages.                      
                         </DescriptionText>
@@ -105,7 +108,8 @@ const RockPaperScissorsApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title>Rock-Paper-Scissors </Title>
+                        <Title href={"https://rock-paper-scissors-5a2c8.web.app/"}
+                               target="__blank">Rock-Paper-Scissors </Title>
                         <DescriptionText>
                               This Projects was made as a challenge as provided in <a 
                               href={"https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH"}

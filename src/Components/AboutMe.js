@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../Theme';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 const DescriptionContainer = styled.div`
       height:85vh; /* 700px */
@@ -34,7 +35,6 @@ const DescriptionContainer = styled.div`
       
 
 `
-
 const Card =styled.div`
       border:solid ${theme.mainBorder} 10px;
       margin:0rem;
@@ -79,7 +79,6 @@ const Title=styled.h1`
       } 
       
 `
-
 const Description=styled.p`
       max-width:100rem;
       font-size:1rem;
@@ -163,9 +162,12 @@ const ButtonBack=styled(Link)`
             
       }
 `
-
 const AboutMe = () => {
-      return ( 
+      return (
+      <>
+            <Helmet >
+                  <title>About me</title>
+            </Helmet>
             <DescriptionContainer>
                   <ButtonBack to="/">
                         <svg height="32" width="32" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
@@ -192,7 +194,8 @@ const AboutMe = () => {
 
                   </Card>
             </DescriptionContainer>
-       );
+      </>
+      );
 }
  
 export default AboutMe;

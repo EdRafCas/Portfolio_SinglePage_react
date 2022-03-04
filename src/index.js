@@ -10,7 +10,9 @@ import Showcase from './Components/Showcase';
 import AboutMe from './Components/AboutMe';
 import SocialNetworkBar from './Components/SocialNetworkBar';
 import Contact from './Components/Contact';
-import ProjectDescription from './Components/ProjectDescription'
+import ProjectDescription from './Components/ProjectDescription';
+import {Helmet} from "react-helmet";
+import favicon from './icons/OmenIcon.jpg'
 
 
 
@@ -27,6 +29,11 @@ const Index = () => {
 
   return ( 
     <Container>
+      <Helmet >
+      <link rel="shortcut icon" href={favicon} type="image/x-icon"></link>
+      <title>Eduardo Castillo</title>
+     
+      </Helmet>
       <BrowserRouter>
         <Routes>
           <Route path="/" exact={true}  element={<Header background1={background1} background2={background2} background3={background3} />}/>
