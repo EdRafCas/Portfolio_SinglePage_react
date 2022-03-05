@@ -1,11 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import DesktopImageDefault from './../img/desktop_blue.jpg';
-/* 
-import DesktopImage1 from './../img/desktop_red.jpg';
-import DesktopImage2 from './../img/abstract.jpg';
-import DesktopImage3 from './../img/tech.jpg'; 
-*/
 import theme from '../Theme';
 
 
@@ -120,64 +115,19 @@ const FalseBackgroundDefault =styled.div`
       
       
 `
-/* const FalseBackground1 =styled.div`
-      position:absolute;
-      content:"";
-      top: 0px;
-      right:0px;
-      bottom:0px;
-      left:0px;
-      opacity:0.5;
-      background: url(${DesktopImage1});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 176.25rem; 
-`
-const FalseBackground2 =styled.div`
-      position:absolute;
-      content:"";
-      top: 0px;
-      right:0px;
-      bottom:0px;
-      left:0px;
-      opacity:0.8;
-      background: url(${DesktopImage2});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 176.25rem;      
-`
-const FalseBackground3 =styled.div`
-      position:absolute;
-      content:"";
-      top: 0px;
-      right:0px;
-      bottom:0px;
-      left:0px;
-      opacity:0.90;
-      background: url(${DesktopImage3});
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 176.25rem;           
-` */
 
-const Header = ({background1, background2, background3}) => {
+
+const Header = () => {
 
       
       const [content, changeContent] =useState(false)
       const [content2, changeContent2] =useState(false)
-      /* const [content3, changeContent3] =useState(false) */
+      
       
 
       return ( 
             <ImageContainer >
-                  {/* {background1 === true ? 
-                  <FalseBackground1/>
-                  : background2 === true ? 
-                  <FalseBackground2/>
-                  : background3 === true ? 
-                  <FalseBackground3/>
-                  :<FalseBackgroundDefault/>
-                  } */}
+                  
                   <FalseBackgroundDefault/>
                        
                   <TextContainer>

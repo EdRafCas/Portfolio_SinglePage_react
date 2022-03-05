@@ -23,9 +23,7 @@ WebFont.load({
 });
 
 const Index = () => {
-      const [background1, changeBackground1] =useState(false)
-      const [background2, changeBackground2] =useState(false)
-      const [background3, changeBackground3] =useState(false)
+      
 
   return ( 
     <Container>
@@ -36,7 +34,7 @@ const Index = () => {
       </Helmet>
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact={true}  element={<Header background1={background1} background2={background2} background3={background3} />}/>
+          <Route path="/" exact={true}  element={<Header />}/>
           <Route path="/Projects/:route" exact={true} element ={<ProjectDescription />}/> 
           <Route path="/Projects" exact={true}  element={<Showcase />}/>  
           <Route path="/AboutMe" exact={true} element ={<AboutMe />}/> 

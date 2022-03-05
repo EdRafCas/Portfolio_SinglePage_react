@@ -1,77 +1,7 @@
 import styled from 'styled-components';
 import theme from '../Theme';
 
-/* const Card =styled.div`
-      position:absolute;
-      display:flex;
-      height:60vh;
-      width:60%;
-      max-width:100%;
-      min-width:300px;
-      overflow:hidden;
-      flex-direction:column;
-      align-items:center;
-      padding:2rem 2rem 1rem;
-      left:0px;
-      top:0px;
-      border:solid ${theme.mainBorder} 5px; 
-      margin:auto;
-      color:#fff;
-      border-radius:15px;
-      cursor:auto;
-      color:${theme.mainText};
-      text-align:center;
-      
-      z-index:100;
-      @media(max-width: 1200px){
-            border:solid ${theme.mainBorder} 3px; 
-            height:60vh;
-            padding:0rem;
-            top:auto;
-            left:auto;
-            right:auto;
-            width:90%;
-            justify-content:center;
-            align-self:center;   
-      }
-      @media(max-width: 760px){ 
-            padding:0rem;
-            height:60vh
-                        
-      }
-` */
 
-/* const Card2 =styled.div`
-      position:absolute;
-      top:0px;
-      right:0px;
-      height:60vh;
-      margin:auto;
-      width:40%;
-      min width:40%;
-      max-width:100%;
-      color:#fff;
-      border-radius:15px;
-      cursor:auto;
-      color:${theme.mainText};
-      text-align:center;
-      min-width:300px;
-      z-index:98;
-      
-      @media(max-width: 1200px){
-            height:100%;
-            top:0px;
-            left:auto;
-            right:auto;
-            width:88%; 
-            
-        
-      }
-      
-      @media(max-width: 375px){     
-        
-      }
-` */
 const Card =styled.div`
       display:flex;
       width:85%;
