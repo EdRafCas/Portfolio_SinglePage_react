@@ -117,22 +117,16 @@ const Texto =styled.h1`
       
 `
 
-const MenuBar = ({changeBackground1, changeBackground2, changeBackground3}) => {
+const MenuBar = () => {
       return ( 
             <OptionsContainer>
-                  <Option1 to={"/Projects"}
-                                    onMouseEnter={()=>changeBackground1(true)}
-                                    onMouseLeave={()=>changeBackground1(false)}>
+                  <Option1 to={"/Projects"}>
                                     <Texto>PROJECTS</Texto>
                   </Option1 >
-                  <Option2  to={"/AboutMe"}        
-                                    onMouseEnter={()=>changeBackground2(true)}
-                                    onMouseLeave={()=>changeBackground2(false)}>
+                  <Option2  to={"/AboutMe"}>
                                     <Texto>ABOUT ME</Texto>
                   </Option2>
-                  <Option3  to={"/Contact"}         
-                                    onMouseEnter={()=>changeBackground3(true)}
-                                    onMouseLeave={()=>changeBackground3(false)}>
+                  <Option3  to={"/Contact"}>
                         <Texto>CONTACT</Texto>
                   </Option3>
             </OptionsContainer>

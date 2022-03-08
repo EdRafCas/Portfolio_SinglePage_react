@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import WebFont from 'webfontloader';
@@ -40,7 +40,7 @@ const Index = () => {
           <Route path="/AboutMe" exact={true} element ={<AboutMe />}/> 
           <Route path="/Contact" exact={true} element ={<Contact />}/> 
         </Routes>
-        <MenuBar changeBackground1={changeBackground1} changeBackground2={changeBackground2} changeBackground3={changeBackground3}/>
+        <MenuBar />
       </BrowserRouter>
       <SocialNetworkBar/>
     </Container>

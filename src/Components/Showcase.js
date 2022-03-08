@@ -21,7 +21,7 @@ const ProjectsPortolio = [
             name:"Spend manager App",
             route:"Spend-manager-app",
             tag:"manager-app",
-            description:"App for easy management of expenses on a daily basis, with account creation, and classification by type and date and of each expense, hosted in firebase ",
+            description:"App for easy tracking and categorization of daily expenses, with account creation, hosted in firebase ",
             src:"https://react-app-lista-gastos-31e5d.web.app/",
             HTML:true,
             CSS:false,
@@ -438,11 +438,6 @@ const Showcase = () => {
                         </svg>
                         
                   </ButtonBack>
-                  {/* <ArrowContainer>
-                        <ReturnButtom to="/">      
-                              <IconArrow/>  
-                        </ReturnButtom>                 
-                  </ArrowContainer> */}
                   
             </ProjectsContainer>
                   

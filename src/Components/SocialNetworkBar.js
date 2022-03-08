@@ -68,10 +68,10 @@ const Icons=styled.a`
 const SocialNetworkBar = () => {
       return ( 
             <SocialNetworks>
-                 <Icons href={"https://github.com/EdRafCas"} target="__blank" github><IconGithub/></Icons>
-                 <Icons href={"https://twitter.com/Eduardrcc"} target="__blank" twitter><IconTwitter/></Icons>
-                 <Icons href={"https://www.instagram.com/eduardooraf/"} target="__blank" instagram><IconInstagram/></Icons>
-                 <Icons href={"https://www.linkedin.com/in/eduardo-castillo-canache-699782143/"} target="__blank" linkedin><IconLinkedin/></Icons>
+                 <Icons href={"https://github.com/EdRafCas"} aria-label="Github" target="__blank" github><IconGithub/></Icons>
+                 <Icons href={"https://twitter.com/Eduardrcc"} aria-label="Twitter"  target="__blank" twitter><IconTwitter/></Icons>
+                 <Icons href={"https://www.instagram.com/eduardooraf/"} aria-label="Instagram"  target="__blank" instagram><IconInstagram/></Icons>
+                 <Icons href={"https://www.linkedin.com/in/eduardo-castillo-canache-699782143/"} aria-label="Linkdn"  target="__blank" linkedin><IconLinkedin/></Icons>
                  
             </SocialNetworks>
        );

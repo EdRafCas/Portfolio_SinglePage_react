@@ -101,7 +101,7 @@ const DescriptionText=styled.p`
             padding-bottom:0.5rem;
       }
       @media(max-width: 550px){ 
-            font-size:0.7rem;
+            font-size:0.75rem;
             padding-bottom:0.5rem;
       }
 `

@@ -92,7 +92,7 @@ const Description=styled.p`
                
       } 
       @media(max-width: 375px){ 
-            font-size:0.7rem;
+            font-size:0.75rem;
             padding:0.5rem;
             
       } 
