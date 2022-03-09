@@ -12,7 +12,7 @@ import SocialNetworkBar from './Components/SocialNetworkBar';
 import Contact from './Components/Contact';
 import ProjectDescription from './Components/ProjectDescription';
 import {Helmet} from "react-helmet";
-import favicon from './icons/OmenIcon.jpg'
+import favicon from './icons/OmenIcon.ico'
 
 
 

@@ -8,11 +8,7 @@ const Container = styled.div`
     width: 100%;
     min-width: 375px;
     max-width:176.25rem;
-    /* min-width:71.25rem; */ 
-    /* max-width: 71.25rem; /* 1140px */
-    
     overflow-y: auto;
-    /* box-shadow: 0px 1.25rem 2.5rem rgba(0,0,0,.05); */
     border-radius: 0; 
     margin: auto;
     display: flex;

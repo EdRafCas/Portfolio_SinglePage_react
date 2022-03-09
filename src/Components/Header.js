@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import DesktopImageDefault from './../img/desktop_blue.jpg';
+import DesktopImageDefault from './../img/desktop_blue.webp';
 import theme from '../Theme';
 
 

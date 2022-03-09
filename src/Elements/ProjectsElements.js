@@ -12,7 +12,6 @@ const Card =styled.div`
       justify-content:center;
       align-items:center;
       padding:2rem 2rem 1rem;
-      /* border:solid ${theme.mainBorder} 5px;  */
       margin:auto;
       color:#fff;
       border-radius:15px;
@@ -39,7 +38,6 @@ const Card =styled.div`
 
 const Card2 =styled.div`
       position:relative;
-      /* border:solid ${theme.mainBorder} 5px;  */
       height:50%;
       width:100%;
       min width:40%;
@@ -49,7 +47,6 @@ const Card2 =styled.div`
       cursor:auto;
       color:${theme.mainText};
       text-align:center;
-      
       z-index:98;
       @media(max-width: 1200px){
             height:40%;

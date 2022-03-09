@@ -11,6 +11,8 @@
 # production
 /build
 
+#removed elements from deploy
+/removed
 # misc
 .DS_Store
 .env
