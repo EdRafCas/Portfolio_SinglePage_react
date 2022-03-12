@@ -133,11 +133,11 @@ const Header = () => {
                   <TextContainer>
                         <Content1  onMouseEnter={()=>changeContent(true)}
                                     onMouseLeave={()=>changeContent(false)}
-                        >{content ===true ? <Content2>Front-End</Content2>: "Hello." }
+                        >{content ===true ? <Content2>Front-End</Content2>: "Hello" }
                         </Content1>
                         <Content1   onMouseEnter={()=>changeContent2(true)}
                                     onMouseLeave={()=>changeContent2(false)}
-                        >{content2 ===true ? <Content2>Developer</Content2>: "Im Eduardo." }
+                        >{content2 ===true ? <Content2>Developer</Content2>: "Im Eduardo" }
                         </Content1>
                         <Content1>Welcome to my portfolio</Content1>
                   </TextContainer>   
