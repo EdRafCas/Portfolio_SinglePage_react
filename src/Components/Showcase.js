@@ -74,23 +74,42 @@ const ProjectsPortolio = [
             React:true, 
             Firebase:true,
             repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
-      }
+      },
+      {
+            id:5,
+            name:"Socialnetwork app",
+            tag:"socialnetwork-app",
+            route:"Socialnetwork-app",
+            description:"Socialnetwork app, designed to provide a twitter-like experience",
+            src:"https://socialnetwork-app-aca27.web.app/",
+            HTML:true,
+            CSS:true,
+            JS:true,
+            React:true, 
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/socialnetwork_app"
+      },
       
 ]
 
 const ProjectsContainer = styled.div`
       position:relative;      
       height:85vh; /* 700px */
-      max-height:85rem;
+      /* max-height:85rem; */
       min-height:600px;
       width:100%;
       display:flex;
       flex-direction:column;
-      justify-content:space-evenly;
-      align-items:flex-start;
+      /* justify-content:space-evenly;
+      align-items:flex-start; */
+      gap:2rem;
       padding-left:8rem;
+      padding-top:1rem;
       z-index:1;           
       background:#000;
+      overflow:scroll;
+      overflow-x:hidden;
+      border:solid ${theme.mainBorder} 5px;
       
       @media(max-width:1024px){
             @media(max-height:600px){
