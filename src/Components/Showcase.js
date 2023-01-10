@@ -18,6 +18,20 @@ import {Helmet} from "react-helmet";
 const ProjectsPortolio = [
       {
             id:1,
+            name:"Socialnetwork app",
+            tag:"socialnetwork-app",
+            route:"Socialnetwork-app",
+            description:"Socialnetwork app, designed to provide a twitter-like experience",
+            src:"https://socialnetwork-app-aca27.web.app/",
+            HTML:true,
+            CSS:true,
+            JS:true,
+            React:true, 
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/socialnetwork_app"
+      },
+      {
+            id:2,
             name:"Spend manager App",
             route:"Spend-manager-app",
             tag:"manager-app",
@@ -28,11 +42,10 @@ const ProjectsPortolio = [
             JS:true,
             React:true, 
             Firebase:true,
-            background:"changeShowcase1(true)",
             repository:"https://github.com/EdRafCas/payment_tracking_app_react"
       },
       {
-            id:2,
+            id:3,
             name:"Shopping cart",
             route:"Shopping-cart-app",
             tag:"shopping-app",
@@ -47,7 +60,7 @@ const ProjectsPortolio = [
 
       },
       {
-            id:3,
+            id:4,
             name:"Coffe Shop",
             tag:"coffe-shop",
             route:"Coffe-shop-landing-page",
@@ -62,7 +75,7 @@ const ProjectsPortolio = [
 
       },
       {
-            id:4,
+            id:5,
             name:"Rock paper scissors",
             tag:"rock-paper-scissors",
             route:"Rock-paper-scissors-app",
@@ -74,21 +87,7 @@ const ProjectsPortolio = [
             React:true, 
             Firebase:true,
             repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
-      },
-      {
-            id:5,
-            name:"Socialnetwork app",
-            tag:"socialnetwork-app",
-            route:"Socialnetwork-app",
-            description:"Socialnetwork app, designed to provide a twitter-like experience",
-            src:"https://socialnetwork-app-aca27.web.app/",
-            HTML:true,
-            CSS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/socialnetwork_app"
-      },
+      }
       
 ]
 
@@ -109,7 +108,7 @@ const ProjectsContainer = styled.div`
       background:#000;
       overflow:scroll;
       overflow-x:hidden;
-      border:solid ${theme.mainBorder} 5px;
+      /* border:solid ${theme.mainBorder} 5px; */
       
       @media(max-width:1024px){
             @media(max-height:600px){
@@ -376,29 +375,32 @@ const Showcase = () => {
       const [showcase2, changeShowcase2] =useState(false)
       const [showcase3, changeShowcase3] =useState(false)
       const [showcase4, changeShowcase4] =useState(false)
+      const [showcase5, changeShowcase5] =useState(false)
 
       const BackgrounChanger=(tagname)=>{
-
             if(tagname ==="manager-app"){
                   changeShowcase1(true)
             }if(tagname ==="shopping-app"){
                   changeShowcase2(true)
-            }if(tagname==="coffe-shop"){
+            }if(tagname ==="coffe-shop"){
                   changeShowcase3(true)
-            }if(tagname==="rock-paper-scissors"){
+            }if(tagname ==="rock-paper-scissors"){
                   changeShowcase4(true)
+            }if(tagname ==="socialnetwork-app"){
+                  changeShowcase5(true)
             }
       }
       const BackgrounReverser=(tagname)=>{
-
             if(tagname ==="manager-app"){
                   changeShowcase1(false)
             }if(tagname ==="shopping-app"){
                   changeShowcase2(false)
-            }if(tagname==="coffe-shop"){
+            }if(tagname ==="coffe-shop"){
                   changeShowcase3(false)
-            }if(tagname==="rock-paper-scissors"){
+            }if(tagname ==="rock-paper-scissors"){
                   changeShowcase4(false)
+            }if(tagname ==="socialnetwork-app"){
+                  changeShowcase5(false)
             }
       }            
 
@@ -417,6 +419,8 @@ const Showcase = () => {
                   :showcase3 === true ? 
                   <BackgroundVideo ShowVideo={CoffeShop}/>
                   :showcase4 === true ? 
+                  <BackgroundVideo ShowVideo={RockPaperScissors}/>
+                  :showcase5 === true ? 
                   <BackgroundVideo ShowVideo={RockPaperScissors}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{

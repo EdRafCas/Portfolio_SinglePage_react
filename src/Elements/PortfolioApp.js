@@ -74,6 +74,37 @@ const ShoppingCartApp = () => {
 
        );
 }
+const SocialNetworkApp = () => {
+      return ( 
+            <>
+                  <Card>
+                        <Title href={"https://cartshop-react.web.app/"}
+                               target="__blank">E-Store Shopping Cart</Title>
+                        <DescriptionText>
+                        In this project my aim was to create a blueprint for a generic online clothing shop, the purpose was to emulate both the design and accesibility functions provided by the most frequeantly available online stores, that being: the ability to search trough a catalogue of items, filter them trough their caracteristics and keep the selections in dynamic shopping cart.                
+                        <br/>
+                        <br/>
+                        The page design (color palette and elements placement) are taken from several existing sites (no need to reinvent the wheel), search engine and cart adding-editing functionalities were all created from scratch.
+                        <br/>                    
+                        <br/>                    
+                        Some of the libraries i've implemented during this project were:
+                        <br/>
+                        - React-Router(BrowserRouter, Route, Switch, Link)                    
+                        <br/>
+                        - Webfont                    
+                        <br/>
+                        - Styled-components                    
+                        <br/>
+                        - React-Helmet                   
+                        </DescriptionText>
+                  </Card>
+                  <Card2>
+                        <BackgroundVideo  Description ShowVideo={ShoppingCart}/>
+                  </Card2>
+            </>
+
+       );
+}
 const CoffeShopApp = () => {
       return ( 
             <>
@@ -138,4 +169,4 @@ const RockPaperScissorsApp = () => {
        );
 }
 
-export  {ExpenseApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp};
+export  {ExpenseApp, SocialNetworkApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp};

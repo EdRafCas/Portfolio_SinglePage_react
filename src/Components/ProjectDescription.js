@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../Theme';
 import {ExpenseApp, 
+      SocialNetworkApp, 
       ShoppingCartApp, 
       CoffeShopApp, 
       RockPaperScissorsApp} from '../Elements/PortfolioApp';
@@ -140,6 +141,8 @@ const ProjectDescription = () => {
                   <ContainerColumns>
                   {route==="Spend-manager-app" ?
                   <ExpenseApp/>
+                  :route==="Socialnetwork-app" ?
+                  <SocialNetworkApp/>
                   :route==="Shopping-cart-app" ?
                   <ShoppingCartApp/>
                   :route==="Coffe-shop-landing-page" ?
