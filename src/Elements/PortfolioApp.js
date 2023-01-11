@@ -78,24 +78,27 @@ const SocialNetworkApp = () => {
       return ( 
             <>
                   <Card>
-                        <Title href={"https://cartshop-react.web.app/"}
-                               target="__blank">E-Store Shopping Cart</Title>
+                        <Title href={"https://socialnetwork-app-aca27.web.app/"}
+                               target="__blank">Social network app (Twitter-like)</Title>
                         <DescriptionText>
-                        In this project my aim was to create a blueprint for a generic online clothing shop, the purpose was to emulate both the design and accesibility functions provided by the most frequeantly available online stores, that being: the ability to search trough a catalogue of items, filter them trough their caracteristics and keep the selections in dynamic shopping cart.                
+                        Twitter being a well know-massively popular social media network, i wanted to try to emulate some of the aspects and features available in the web version.
                         <br/>
                         <br/>
-                        The page design (color palette and elements placement) are taken from several existing sites (no need to reinvent the wheel), search engine and cart adding-editing functionalities were all created from scratch.
-                        <br/>                    
-                        <br/>                    
-                        Some of the libraries i've implemented during this project were:
+                        Some of the features that i've aimed to replicate:
                         <br/>
-                        - React-Router(BrowserRouter, Route, Switch, Link)                    
+                        - Account Creation with unique username/alias selection.
                         <br/>
-                        - Webfont                    
+                        - Profile image selection, background image selection and editable biography.
                         <br/>
-                        - Styled-components                    
+                        - Shared timeline for all registered users messages are organized solely by publication date, no followers-non followers restrictions (yet).         
                         <br/>
-                        - React-Helmet                   
+                        - Ability to perform "retweets" and "likes" much as the original version of the app, this interactions are counted and the numbers are shown and updated in live time.
+                        <br/>
+                        - Comments into a previous message, this comments will display the username of the original user and redirect to them, thus creating a "thread" timeline specifically for each message.
+                        <br/>
+                        - Personalized pages for each user, will display images chosen by users, and grant access to the "like" timeline, that will only display messages, that the chosen user has "liked" manually.            
+                        <br/>
+                        - Bookmark timeline, accessible only for the user logged in, and wont be shown to others users and will allow to essentially "save" messages on a private list.                
                         </DescriptionText>
                   </Card>
                   <Card2>
