@@ -1,5 +1,6 @@
 import React from 'react';
 import BackgroundVideo from './BackgroundVideo';
+import SocialNetwork from '../video/socialnetwork_video.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
@@ -88,21 +89,21 @@ const SocialNetworkApp = () => {
                         <br/>
                         - Account Creation with unique username/alias selection.
                         <br/>
-                        - Profile image selection, background image selection and editable biography.
+                        - Profile & background image selection and editable biography.
                         <br/>
-                        - Shared timeline for all registered users messages are organized solely by publication date, no followers-non followers restrictions (yet).         
+                        - Shared timeline: for all registered users messages are organized solely by publication date, no followers-non followers restrictions (yet).         
                         <br/>
-                        - Ability to perform "retweets" and "likes" much as the original version of the app, this interactions are counted and the numbers are shown and updated in live time.
+                        - Ability to perform "retweets" and "likes": much as the original version of the app, this interactions are counted and the numbers are shown and updated in live time.
                         <br/>
-                        - Comments into a previous message, this comments will display the username of the original user and redirect to them, thus creating a "thread" timeline specifically for each message.
+                        - Comments into a existing message: this comments will display the username of the original user and redirect to them, thus creating a "thread" timeline specifically for each message.
                         <br/>
-                        - Personalized pages for each user, will display images chosen by users, and grant access to the "like" timeline, that will only display messages, that the chosen user has "liked" manually.            
+                        - Personalized pages for each user: will display images chosen by users, and grant access to the "like" timeline, that will only display messages, that the chosen user has "liked" manually.            
                         <br/>
-                        - Bookmark timeline, accessible only for the user logged in, and wont be shown to others users and will allow to essentially "save" messages on a private list.                
+                        - Bookmark timeline: accessible only for the user logged in, hidden from the public and others users and allowing to essentially "save" messages on a private timeline.                
                         </DescriptionText>
                   </Card>
                   <Card2>
-                        <BackgroundVideo  Description ShowVideo={ShoppingCart}/>
+                        <BackgroundVideo  Description ShowVideo={SocialNetwork}/>
                   </Card2>
             </>
 

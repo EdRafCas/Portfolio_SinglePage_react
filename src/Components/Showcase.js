@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
+import SocialNetwork from '../video/socialnetwork_video.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
@@ -421,7 +422,7 @@ const Showcase = () => {
                   :showcase4 === true ? 
                   <BackgroundVideo ShowVideo={RockPaperScissors}/>
                   :showcase5 === true ? 
-                  <BackgroundVideo ShowVideo={ShoppingCart}/>
+                  <BackgroundVideo ShowVideo={SocialNetwork}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
