@@ -18,7 +18,7 @@ const ShowProject =styled.div`
       }
 `
 const VideoBackground=styled.video`
-      position:absolute;
+      position:fixed;
       width:100%;
       left:50%;
       top:50%;

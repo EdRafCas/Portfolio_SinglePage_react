@@ -80,7 +80,7 @@ const ProjectsPortolio = [
             name:"Rock paper scissors",
             tag:"rock-paper-scissors",
             route:"Rock-paper-scissors-app",
-            description:"Dynamic simulator for rock-paper-scissors game vs CPU",
+            description:"Simulator rock-paper-scissors game vs CPU (FrotendMentor Challenge)",
             src:"https://rock-paper-scissors-5a2c8.web.app/",
             HTML:true,
             CSS:true,
@@ -88,6 +88,21 @@ const ProjectsPortolio = [
             React:true, 
             Firebase:true,
             repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
+      },
+      {
+            id:6,
+            name:"Todo App",
+            tag:"todo-app",
+            route:"todo-app",
+            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)"`,
+            src:"https://todo-app-frontendmentor-fd084.web.app/",
+            HTML:true,
+            CSS:true,
+            SASS:true,
+            JS:true,
+            React:true, 
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/Todo_app"
       }
       
 ]
@@ -377,6 +392,7 @@ const Showcase = () => {
       const [showcase3, changeShowcase3] =useState(false)
       const [showcase4, changeShowcase4] =useState(false)
       const [showcase5, changeShowcase5] =useState(false)
+      const [showcase6, changeShowcase6] =useState(false)
 
       const BackgrounChanger=(tagname)=>{
             if(tagname ==="manager-app"){
@@ -389,6 +405,8 @@ const Showcase = () => {
                   changeShowcase4(true)
             }if(tagname ==="socialnetwork-app"){
                   changeShowcase5(true)
+            }if(tagname ==="todo-app"){
+                  changeShowcase6(true)
             }
       }
       const BackgrounReverser=(tagname)=>{
@@ -402,6 +420,8 @@ const Showcase = () => {
                   changeShowcase4(false)
             }if(tagname ==="socialnetwork-app"){
                   changeShowcase5(false)
+            }if(tagname ==="todo-app"){
+                  changeShowcase6(false)
             }
       }            
 
@@ -422,6 +442,8 @@ const Showcase = () => {
                   :showcase4 === true ? 
                   <BackgroundVideo ShowVideo={RockPaperScissors}/>
                   :showcase5 === true ? 
+                  <BackgroundVideo ShowVideo={SocialNetwork}/>
+                  :showcase6 === true ? 
                   <BackgroundVideo ShowVideo={SocialNetwork}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
