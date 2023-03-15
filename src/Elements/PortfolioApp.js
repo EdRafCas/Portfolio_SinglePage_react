@@ -4,6 +4,7 @@ import SocialNetwork from '../video/socialnetwork_video.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
+import TodoAppVideo from '../video/todoApp_video.MP4';
 import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
 import {Card, Card2, Title, DescriptionText} from './ProjectsElements'
 
@@ -109,6 +110,36 @@ const SocialNetworkApp = () => {
 
        );
 }
+const TodoApp = () => {
+      return ( 
+            <>
+                  <Card>
+                        <Title href={"https://todo-app-frontendmentor-fd084.web.app/"}
+                               target="__blank">Todo app (FrontEndMentor)</Title>
+                        <DescriptionText>
+                        This Projects was made as a challenge as provided in <a 
+                        href={"https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW"}
+                        target="__blank">frontendmentor.io</a>                        
+                        <br/>                    
+                        <br/>  
+                        Starting from a basic folder with resources(svgs, icons, color palette) but no guidelines in the "how" the goal was to create simple notepad for simple, shortly phrased "tasks", this tasks could then be crossed as completed, and filtered on this basis.
+                        <br/>
+                        Another highlight for the project is the implementation of day/night mode with a toggle buttom, changing the styles/bacgrounds to fit the current mode without reloading nor erasing the tasks already registered. This was achieved by integrating the <b>useState</b> functionality provided by react, in combination with <b>SASS </b>styles, that allows to reach specific components classes defined deep withing the virtual DOM tree, and at the same time pairing classes values to dynamic variables defined trough jsx conditionals to be defined in response to the value of react states.
+                        <br/>  
+                        <br/>  
+
+                        Given that part to the goal was to create a plain, simple, easy to look&easy to handle app, there was need for a wide variety of libraries to be used and the project rest solely upon  <b>react-dom</b> functionalities and <b>JSX/CSS/SASS</b>syntax. 
+                                                                                                                                
+
+                        </DescriptionText>
+                  </Card>
+                  <Card2>
+                        <BackgroundVideo  Description ShowVideo={TodoAppVideo}/>
+                  </Card2>
+            </>
+
+       );
+}
 const CoffeShopApp = () => {
       return ( 
             <>
@@ -144,11 +175,11 @@ const RockPaperScissorsApp = () => {
             <>
                   <Card>
                         <Title href={"https://rock-paper-scissors-5a2c8.web.app/"}
-                               target="__blank">Rock-Paper-Scissors </Title>
+                               target="__blank">Rock-Paper-Scissors (FrontEndMentor)</Title>
                         <DescriptionText>
                               This Projects was made as a challenge as provided in <a 
                               href={"https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH"}
-                              target="__blank">frontendmentor </a>                        
+                              target="__blank">frontendmentor.io </a>                        
                               <br/>                    
                               <br/>  
                              Starting from a basic folder with resources(svgs, icons, color palette) but no guidelines in the "how" the goal was to create an interactive game that allowed the win-lose-tie interaction we all know from rock-paper-scissors, it simulates a seemingly random value upon choosing an option and keeps a record(locally stored) of results.
@@ -173,4 +204,4 @@ const RockPaperScissorsApp = () => {
        );
 }
 
-export  {ExpenseApp, SocialNetworkApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp};
+export  {ExpenseApp, SocialNetworkApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp, TodoApp};

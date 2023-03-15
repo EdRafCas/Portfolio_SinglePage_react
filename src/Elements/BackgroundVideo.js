@@ -18,7 +18,7 @@ const ShowProject =styled.div`
       }
 `
 const VideoBackground=styled.video`
-      position:fixed;
+      position:${(props) => props.Description ? "absolute" : "fixed"};
       width:100%;
       left:50%;
       top:50%;
@@ -30,7 +30,7 @@ const VideoBackground=styled.video`
 const BackgroundVideo = ({ShowVideo, Description}) => {
       return ( 
             <ShowProject Description={Description} >
-                  <VideoBackground autoPlay loop muted>
+                  <VideoBackground Description={Description} autoPlay loop muted>
                         <source src={ShowVideo} type="video/mp4"/>
                   </VideoBackground>
             </ShowProject>

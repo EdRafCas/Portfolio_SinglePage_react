@@ -4,6 +4,7 @@ import SocialNetwork from '../video/socialnetwork_video.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
+import TodoApp from '../video/todoApp_video.MP4';
 import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
 import { Link } from 'react-router-dom';
 import BackgroundVideo from '../Elements/BackgroundVideo';
@@ -13,6 +14,7 @@ import {ReactComponent as IconHtml} from './../icons/html5_icon.svg'
 import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 import {ReactComponent as IconGitAlt} from './../icons/git_alt_icon.svg'
+import {ReactComponent as IconSass} from './../icons/sass_icon.svg'
 import theme from '../Theme';
 import {Helmet} from "react-helmet";
 
@@ -60,20 +62,20 @@ const ProjectsPortolio = [
             repository:"https://github.com/EdRafCas/Store_cart_react"
 
       },
-      {
+       {
             id:4,
-            name:"Coffe Shop",
-            tag:"coffe-shop",
-            route:"Coffe-shop-landing-page",
-            description:"Landing page for a coffe shop-like business",
-            src:"https://coffee-shop-react.web.app/",
+            name:"Todo App",
+            tag:"todo-app",
+            route:"Todo-app",
+            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)"`,
+            src:"https://todo-app-frontendmentor-fd084.web.app/",
             HTML:true,
             CSS:true,
+            SASS:true,
             JS:true,
             React:true, 
             Firebase:true,
-            repository:"https://github.com/EdRafCas/coffee_shop_react"
-
+            repository:"https://github.com/EdRafCas/Todo_app"
       },
       {
             id:5,
@@ -91,20 +93,19 @@ const ProjectsPortolio = [
       },
       {
             id:6,
-            name:"Todo App",
-            tag:"todo-app",
-            route:"todo-app",
-            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)"`,
-            src:"https://todo-app-frontendmentor-fd084.web.app/",
+            name:"Coffe Shop",
+            tag:"coffe-shop",
+            route:"Coffe-shop-landing-page",
+            description:"Landing page for a coffe shop-like business",
+            src:"https://coffee-shop-react.web.app/",
             HTML:true,
             CSS:true,
-            SASS:true,
             JS:true,
             React:true, 
             Firebase:true,
-            repository:"https://github.com/EdRafCas/Todo_app"
+            repository:"https://github.com/EdRafCas/coffee_shop_react"
+
       }
-      
 ]
 
 const ProjectsContainer = styled.div`
@@ -271,6 +272,7 @@ const IconContainer=styled.div`
       height:3rem;
       padding-right:3rem;
       padding-left:2rem;
+      z-index:1;
      /*  border:1px solid white; */
       @media(max-width: 930px){ 
             gap:0.5em;
@@ -444,7 +446,7 @@ const Showcase = () => {
                   :showcase5 === true ? 
                   <BackgroundVideo ShowVideo={SocialNetwork}/>
                   :showcase6 === true ? 
-                  <BackgroundVideo ShowVideo={SocialNetwork}/>
+                  <BackgroundVideo ShowVideo={TodoApp}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
@@ -460,9 +462,12 @@ const Showcase = () => {
                                           
                                           <Description>{Projects.description}</Description>
                                           <IconContainer>
-                                                <IconsGit href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>
+                                                <IconsGit onClick={(e)=>{e.stopPropagation();}} href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>
                                                 <Icons><IconHtml/></Icons>
                                                 <Icons><IconCss/></Icons>
+                                                {Projects.SASS ?
+                                                <Icons><IconSass/></Icons>
+                                                :""}
                                                 <Icons><IconJs/></Icons>
                                                 {Projects.React ?
                                                 <Icons><IconReact/></Icons>
