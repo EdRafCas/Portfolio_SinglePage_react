@@ -6,7 +6,8 @@ import {ExpenseApp,
       SocialNetworkApp, 
       ShoppingCartApp, 
       CoffeShopApp, 
-      RockPaperScissorsApp, 
+      RockPaperScissorsApp,
+      TapAndMatch, 
       TodoApp} from '../Elements/PortfolioApp';
 import {Helmet} from "react-helmet";
 
@@ -148,6 +149,8 @@ const ProjectDescription = () => {
                   <ShoppingCartApp/>
                   :route==="Coffe-shop-landing-page" ?
                   <CoffeShopApp/>
+                  :route==="Tap-and-match" ?
+                  <TapAndMatch/>
                   :route==="Todo-app" ?
                   <TodoApp/>
                   :route==="Rock-paper-scissors-app" ?

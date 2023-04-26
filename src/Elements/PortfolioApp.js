@@ -5,6 +5,7 @@ import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
 import TodoAppVideo from '../video/todoApp_video.MP4';
+import TapAndMatchVideo from '../video/tap_and_match.mp4';
 import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
 import {Card, Card2, Title, DescriptionText} from './ProjectsElements'
 
@@ -110,6 +111,23 @@ const SocialNetworkApp = () => {
 
        );
 }
+const TapAndMatch = () => {
+      return ( 
+            <>
+                  <Card>
+                        <Title href={"https://todo-app-frontendmentor-fd084.web.app/"}
+                               target="__blank">Todo app (FrontEndMentor)</Title>
+                        <DescriptionText>
+                          LEROOOY JEEEENKINS                                                           
+                        </DescriptionText>
+                  </Card>
+                  <Card2>
+                        <BackgroundVideo  Description ShowVideo={TapAndMatchVideo}/>
+                  </Card2>
+            </>
+
+       );
+}
 const TodoApp = () => {
       return ( 
             <>
@@ -204,4 +222,4 @@ const RockPaperScissorsApp = () => {
        );
 }
 
-export  {ExpenseApp, SocialNetworkApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp, TodoApp};
+export  {ExpenseApp, SocialNetworkApp, ShoppingCartApp, CoffeShopApp, RockPaperScissorsApp, TapAndMatch,TodoApp};

@@ -4,6 +4,7 @@ import SocialNetwork from '../video/socialnetwork_video.mp4';
 import SpendManager from '../video/spend_manager_video.mp4';
 import ShoppingCart from '../video/shopping_cart_video.mp4';
 import CoffeShop from '../video/coffee_shop_video.mp4';
+import TapAndMatch from '../video/tap_and_match.mp4';
 import TodoApp from '../video/todoApp_video.MP4';
 import RockPaperScissors from '../video/rock_paper_scissors_video.mp4';
 import { Link } from 'react-router-dom';
@@ -62,12 +63,27 @@ const ProjectsPortolio = [
             repository:"https://github.com/EdRafCas/Store_cart_react"
 
       },
-       {
+      {
             id:4,
+            name:"Tap & Match",
+            tag:"Tap-and-match",
+            route:"Tap-and-match",
+            description:` A Duolingo-like game, the user chooses  (and matchs)  spanish/english words to earn points and complete the track`,
+            src:"https://tap-and-match-app.web.app/",
+            HTML:true,
+            CSS:true,
+            SASS:true,
+            JS:true,
+            React:true, 
+            Firebase:true,
+            repository:"https://github.com/EdRafCas/tap_and_match_app"
+      },
+       {
+            id:5,
             name:"Todo App",
             tag:"todo-app",
             route:"Todo-app",
-            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)"`,
+            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)`,
             src:"https://todo-app-frontendmentor-fd084.web.app/",
             HTML:true,
             CSS:true,
@@ -78,7 +94,7 @@ const ProjectsPortolio = [
             repository:"https://github.com/EdRafCas/Todo_app"
       },
       {
-            id:5,
+            id:6,
             name:"Rock paper scissors",
             tag:"rock-paper-scissors",
             route:"Rock-paper-scissors-app",
@@ -92,7 +108,7 @@ const ProjectsPortolio = [
             repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
       },
       {
-            id:6,
+            id:7,
             name:"Coffe Shop",
             tag:"coffe-shop",
             route:"Coffe-shop-landing-page",
@@ -395,6 +411,7 @@ const Showcase = () => {
       const [showcase4, changeShowcase4] =useState(false)
       const [showcase5, changeShowcase5] =useState(false)
       const [showcase6, changeShowcase6] =useState(false)
+      const [showcase7, changeShowcase7] =useState(false)
 
       const BackgrounChanger=(tagname)=>{
             if(tagname ==="manager-app"){
@@ -409,7 +426,10 @@ const Showcase = () => {
                   changeShowcase5(true)
             }if(tagname ==="todo-app"){
                   changeShowcase6(true)
+            }if(tagname ==="Tap-and-match"){
+                  changeShowcase7(true)
             }
+            
       }
       const BackgrounReverser=(tagname)=>{
             if(tagname ==="manager-app"){
@@ -424,6 +444,8 @@ const Showcase = () => {
                   changeShowcase5(false)
             }if(tagname ==="todo-app"){
                   changeShowcase6(false)
+            }if(tagname ==="Tap-and-match"){
+                  changeShowcase7(false)
             }
       }            
 
@@ -447,6 +469,8 @@ const Showcase = () => {
                   <BackgroundVideo ShowVideo={SocialNetwork}/>
                   :showcase6 === true ? 
                   <BackgroundVideo ShowVideo={TodoApp}/>
+                  :showcase7 === true ? 
+                  <BackgroundVideo ShowVideo={TapAndMatch}/>
                   :""}
                   {ProjectsPortolio.map((Projects, index)=>{
                         return(
