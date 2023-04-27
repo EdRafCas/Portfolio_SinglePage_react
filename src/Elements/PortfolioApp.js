@@ -115,10 +115,14 @@ const TapAndMatch = () => {
       return ( 
             <>
                   <Card>
-                        <Title href={"https://todo-app-frontendmentor-fd084.web.app/"}
-                               target="__blank">Todo app (FrontEndMentor)</Title>
+                        <Title href={"https://tap-and-match-app.web.app/"}
+                               target="__blank">Tap & match </Title>
                         <DescriptionText>
-                          LEROOOY JEEEENKINS                                                           
+                        <br/>  
+                        This small but content intensive project was made Drawing inspiration from the popular app "Duolingo" app and other popular games that feature a "match" of choices between to columns, in this case, English/Spanish words of common use.
+                        <br/>                                                        
+                        <br/>                                                      
+                        The desired functionality (progress trough matching, and simultaneous animation on both sides when right/wrong) is achieved by using the useState, useEffect and useContext functionalities, all contained within the base React library.
                         </DescriptionText>
                   </Card>
                   <Card2>
