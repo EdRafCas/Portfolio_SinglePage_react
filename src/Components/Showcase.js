@@ -16,6 +16,7 @@ import {ReactComponent as IconReact} from './../icons/react_icon.svg'
 import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 import {ReactComponent as IconGitAlt} from './../icons/git_alt_icon.svg'
 import {ReactComponent as IconSass} from './../icons/sass_icon.svg'
+import {ReactComponent as IconRedux} from './../icons/redux_icon.svg'
 import theme from '../Theme';
 import {Helmet} from "react-helmet";
 
@@ -75,6 +76,7 @@ const ProjectsPortolio = [
             SASS:true,
             JS:true,
             React:true, 
+            Redux:true,
             Firebase:true,
             repository:"https://github.com/EdRafCas/tap_and_match_app"
       },
@@ -491,6 +493,9 @@ const Showcase = () => {
                                                 <Icons><IconCss/></Icons>
                                                 {Projects.SASS ?
                                                 <Icons><IconSass/></Icons>
+                                                :""}
+                                                {Projects.Redux ?
+                                                <Icons><IconRedux/></Icons>
                                                 :""}
                                                 <Icons><IconJs/></Icons>
                                                 {Projects.React ?
