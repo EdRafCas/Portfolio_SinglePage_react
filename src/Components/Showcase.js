@@ -304,12 +304,17 @@ const IconContainer=styled.div`
 `
 const Icons=styled.div`
       /* border:1px solid white; */
+      
       svg{
             height:100%;
             max-height:3rem;
             width:auto;
             min-width:1rem;
             fill:${theme.mainText};
+            stroke:${theme.mainText};
+            path{
+                  fill:${theme.mainText};
+            }
             @media(max-width: 375px){ 
                   max-height:1rem;}
       }

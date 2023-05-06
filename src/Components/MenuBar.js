@@ -97,15 +97,18 @@ const Texto =styled.h1`
       } */
       @media(min-width: 761px){
             ${Option1}:hover &{
-                  text-shadow: 5px 5px 5px grey;
+                  /* text-shadow: 5px 5px 5px grey; */
+                  transition:0.4s;
                   font-size:2rem;
             };
             ${Option2}:hover &{
-                  text-shadow: 5px 5px 5px grey;
+                  /* text-shadow: 5px 5px 5px grey; */
+                  transition:0.4s;
                   font-size:2rem;
             };
             ${Option3}:hover &{
-                  text-shadow: 5px 5px 5px grey;
+                 /*  text-shadow: 5px 5px 5px grey; */
+                 transition:0.4s;
                   font-size:2rem;
             };
       }
