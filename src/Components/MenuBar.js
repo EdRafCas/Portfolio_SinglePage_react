@@ -34,7 +34,7 @@ const Option1=styled(Link)`
       :hover{
             
             background-color: black;
-            border:solid 3px ${theme.mainRed};     
+            /* border:solid 3px ${theme.mainRed};     */ 
       }
       @media(min-width: 761px){
             transform: scale(1.3);
@@ -60,7 +60,7 @@ const Option2=styled(Link)`
             
             background-color: black;
             
-            border:solid 3px #fff;
+            /* border:solid 3px #fff; */
       }
       @media(min-width: 761px){
             transform: scale(1.3);
@@ -79,7 +79,7 @@ const Option3=styled(Link)`
       text-decoration:none;
       :hover{
             background-color: black;
-            border:solid 3px blue;
+            /* border:solid 3px blue; */
       }
       @media(min-width: 761px){
             transform: scale(1.3);

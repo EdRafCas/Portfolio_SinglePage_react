@@ -15,16 +15,16 @@ const TextContainer =styled.div`
 const Content1 =styled.div`
       position: relative;
       color:${theme.mainText};  
-      font-size: 5rem;
+      font-size: 3.5rem;
       line-height: 0.9;
       font-weight:1000;
       text-align:center;
       cursor:pointer;
-      @media(max-width: 1140px){ 
+   /*    @media(max-width: 1140px){ 
             font-size: 4rem;
-      }
+      } */
       @media(max-width: 760px){ 
-            font-size: 2rem;
+            font-size: 2.5rem;
       }
       @media(max-width: 375px){ 
             font-size: 1.5rem;
@@ -33,12 +33,11 @@ const Content1 =styled.div`
 const Content2 =styled.div`
       position: relative;
       color:${theme.mainText}; 
-      font-size: 5rem;
+      font-size: 3.5rem;
       line-height: 0.9;
       font-weight:1000;
       transition:0.3s all ease;
       text-transform:uppercase;
-      
       display:flex;
       justify-content:center;
       cursor:pointer;
@@ -46,14 +45,14 @@ const Content2 =styled.div`
       
       @media(min-width: 761px){ 
             :hover{
-                  transform:scale(1.2)
+                  transform:scale(1.1)
             }
       }
-      @media(max-width: 1140px){ 
-            font-size: 4rem;
-      }
+      /* @media(max-width: 1140px){ 
+            font-size: 3.5rem;
+      } */
       @media(max-width: 760px){ 
-            font-size: 3rem;
+            font-size: 2.5rem;
       }
       @media(max-width: 375px){ 
             font-size: 1.5rem;
