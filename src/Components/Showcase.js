@@ -17,112 +17,105 @@ import {ReactComponent as IconFirebase} from './../icons/firebase_icon.svg'
 import {ReactComponent as IconGitAlt} from './../icons/git_alt_icon.svg'
 import {ReactComponent as IconSass} from './../icons/sass_icon.svg'
 import {ReactComponent as IconRedux} from './../icons/redux_icon.svg'
+import {ReactComponent as IconVite} from './../icons/vitejs_icon.svg'
 import theme from '../Theme';
 import {Helmet} from "react-helmet";
 
 const ProjectsPortolio = [
-      {
-            id:1,
-            name:"Socialnetwork app",
-            tag:"socialnetwork-app",
-            route:"Socialnetwork-app",
-            description:"Socialnetwork app, designed to provide a twitter-like experience",
-            src:"https://socialnetwork-app-aca27.web.app/",
-            HTML:true,
-            CSS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/socialnetwork_app"
+      {id:1,
+      name:"Socialnetwork app",
+      tag:"socialnetwork-app",
+      route:"Socialnetwork-app",
+      description:"Socialnetwork app, designed to provide a twitter-like experience",
+      src:"https://socialnetwork-app-aca27.web.app/",
+      HTML:true,
+      CSS:true,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/socialnetwork_app"
       },
-      {
-            id:2,
-            name:"Spend manager App",
-            route:"Spend-manager-app",
-            tag:"manager-app",
-            description:"App for easy tracking and categorization of daily expenses, with account creation, hosted in firebase ",
-            src:"https://react-app-lista-gastos-31e5d.web.app/",
-            HTML:true,
-            CSS:false,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/payment_tracking_app_react"
+      {id:2,
+      name:"Spend manager App",
+      route:"Spend-manager-app",
+      tag:"manager-app",
+      description:"App for easy tracking and categorization of daily expenses, with account creation, hosted in firebase ",
+      src:"https://react-app-lista-gastos-31e5d.web.app/",
+      HTML:true,
+      CSS:false,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/payment_tracking_app_react"
       },
-      {
-            id:3,
-            name:"Shopping cart",
-            route:"Shopping-cart-app",
-            tag:"shopping-app",
-            description:"Digital store for a clothing store, with shopping cart and search functionalities",
-            src:"https://cartshop-react.web.app/",
-            HTML:true,
-            CSS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/Store_cart_react"
-
+      {id:3,
+      name:"Shopping cart",
+      route:"Shopping-cart-app",
+      tag:"shopping-app",
+      description:"Digital store for a clothing store, with shopping cart and search functionalities",
+      src:"https://cartshop-react.web.app/",
+      HTML:true,
+      CSS:true,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/Store_cart_react"
       },
-      {
-            id:4,
-            name:"Tap & Match",
-            tag:"Tap-and-match",
-            route:"Tap-and-match",
-            description:` A Duolingo-like game, the user chooses  (and matchs)  spanish/english words to earn points and complete the track`,
-            src:"https://tap-and-match-app.web.app/",
-            HTML:true,
-            CSS:true,
-            SASS:true,
-            JS:true,
-            React:true, 
-            Redux:true,
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/tap_and_match_app"
+      {id:4,
+      name:"Tap & Match",
+      tag:"Tap-and-match",
+      route:"Tap-and-match",
+      description:` A Duolingo-like game, the user chooses  (and matchs)  spanish/english words to earn points and complete the track`,
+      src:"https://tap-and-match-app.web.app/",
+      HTML:true,
+      CSS:true,
+      SASS:true,
+      JS:true,
+      React:true, 
+      Redux:true,
+      Firebase:true,
+      ViteJs:true,
+      repository:"https://github.com/EdRafCas/tap_and_match_app"
       },
-       {
-            id:5,
-            name:"Todo App",
-            tag:"todo-app",
-            route:"Todo-app",
-            description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)`,
-            src:"https://todo-app-frontendmentor-fd084.web.app/",
-            HTML:true,
-            CSS:true,
-            SASS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/Todo_app"
+      {id:5,
+      name:"Todo App",
+      tag:"todo-app",
+      route:"Todo-app",
+      description:` "Todo" app, notepad application with day/night toggle (FrotendMentor Challenge)`,
+      src:"https://todo-app-frontendmentor-fd084.web.app/",
+      HTML:true,
+      CSS:true,
+      SASS:true,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/Todo_app"
       },
-      {
-            id:6,
-            name:"Rock paper scissors",
-            tag:"rock-paper-scissors",
-            route:"Rock-paper-scissors-app",
-            description:"Simulator rock-paper-scissors game vs CPU (FrotendMentor Challenge)",
-            src:"https://rock-paper-scissors-5a2c8.web.app/",
-            HTML:true,
-            CSS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
+      {id:6,
+      name:"Rock paper scissors",
+      tag:"rock-paper-scissors",
+      route:"Rock-paper-scissors-app",
+      description:"Simulator rock-paper-scissors game vs CPU (FrotendMentor Challenge)",
+      src:"https://rock-paper-scissors-5a2c8.web.app/",
+      HTML:true,
+      CSS:true,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/App_react_rock_paper_scissors"
       },
-      {
-            id:7,
-            name:"Coffe Shop",
-            tag:"coffe-shop",
-            route:"Coffe-shop-landing-page",
-            description:"Landing page for a coffe shop-like business",
-            src:"https://coffee-shop-react.web.app/",
-            HTML:true,
-            CSS:true,
-            JS:true,
-            React:true, 
-            Firebase:true,
-            repository:"https://github.com/EdRafCas/coffee_shop_react"
-
+      {id:7,
+      name:"Coffe Shop",
+      tag:"coffe-shop",
+      route:"Coffe-shop-landing-page",
+      description:"Landing page for a coffe shop-like business",
+      src:"https://coffee-shop-react.web.app/",
+      HTML:true,
+      CSS:true,
+      JS:true,
+      React:true, 
+      Firebase:true,
+      repository:"https://github.com/EdRafCas/coffee_shop_react"
       }
 ]
 
@@ -186,15 +179,18 @@ const Example=styled.div`
       flex-direction:column;
      /*  width:50%; */
       width:50%;
+      min-width:670px;
+      
       
       @media(min-width: 501px){
             :hover{
                   transform:scale(1.2);
                   background:none;
             }
+            
       }
       @media(max-width: 930px){
-            
+            min-width:500px;
             font-size:2rem;    
       }
       @media(max-width: 760px){ 
@@ -221,8 +217,8 @@ const LinkContainer =styled(Link)`
       color:${theme.mainText};
       padding:0;
       margin:0;
-      
       justify-content:space-between;
+
       
       @media(max-width: 930px){
             font-size:2rem;
@@ -286,18 +282,18 @@ const IconContainer=styled.div`
       display:flex;
       flex-direction:row;
       justify-content:flex-end;
-      gap:0.5em;
+      gap:0.4em;
       height:3rem;
-      padding-right:3rem;
-      padding-left:2rem;
+      padding-right:0rem;
+      padding-left:0rem;
       z-index:1;
-     /*  border:1px solid white; */
+      /* border:1px solid white; */
       @media(max-width: 930px){ 
             gap:0.5em;
             height:2rem;
       }
       @media(max-width: 760px){ 
-            gap:0.5em;
+            gap:0.3em;
             height:1rem;
 
       }
@@ -508,6 +504,9 @@ const Showcase = () => {
                                                 :""}
                                                 {Projects.Firebase ?
                                                 <Icons><IconFirebase/></Icons>
+                                                :""}
+                                                {Projects.ViteJs ?
+                                                <Icons><IconVite/></Icons>
                                                 :""}
                                           </IconContainer>
                                     </LinkContainer>                                 

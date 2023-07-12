@@ -34,8 +34,6 @@ const Card =styled.div`
       }
       
 `
-
-
 const Card2 =styled.div`
       position:relative;
       height:50%;
@@ -53,10 +51,8 @@ const Card2 =styled.div`
            
       }
       @media(max-width: 375px){     
-      }
-      
+      }  
 `
-
 const Title=styled.a`
       text-decoration: none;
       color:${theme.mainText};
@@ -102,6 +98,5 @@ const DescriptionText=styled.p`
             padding-bottom:0.5rem;
       }
 `
-
 
 export {Card, Card2, Title, DescriptionText};

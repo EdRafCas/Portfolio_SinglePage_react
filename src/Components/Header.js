@@ -58,7 +58,6 @@ const Content2 =styled.div`
             font-size: 1.5rem;
       }
 `
-
 const ImageContainer = styled.div`
       
       height:85vh; /* 700px */
@@ -85,7 +84,6 @@ const ImageContainer = styled.div`
       
       } 
 `
-
 const FalseBackgroundDefault =styled.div`
       position:absolute;
       content:"";
@@ -118,7 +116,6 @@ const FalseBackgroundDefault =styled.div`
 
 const Header = () => {
 
-      
       const [content, changeContent] =useState(false)
       const [content2, changeContent2] =useState(false)
       
