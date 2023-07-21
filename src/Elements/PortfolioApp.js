@@ -84,10 +84,10 @@ const SocialNetworkApp = () => {
                         <Title href={"https://socialnetwork-app-aca27.web.app/"}
                                target="__blank">Social network app (Twitter-like)</Title>
                         <DescriptionText>
-                        Twitter being a well know-massively popular social media network, i wanted to try to emulate some of the aspects and features available in the web version.
+                        Twitter needing no introduction, this app aims to emulate some of the aspects and features available in the web version.
                         <br/>
                         <br/>
-                        Some of the features that i've aimed to replicate:
+                        Some of the main features:
                         <br/>
                         - Account Creation with unique username/alias selection.
                         <br/>
