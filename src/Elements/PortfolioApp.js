@@ -16,12 +16,11 @@ const ExpenseApp = () => {
                         <Title href={"https://react-app-lista-gastos-31e5d.web.app/"}
                                target="__blank">Spent-tracking</Title>
                         <DescriptionText>
-                              This project is the most challenging one i've done so far: a functional, Firebase-hosted application.                             
+                              This project was my first attempt at creating a functional, Firebase-hosted application.                             
                               <br/>
                               <br/>
-                              The goal and purpose is to serve as "tracking" app, to access it requires the user to create an account (email and password are required) and login, once authenticated (firebase authentication) it receives "expenses", it allows to set a date, a category, and an amount to each one of the data entries, mantains a permanently visible acumulated of all the expenses whose dates are contained during the ongoing month and offers the possibility to edit/erase all values of all entries, at any time.
-                              <br/>
-                              Firebase-hosting all database                    
+                              The goal and purpose is to serve as "tracking" app, to access it requires the user to create an account (email and password are required) and login, once authenticated (firebase authentication) it receives data as "expenses", each one with a set amount of standart values (date, category, amount)  mantains a permanently visible acumulated of all the expenses whose dates are contained during the ongoing month and offers the possibility to edit/erase all values of all entries, at any time.
+                              <br/>                  
                               <br/>                    
                               Some of the libraries i've implemented during this project were:
                               <br/>
@@ -99,9 +98,9 @@ const SocialNetworkApp = () => {
                         <br/>
                         - Comments into a existing message: this comments will display the username of the original user and redirect to them, thus creating a "thread" timeline specifically for each message.
                         <br/>
-                        - Personalized pages for each user: will display images chosen by users, and grant access to the "like" timeline, that will only display messages, that the chosen user has "liked" manually.            
+                        - Personalized pages for each user: display background image chose by users, and grant access to the "like" timeline, that will only display messages, that the chosen user has "liked" manually.            
                         <br/>
-                        - Bookmark timeline: accessible only for the user logged in, hidden from the public and others users and allowing to essentially "save" messages on a private timeline.                
+                        - Bookmark timeline: accessible and visible only for the user logged in, essentially a private timeline.                
                         </DescriptionText>
                   </Card>
                   <Card2>
