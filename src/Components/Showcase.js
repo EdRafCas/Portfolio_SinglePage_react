@@ -130,7 +130,7 @@ const ProjectsContainer = styled.div`
       /* justify-content:space-evenly;
       align-items:flex-start; */
       gap:2rem;
-      padding-left:8rem;
+      padding-left:10rem;
       padding-top:1rem;
       z-index:1;           
       background:#000;
@@ -162,9 +162,6 @@ const ProjectsContainer = styled.div`
             padding-left:2.5rem;
             height:90vh;
             min-height:35rem;
-           
-            
-      
       } 
       
       
@@ -173,12 +170,12 @@ const Example=styled.div`
       padding:1rem;
       position:relative;
       min-width:31rem;
-      border:solid ${theme.mainBorder} 5px;
+      border:solid ${theme.mainBorder} 3px;
       border-radius:1rem;
       display:flex;
       flex-direction:column;
      /*  width:50%; */
-      width:50%;
+      width:40%;
       min-width:670px;
       
       
@@ -218,6 +215,7 @@ const LinkContainer =styled(Link)`
       padding:0;
       margin:0;
       justify-content:space-between;
+      
 
       
       @media(max-width: 930px){
@@ -479,14 +477,12 @@ const Showcase = () => {
                         return(
                               <Example    key={index}        
                                           onMouseEnter={()=>BackgrounChanger(Projects.tag)}
-                                          onMouseLeave={()=>BackgrounReverser(Projects.tag)}
-                              >
+                                          onMouseLeave={()=>BackgrounReverser(Projects.tag)}>
                                     <Title 
                                           href={Projects.src}
                                           target="__blank">{Projects.name}
                                     </Title>
                                     <LinkContainer to={`/Projects/${Projects.route}`}>
-                                          
                                           <Description>{Projects.description}</Description>
                                           <IconContainer>
                                                 <IconsGit onClick={(e)=>{e.stopPropagation();}} href={Projects.repository} target="__blank"><IconGitAlt/></IconsGit>

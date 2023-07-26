@@ -19,7 +19,7 @@ const ExpenseApp = () => {
                               This project was my first attempt at creating a functional, Firebase-hosted application.                             
                               <br/>
                               <br/>
-                              The goal and purpose is to serve as "tracking" app, to access it requires the user to create an account (email and password are required) and login, once authenticated (firebase authentication) it receives data as "expenses", each one with a set amount of standart values (date, category, amount)  mantains a permanently visible acumulated of all the expenses whose dates are contained during the ongoing month and offers the possibility to edit/erase all values of all entries, at any time.
+                              The goal and purpose is to serve as "tracking" app, to access it requires the user to create an account (email and password are required) and login, once authenticated (firebase authentication) it receives data as "expenses", each one with a set amount of standart values (date, category, amount)  mantains a permanently visible acumulated of all the expenses whose dates are contained during a set timeframe (current month) and offers the possibility to edit/erase all values of all entries, at any time.
                               <br/>                  
                               <br/>                    
                               Some of the libraries i've implemented during this project were:
