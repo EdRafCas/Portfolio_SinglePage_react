@@ -52,10 +52,10 @@ const ShoppingCartApp = () => {
                         <Title href={"https://cartshop-react.web.app/"}
                                target="__blank">E-Store Shopping Cart</Title>
                         <DescriptionText>
-                        In this project my aim was to create a blueprint for a generic online clothing shop, the purpose was to emulate both the design and accesibility functions provided by the most frequeantly available online stores, that being: the ability to search trough a catalogue of items, filter them trough their caracteristics and keep the selections in dynamic shopping cart.                
+                        The aim was to create a blueprint for a generic online shop, the purpose was to emulate both the design and accessibility functions provided by the most frequently available online stores, that being: the ability to search through a catalogue of items, filter them through their characteristics and keep the selections in dynamic shopping cart.                
                         <br/>
                         <br/>
-                        The page design (color palette and elements placement) are taken from several existing sites (no need to reinvent the wheel), search engine and cart adding-editing functionalities were all created from scratch.
+                        The search engine and cart adding-editing functionalities were all created from scratch using solely Javascript & React functionalities.
                         <br/>                    
                         <br/>                    
                         Some of the libraries i've implemented during this project were:

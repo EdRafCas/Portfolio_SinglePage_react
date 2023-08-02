@@ -157,8 +157,6 @@ const ProjectDescription = () => {
                   <RockPaperScissorsApp/>
                   :""
                   }
-                  
-                        
                   </ContainerColumns>
                   
             </ProjectsContainer>
