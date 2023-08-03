@@ -145,7 +145,7 @@ const TodoApp = () => {
                         <br/>  
                         Starting from a basic folder with resources(svgs, icons, color palette) but no guidelines in the "how" the goal was to create simple notepad for simple, shortly phrased "tasks", this tasks could then be crossed as completed, and filtered on this basis.
                         <br/>
-                        Another highlight for the project is the implementation of day/night mode with a toggle buttom, changing the styles/bacgrounds to fit the current mode without reloading nor erasing the tasks already registered. This was achieved by integrating the <b>useState</b> functionality provided by react, in combination with <b>SASS </b>styles, that allows to reach specific components classes defined deep withing the virtual DOM tree, and at the same time pairing classes values to dynamic variables defined trough jsx conditionals to be defined in response to the value of react states.
+                        Another highlight for the project is the implementation of day/night mode with a toggle button, changing the styles/backgrounds to fit the current mode without reloading nor erasing the tasks already registered. This was achieved by integrating the <b>useState</b> functionality provided by react, in combination with <b>SASS </b>styles, that allows to reach specific components classes defined deep withing the virtual DOM tree, and at the same time pairing classes values to dynamic variables defined trough jsx conditionals to be defined in response to the value of react states.
                         <br/>  
                         <br/>  
 
